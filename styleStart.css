@@ -1,0 +1,249 @@
+
+
+
+.fill{
+
+}
+
+p{
+	margin: 0; padding: 0;
+}
+h1{
+	padding: 1vw; margin: 0vw;
+	font-size: 4vw;
+}
+
+
+#windowSize{
+	height: 100vh; width: 100vw;
+	background-color: black;
+		background: linear-gradient(to top left, #669999 0%, black 100%);
+}
+
+
+#startBtn{
+	height: 10vw; width: 10vw;
+	position: absolute;
+	z-index: 2;
+	top: 2vw; left: 2vw;
+	background-image: url("images/start.png");
+	background-size: contain;
+	animation: bounce 2s infinite;
+	cursor: pointer;
+}
+
+@keyframes bounce{
+	0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+} 
+
+#displayScreen{
+	position: absolute; top: 0;
+	height: 45%; width: 80%;
+	background-color: white;
+	border-right: 10vw solid black;
+	border-left: 10vw solid black;
+	background-image: url("images/bg3.gif");
+	background-size: cover;
+	background-position: -150px;
+}
+
+#textDiv{
+	position: relative;
+
+}
+
+#selectionScreen{
+	height: 55%; width: 100vw;
+	background-color: blue;
+	background: linear-gradient(to top left, #669999 0%, black 100%);
+	overflow: hidden;
+}
+
+.char{
+	height: 14%; width: 22%;
+	margin-left: 2vw; margin-top: 3vh;
+	background-color: black;
+	display: inline-block;
+  	box-shadow: 5px 5px 10px black;
+  	background-size: cover;
+  	background-position: 0px 125px;
+  	cursor: pointer;
+}
+
+.char:hover{
+	transition: 0.5s;
+	border-right: 25px black solid;
+	border-left: 25px black solid;
+	height: 14%; width: 18%;
+	box-shadow: 10px 10px 100px 10px red;
+}
+
+#char1{
+	background-image: url("images/kimjon.jpeg");
+	background-position: 0px -30px;
+	margin-top: 48vh;
+}
+#char1:hover{
+	box-shadow: 10px 10px 100px 10px blue;
+}
+#char1:hover ~ #displayScreen {
+	background-image: url("images/kim.gif");
+	background-size: cover;
+	background-position: 0px -150px;
+}
+
+#char2{
+	background-image: url("images/jonny.jpg");
+}
+#char2:hover{
+	background-position: 0px 100px; 
+	box-shadow: 10px 10px 100px 10px yellow;
+}
+#char2:hover ~ #displayScreen{
+	background-image: url("images/sins.gif");
+	background-size: cover;
+	background-position: 0px -150px;
+}
+
+#char3{
+	background-image: url("images/dildo.jpg");
+}
+#char3:hover{
+	box-shadow: 10px 10px 100px 10px black;
+}
+#char3:hover ~ #displayScreen{
+	background-image: url("images/dildo1.gif");
+	background-size: cover;
+	background-position: 0px -700px;
+}
+
+#char4{
+	background-image: url("images/george.jpg");
+	background-position: 0px -50px; 
+}
+#char4:hover{
+	box-shadow: 10px 10px 100px 10px lightblue;
+}
+#char4:hover ~ #displayScreen{
+	background-image: url("images/george.gif");
+	background-size: cover;
+	background-position: 0px -200px;
+}
+
+#char5{
+	background-image: url("images/steve.jpg");
+	background-position: 0px 0px; 
+	background-repeat: no-repeat;
+}
+#char5:hover{
+	background-position: 0px -20px; 
+	box-shadow: 10px 10px 100px 10px gold;
+}
+#char5:hover ~ #displayScreen{
+	background-image: url("images/steve.gif");
+	background-size: cover;
+	background-position: 0px -150px;
+}
+
+#char6{
+	background-image: url("images/krimsen.jpg");
+	background-position: 0px 150px; 
+}
+#char6:hover{
+	background-position: 0px 120px; 
+}
+#char6:hover ~ #displayScreen{
+	background-image: url("images/krimsen1.gif");
+	background-size: cover;
+	background-position: 0px -0px;
+}
+
+#char7{
+	background-image: url("images/show.jpg");
+	background-position: 0px -50px; 
+}
+#char7:hover{
+	box-shadow: 10px 10px 100px 10px gold;
+	background-position: 0px -50px; 
+}
+#char7:hover ~ #displayScreen{
+	background-image: url("images/chow.gif");
+	background-size: cover;
+	background-position: 0px -50px;
+}
+
+#char8{
+	background-image: url("images/hoy.jpg");
+}
+#char8:hover{
+	box-shadow: 10px 10px 100px 10px white;
+}
+#char8:hover ~ #displayScreen{
+	background-image: url("images/hoy1.gif");
+	background-size: cover;
+	background-position: 0px -200px;
+}
+
+#char9{
+	background-image: url("images/dwight.jpg");
+	background-position: 0px 0px; 
+}
+#char9:hover{
+	box-shadow: 10px 10px 100px 10px black;
+}
+#char9:hover ~ #displayScreen{
+	background-image: url("images/dwight.gif");
+	background-size: cover;
+	background-position: 0px -150px;
+}
+
+#char10{
+	background-image: url("images/trump.jpg");
+}
+#char10:hover{
+	box-shadow: 10px 10px 100px 10px beige;
+}
+#char10:hover ~ #displayScreen{
+	background-image: url("images/trump.gif");
+	background-size: cover;
+	background-position: 0px -130px;
+}
+
+#char11{
+	background-image: url("images/brian.jpg");
+}
+#char11:hover{
+	box-shadow: 10px 10px 100px 10px purple;
+}
+#char11:hover ~ #displayScreen{
+	background-image: url("images/brian1.gif");
+	background-size: cover;
+	background-position: 0px -300px;
+}
+
+
+#char12{
+	background-image: url("images/gump.jpg");
+	background-position: 0px -40px;
+}
+#char12:hover{
+	box-shadow: 10px 10px 100px 10px orange;
+}
+#char12:hover ~ #displayScreen{
+	background-image: url("images/gump.gif");
+	background-size: cover;
+	background-position: 0px -120px;
+}
+
+
+
+body{
+	padding: 0;
+	margin: 0;
+
+}
