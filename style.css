@@ -6,3 +6,24 @@ canvas {
     border: 1px solid #d3d3d3;
     background-color: #f1f1f1;
 }
+
+#dice {
+    height: 50px;
+    width: 50px;
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid gray;
+    border-radius: 10px;  
+    font-size: 80px;
+}
+
+#buttonForDice {
+    background-color: rgb(82, 186, 179);
+    border-radius: 6px;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+}
