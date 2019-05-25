@@ -1,4 +1,4 @@
-function startGame() {
+function startGame2() {
     myGameArea.start();
 }
 

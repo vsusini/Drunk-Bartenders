@@ -5,18 +5,22 @@
         <title> Drunk Board Game </title>
     </head>
     
-    <body onload="startGame()">
+    <body onload="startGame2()">
 
         <p id="dice">
 
         </p>
         <button type="button" id="buttonForDice" onclick="rollDie()">ROLL THE DIE</button>
 
+        <button type="button" onclick="choosePlayer(3)">Choose a Player</button>
+
+        <button type="button" onclick="startGame()">Start Game</button>
+
     </body>
 
+    <script type="text/javascript" src="startMenu.js"></script>
     <script type="text/javascript" src="dice.js"></script>
     <script type="text/javascript" src="gameLogic.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="startMenu.js"></script>
 
 </html>
