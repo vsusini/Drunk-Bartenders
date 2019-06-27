@@ -2,45 +2,35 @@
 <html>
 	<head>
         <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="myscript.js"></script>
         <title> Drunk Board Game </title>
     </head>
     
     <body>
 
-            <div id = "windowSize"> 
+    	<div id = playWindow>
 
-					<div id = startBtn> </div>
+    		<div id = gameInfoDiv>
+    			<h1 id=roundNumText> Round: 1/10 </h1>
+    			<h1 id=playerNumText> VOID </h1>
+    		</div>
 
-					<div class = "char" id = "char1" onclick="choosePlayer(0)"></div>
-					<div class = "char" id = "char2" onclick="choosePlayer(1)"></div>
-					<div class = "char" id = "char3" onclick="choosePlayer(2)"></div>
-					<div class = "char" id = "char4" onclick="choosePlayer(3)"></div>
-					<div class = "char" id = "char5" onclick="choosePlayer(4)"></div>
-					<div class = "char" id = "char6" onclick="choosePlayer(5)"></div>
-					<div class = "char" id = "char7" onclick="choosePlayer(6)"></div>
-					<div class = "char" id = "char8" onclick="choosePlayer(7)"></div>
-					<div class = "char" id = "char9" onclick="choosePlayer(8)"></div>
-					<div class = "char" id = "char10" onclick="choosePlayer(9)"></div>
-					<div class = "char" id = "char11" onclick="choosePlayer(10)"></div>
-					<div class = "char" id = "char12" onclick="choosePlayer(11)"></div>
-					<div id = "displayScreen"></div>
+    		<div id = cardInfoDiv>
+    			<p id = cardInfo> Player 1: Roll the dice to select a card </p>
+    		</div>
 
-			<div>
+    		<div id = charDiv>
+    		</div>
 
-        <p id="dice">
+    		<div id = rollBtn>
+    		</div>
 
-        </p>
-        <button type="button" id="buttonForDice" onclick="rollDie()">ROLL THE DIE</button>
+    		<div id = nextPlayer>
+    			<h1 id=nextPlayerText> Go to Next Player </h1>
+    		</div>
 
-        <button type="button" onclick="choosePlayer(3)">Choose a Player</button>
-
-        <button type="button" onclick="startGame()">Start Game</button>
+    	</div>
 
     </body>
-
-    <script type="text/javascript" src="startMenu.js"></script>
-    <script type="text/javascript" src="dice.js"></script>
-    <script type="text/javascript" src="gameLogic.js"></script>
-    <script type="text/javascript" src="script.js"></script>
 
 </html>
