@@ -2,24 +2,13 @@
 <html>
 
 <head>
-
 	<link rel="stylesheet" href="styleStart.css">
-	<script type="text/javascript" src="script.js"></script>
 	<title></title>
 </head>
 
 <body>
 
-	<div id="windowSize">
-
-		<!-- 					<div id = startBtn> </div>
-
-					<div id = startInfo>
-						<input id = input type = "number" placeholder="Number of Players" min="1" max="12"> 
-						<input id = submit type = "submit" value = "Enter">
-					</div> -->
-
-
+	<div id="charSelection">
 		<div id=inputSection>
 			<p class=inputText> Number of players</p>
 			<div id=btn1 class=btn> 1 </div>
@@ -35,7 +24,6 @@
 			<div id=btn11 class=btn> 11 </div>
 			<div id=btn12 class=btn> 12 </div>
 		</div>
-
 
 		<div id=selectionScreen>
 			<div id=selectionText>
@@ -72,15 +60,46 @@
 			<div id="displayScreen"></div>
 			<div id=arrow> </div>
 		</div>
+	</div>
+
+	<div id="gameScreen">
+		<div id=gameScreen2>
+			<div id=gameBg1 class=gameBgs>
+				<div id=game1 name=t1 class=gameTile></div> 
+				<div id=game2 name=t2 class=gameTile></div> 
+				<div id=game3 name=t3 class=gameTile></div> 
+				<div id=game4 name=t4 class=gameTile></div> 
+			</div>
+
+			<div id=gameBg2 class=gameBgs>
+				<div id=game5 name=t5 class=gameTile></div> 
+				<div id=game6 name=t6 class=gameTile></div> 
+				<div id=game7 name=t7 class=gameTile></div> 
+				<div id=game8 name=t8 class=gameTile></div> 
+			</div>
+		</div>
+
+		<div id=controlPanel>
+
+		</div>
+
+	</div>
 
 
 
-		<div>
 
-			<script type="text/javascript" src="startMenu.js"></script>
-			<script type="text/javascript" src="dice.js"></script>
-			<script type="text/javascript" src="gameLogic.js"></script>
-			<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="startMenu.js"></script>
+	<script type="text/javascript" src="dice.js"></script>
+	<script type="text/javascript" src="gameLogic.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+	<script>
+		var charSelection = document.getElementById("charSelection");
+		var gameScreen = document.getElementById("gameScreen");
+
+		charSelection.style.display = "none";
+		gameScreen.style.display = "block";
+	</script>
 
 </body>
 
