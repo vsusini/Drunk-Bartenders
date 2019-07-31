@@ -366,3 +366,9 @@ body{
 	background-color: black;
 	font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif; 
 }
+
+.selected{
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+	pointer-events: none
+}
