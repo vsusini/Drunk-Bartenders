@@ -203,7 +203,8 @@ function createPlayer(num, name, imageName) {
     if (currentPlayerCount == playerCount) {
         console.log(playerList);
         makeAllPlayerSelected();
-        changeScreen(); 
+        changeScreen();
+        startGame(playerList);
     } else {
         console.log("Missed it");
     }

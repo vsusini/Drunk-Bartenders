@@ -8,8 +8,9 @@ var dice = {
 }
 
 function printNumber(number) {
-    var placeholder = document.getElementById('dice');
-    placeholder.innerHTML = number;
+    //var placeholder = document.getElementById('dice');
+    //placeholder.innerHTML = number;
+    console.log("pribtn");
 }
 
 function rollDie(){
