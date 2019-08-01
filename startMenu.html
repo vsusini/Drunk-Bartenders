@@ -42,45 +42,54 @@
 			<div class="char" id="char9" onclick="choosePlayer(8)"></div>
 			<div class="char" id="char10" onclick="choosePlayer(9)"></div>
 			<div class="char" id="char11" onclick="choosePlayer(10)"></div>
-			<div class="char" id="char12" onclick="choosePlayer(12)"></div>
-			<div class="char" id="char13" onclick="choosePlayer(13)"></div>
-			<div class="char" id="char14" onclick="choosePlayer(14)"></div>
-			<div class="char" id="char15" onclick="choosePlayer(15)"></div>
-			<div class="char" id="char16" onclick="choosePlayer(16)"></div>
-			<div class="char" id="char17" onclick="choosePlayer(17)"></div>
-			<div class="char" id="char18" onclick="choosePlayer(18)"></div>
-			<div class="char" id="char19" onclick="choosePlayer(19)"></div>
-			<div class="char" id="char20" onclick="choosePlayer(20)"></div>
-			<div class="char" id="char21" onclick="choosePlayer(21)"></div>
-			<div class="char" id="char22" onclick="choosePlayer(22)"></div>
-			<div class="char" id="char23" onclick="choosePlayer(23)"></div>
-			<div class="char" id="char24" onclick="choosePlayer(24)"></div>
-			<div class="char" id="char25" onclick="choosePlayer(25)"></div>
-			<div class="char" id="char26" onclick="choosePlayer(26)"></div>
+			<div class="char" id="char12" onclick="choosePlayer(11)"></div>
+			<div class="char" id="char13" onclick="choosePlayer(12)"></div>
+			<div class="char" id="char14" onclick="choosePlayer(13)"></div>
+			<div class="char" id="char15" onclick="choosePlayer(14)"></div>
+			<div class="char" id="char16" onclick="choosePlayer(15)"></div>
+			<div class="char" id="char17" onclick="choosePlayer(16)"></div>
+			<div class="char" id="char18" onclick="choosePlayer(17)"></div>
+			<div class="char" id="char19" onclick="choosePlayer(18)"></div>
+			<div class="char" id="char20" onclick="choosePlayer(19)"></div>
+			<div class="char" id="char21" onclick="choosePlayer(20)"></div>
+			<div class="char" id="char22" onclick="choosePlayer(21)"></div>
+			<div class="char" id="char23" onclick="choosePlayer(22)"></div>
+			<div class="char" id="char24" onclick="choosePlayer(23)"></div>
+			<div class="char" id="char25" onclick="choosePlayer(24)"></div>
+			<div class="char" id="char26" onclick="choosePlayer(25)"></div>
+			<div class="char" id="char27" onclick="choosePlayer(26)"></div>
+
 			<div id="displayScreen"></div>
 			<div id=arrow> </div>
 		</div>
 	</div>
 
 	<div id="gameScreen">
+		<!-- character divs appended here (from game logic) -->
+		
 		<div id=gameScreen2>
 			<div id=gameBg1 class=gameBgs>
-				<div id=game1 name=t1 class=gameTile></div> 
+				<img src="images/Card1.svg" id=game1 name=t1 class=gameTile>
+				</img> 
 				<div id=game2 name=t2 class=gameTile></div> 
 				<div id=game3 name=t3 class=gameTile></div> 
 				<div id=game4 name=t4 class=gameTile></div> 
 			</div>
 
 			<div id=gameBg2 class=gameBgs>
-				<div id=game5 name=t5 class=gameTile></div> 
+				<div id=game5 name=t5 class=gameTile></div>
 				<div id=game6 name=t6 class=gameTile></div> 
 				<div id=game7 name=t7 class=gameTile></div> 
 				<div id=game8 name=t8 class=gameTile></div> 
 			</div>
 		</div>
 
-		<div id=controlPanel>
+		<div id=controlPanel class=bottomPanel>
+		</div>
 
+		<div id=rollDice class=bottomPanel>
+			<p id=rollText> Roll Dice </p>
+			<p id=rollNum> You rolled a _ </p>
 		</div>
 
 	</div>
@@ -93,6 +102,13 @@
 	<script type="text/javascript" src="gameLogic.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 
+<!-- 	<script>
+		var charSelection = document.getElementById("charSelection");
+		var gameScreen = document.getElementById("gameScreen");
+
+		charSelection.style.display = "none";
+		gameScreen.style.display = "block";
+	</script> -->
 
 </body>
 

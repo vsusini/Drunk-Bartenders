@@ -3,6 +3,7 @@
 
 }
 body{
+	font-family: 'Montserrat', sans-serif;
 	padding: none; margin: none;
 }
 
@@ -389,16 +390,17 @@ body{
 }
 .seperator{
 	height: 100vh; width: 5vw;
-	background-color: black;
+
 	position: relative;
 	left: -2.5vw; top: 0;
 	padding: 0; margin: 0;
 }
 .gameTile{
-	height: 50vh; width: 15vw;
-	margin-left: 7.5vw; margin-top: 10vh;
-	background-color: blue;
+	height: 600px; width: 350px;
+	margin-left: 5vw; margin-top: 5vh;
+	/*box-shadow: 10px 10px 30px black;*/
 	display: inline-block;
+	background-color: black;
 
 }
 .gameBgs{
@@ -407,25 +409,72 @@ body{
 	background-size: cover;
 	background-position: -10vh;
 	margin-right: 1vw;
-	
 }
+
+
 #gameBg1{
 	background-image: url("images/gameScreen1.jpg");
 	background-position: -10vh;
+	background-color: black;
 }
-#gameBg2{
-	background-image: url("images/gameScreen2.jpg");
-}
-
-
 #game1{
+	background-repeat: no-repeat;
+	background-size: contain;
+/*	box-shadow: 10px 10px 30px black;*/
+	background-image: url("images/Card2.png");
+}
+#tileText1{
+	color: white;
+	text-align: center;
+	padding-top: 10vh;
+	font-size: 4vh;
+}
 
+
+
+
+#gameBg2{
+	background-image: url("images/gameScreen1.jpg");
+}
+
+
+
+.bottomPanel{
+	position: fixed;
+	height: 10vh; 
 }
 
 #controlPanel{
-	position: fixed;
 	bottom: 0; left: 0;
-	height: 10vh; width: 100vw;
+	width: 80vw;
 	background-color: grey;
 	border: 20px solid black;
+	box-sizing: border-box;
 }
+#rollDice{
+	bottom: 0; right: 0;
+	width: 20vw;
+	background-color: red; color: white;
+	text-align: center;
+	margin: 0; padding: 0;
+}
+#rollText{
+	font-size: 2vh;
+}
+#rollNum{
+	font-size: 2vh;
+}
+.playerStyle0{
+	background-image: url("images/stormtrooper_char.png");
+	height: 20vh; width: 8vh;
+	position: fixed; bottom: 20vh; left: 20vw;
+}
+.playerStyle1{
+	height: 20vh; width: 8vh;
+	position: fixed; bottom: 20vh; left: 16vw;
+}
+.playerStyle2{
+	height: 20vh; width: 8vh;
+	position: fixed; bottom: 20vh; left: 12vw;
+}
+
