@@ -5,10 +5,11 @@ function increaseMoveCount(){
     }
 }
 
-//Game portion
-function startGame(playerList){
-
+function layoutStartingPositions(){
     //display characters
+    var left = 0;
+    maxSpot = 40;
+    result = 40 / playerCount
     for(var i=0; i<playerCount; i++){
         var game_screen = document.getElementById("gameScreen");
         var node = document.createElement("img");
@@ -21,17 +22,20 @@ function startGame(playerList){
         game_screen.appendChild(node);
 
         //add class styling
-        var myString = "playerStyle" + i;
+        var myString = "playerStyle";
         node.classList.add(myString);
 
         var name = player.getName();
         // alert("Player Name: " + name);
-
+        node.style.setProperty("left",left+"vw");
         node.setAttribute("src", player.getPicID());
+        left = left + result;
     }
+}
 
-
-
+//Game portion
+function startGame(playerList){
+    layoutStartingPositions();
 
     console.log("Made it NOW, we play..");
     console.log("From console:"+playerList);

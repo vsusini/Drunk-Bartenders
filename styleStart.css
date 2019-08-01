@@ -464,17 +464,10 @@ body{
 #rollNum{
 	font-size: 2vh;
 }
-.playerStyle0{
+.playerStyle{
 	background-image: url("images/stormtrooper_char.png");
 	height: 20vh; width: 8vh;
-	position: fixed; bottom: 20vh; left: 20vw;
+	position: fixed; bottom: 20vh;
 }
-.playerStyle1{
-	height: 20vh; width: 8vh;
-	position: fixed; bottom: 20vh; left: 16vw;
-}
-.playerStyle2{
-	height: 20vh; width: 8vh;
-	position: fixed; bottom: 20vh; left: 12vw;
-}
+
 
