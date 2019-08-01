@@ -1,7 +1,7 @@
 var NUMCHAR = 27
 
 var playerCount = window.prompt("How many players would you like?");
-alert("You chose " + playerCount + " Players");
+// alert("You chose " + playerCount + " Players");
 
 var currentPlayerCount = 0;
 
@@ -209,3 +209,4 @@ function createPlayer(num, name, imageName) {
         console.log("Missed it");
     }
 }
+

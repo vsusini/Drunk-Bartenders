@@ -6,8 +6,33 @@ function increaseMoveCount(){
 }
 
 //Game portion
-
 function startGame(playerList){
+
+    //display characters
+    for(var i=0; i<playerCount; i++){
+        var game_screen = document.getElementById("gameScreen");
+        var node = document.createElement("img");
+
+        player = playerList[i];
+        var playerNum = player.getPlayerID();
+        // alert("Player num: " + playerNum);
+
+        //add div element to gameScreen
+        game_screen.appendChild(node);
+
+        //add class styling
+        var myString = "playerStyle" + i;
+        node.classList.add(myString);
+
+        var name = player.getName();
+        // alert("Player Name: " + name);
+
+        node.setAttribute("src", player.getPicID());
+    }
+
+
+
+
     console.log("Made it NOW, we play..");
     console.log("From console:"+playerList);
     while(playerList[playerMoveCount].getTileNum() < 80){
