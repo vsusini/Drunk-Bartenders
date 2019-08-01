@@ -1,5 +1,6 @@
 var NUMCHAR = 27
 
+var playerCount = document.getElementById("")
 var playerCount = window.prompt("How many players would you like?");
 // alert("You chose " + playerCount + " Players");
 

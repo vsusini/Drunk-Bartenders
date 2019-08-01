@@ -396,11 +396,14 @@ body{
 	padding: 0; margin: 0;
 }
 .gameTile{
-	height: 600px; width: 350px;
-	margin-left: 5vw; margin-top: 5vh;
+	height: 50vh; width: 17vw;
+	 margin-top: 5vh;
 	/*box-shadow: 10px 10px 30px black;*/
 	display: inline-block;
-	background-color: black;
+/*	background-color: black;*/
+	margin-left: auto; margin-right: auto;
+	left: 0; right: 0;
+	position: relative;
 
 }
 .gameBgs{
@@ -416,8 +419,12 @@ body{
 	background-image: url("images/gameScreen1.jpg");
 	background-position: -10vh;
 	background-color: black;
+	display: flex;
+	 text-align: justify;
+	  -ms-text-justify: distribute-all-lines;
+	  text-justify: distribute-all-lines;
 }
-#game1{
+#card1, #card2, #card3, #card4{
 	background-repeat: no-repeat;
 	background-size: contain;
 /*	box-shadow: 10px 10px 30px black;*/
