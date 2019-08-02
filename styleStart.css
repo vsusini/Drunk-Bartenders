@@ -388,7 +388,6 @@ body::-webkit-scrollbar-thumb {
 		padding: 0;
 		margin: 0px;
 		background-color: black;
-		font-family: Optima,Segoe,Segoe UI,Candara,Calibri,Arial,sans-serif; 
 	}
 
 	.selected{
@@ -429,6 +428,7 @@ body::-webkit-scrollbar-thumb {
 
 		background-size: auto;
 		background-size: 100% 100%;
+		z-index: 3;
 
 	}
 	.gameBgs{
@@ -438,6 +438,7 @@ body::-webkit-scrollbar-thumb {
 		background-position: -10vh;
 		/*evenly distribute tiles*/
 		overflow-y: hidden;
+		z-index: 3;
 	}
 
 
@@ -529,9 +530,19 @@ body::-webkit-scrollbar-thumb {
 	.playerStyle{
 		background-image: url("images/stormtrooper_char.png");
 		height: 20vh; width: 8vh;
-		position: absolute; bottom: 20vh;
+		position: absolute; bottom: 15vh;
 		float: left;
 		transition: 2s;
+		z-index: 5;
+	}
+	#floor{
+		position: absolute; bottom: 10vh;
+		left: 2vw; height: 10vh; width: 300vw;
+		background-color: #1f1f1f;
+		overflow: visible;
+		z-index: 0;
+		transform: skew(-0.07turn, 0deg);
+		background-image: url("characterModels/floorTile.jpg");
 	}
 
 
