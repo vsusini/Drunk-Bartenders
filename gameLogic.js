@@ -88,13 +88,13 @@ function moveToPlayer(){
 
 function continueGame(){
     if (playerList[playerMoveCount].getTileNum() < 80){
-        increaseMoveCount();
         var move = rollDie()
         addDieValueToScreen(move);
         console.log(playerList[playerMoveCount].getPlayerID()+" got:"+move+"!");
         movePlayer(playerList[playerMoveCount],move);
         playerList[playerMoveCount].increaseTileNum(move);
 
+        increaseMoveCount();
     } else {
         alert ("game is over");
     }
