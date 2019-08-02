@@ -475,9 +475,10 @@ body::-webkit-scrollbar-thumb {
 		background-color: #002266;
 		box-sizing: border-box;
 		color: white;
+		letter-spacing: 10px;
 	}
 	#rollText{/**/
-		font-size: 3vh;
+		font-size: 4vh;
 		vertical-align: middle;
 		text-align: center;	
 	}
@@ -505,7 +506,7 @@ body::-webkit-scrollbar-thumb {
 		float: left;
 		vertical-align: middle;
 		text-align: center;	
-		font-size: 3vh;
+		font-size: 4vh;
 		line-height: 10vh;
 		vertical-align: middle;
 		text-align: center;	

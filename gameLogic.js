@@ -56,14 +56,13 @@ function movePlayer(player,move){
     //now move the player;
     //increase by 25vw;
     //node.style.setProperty("left",move*25vw);
-    
-    
-
+    playerNumber = player.getPlayerID() + 1;
+    turnText.innerHTML = "Go to player " + playerNumber + "'s turn";
 }
 
 function addDieValueToScreen(move){
     document.getElementById("dieValue").innerHTML = move;
-    alert("move "+move);
+    // alert("move "+move);
     dieText = document.getElementById("rollDieText");
     turnText = document.getElementById("rollTurnText");
 
@@ -73,6 +72,7 @@ function addDieValueToScreen(move){
 
 
 function moveToPlayer(){
+    document.getElementById("dieValue").innerHTML = "";
     alert("Move to players current position")
 
     dieText = document.getElementById("rollDieText");
@@ -80,8 +80,6 @@ function moveToPlayer(){
     dieText.style.display = "block";
     turnText.style.display = "none";
 }
-
-
 
 
 function continueGame(){
