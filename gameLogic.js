@@ -1,4 +1,8 @@
 
+//  Name: gameLogic.js
+//  Author : Nicolas Gardin
+//  Author : Vincent Susinu
+//  Date Modified: 02/08/2019
 
 
 var playerMoveCount = 0;
@@ -60,7 +64,24 @@ function movePlayer(player,move){
 function addDieValueToScreen(move){
     document.getElementById("dieValue").innerHTML = move;
     alert("move "+move);
+    dieText = document.getElementById("rollDieText");
+    turnText = document.getElementById("rollTurnText");
+
+    dieText.style.display = "none";
+    turnText.style.display = "block";
 }
+
+
+function moveToPlayer(){
+    alert("Move to players current position")
+
+    dieText = document.getElementById("rollDieText");
+    turnText = document.getElementById("rollTurnText");
+    dieText.style.display = "block";
+    turnText.style.display = "none";
+}
+
+
 
 
 function continueGame(){

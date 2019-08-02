@@ -178,6 +178,14 @@ function removeClassSelectedFromPlayers(playerElm){
     }
 }
 
+
+//  Name: gameLogic.js
+//  Author : Nicolas Gardin
+//  Author : Vincent Susinu
+//  Date Modified: 02/08/2019
+
+
+
 function changeScreen(){
     var charSelection = document.getElementById("charSelection");
     var gameScreen = document.getElementById("gameScreen");
