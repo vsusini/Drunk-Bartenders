@@ -11,20 +11,19 @@
 	<div id="charSelection">
 		<div id=inputSection>
 			<p class=inputText> Number of players </p>
-			<div id=btn1 class=btn> 1 </div>
-			<div id=btn2 class=btn> 2 </div>
-			<div id=btn3 class=btn> 3 </div>
-			<div id=btn4 class=btn> 4 </div>
-			<div id=btn5 class=btn> 5 </div>
-			<div id=btn6 class=btn> 6 </div>
-			<div id=btn7 class=btn> 7 </div>
-			<div id=btn8 class=btn> 8 </div>
-			<div id=btn9 class=btn> 9 </div>
-			<div id=btn10 class=btn> 10 </div>
-			<div id=btn11 class=btn> 11 </div>
-			<div id=btn12 class=btn> 12 </div>
+			<div id=btn1 class=btn onclick="numPlayersSelected(1)"> 1 </div>
+			<div id=btn2 class=btn onclick="numPlayersSelected(2)"> 2 </div>
+			<div id=btn3 class=btn onclick="numPlayersSelected(3)"> 3 </div>
+			<div id=btn4 class=btn onclick="numPlayersSelected(4)"> 4 </div>
+			<div id=btn5 class=btn onclick="numPlayersSelected(5)"> 5 </div>
+			<div id=btn6 class=btn onclick="numPlayersSelected(6)"> 6 </div>
+			<div id=btn7 class=btn onclick="numPlayersSelected(7)"> 7 </div>
+			<div id=btn8 class=btn onclick="numPlayersSelected(8)"> 8 </div>
+			<div id=btn9 class=btn onclick="numPlayersSelected(9)"> 9 </div>
+			<div id=btn10 class=btn onclick="numPlayersSelected(10)"> 10 </div>
+			<div id=btn11 class=btn onclick="numPlayersSelected(11)"> 11 </div>
+			<div id=btn12 class=btn onclick="numPlayersSelected(12)"> 12 </div>
 		</div>
-
 		<div id=selectionScreen>
 			<div id=selectionText>
 				<h1> Character Selection </h1>
@@ -66,8 +65,8 @@
 
 	<div id="gameScreen">
 		<!-- character divs appended here (from game logic) -->
-		
-		<div id=gameScreen2>
+
+		<div id="gameScreen2">
 			<div id=gameBg1 class=gameBgs>
 				<img src="images/Card1.svg" id=card1 name=t1 class=gameTile>
 				</img> 
@@ -77,17 +76,17 @@
 				</img>
 				<img src="images/Card1.svg" id=card4 name=t1 class=gameTile>
 				</img>
-
-<!-- 				<div id=game2 name=t2 class=gameTile></div> 
-				<div id=game3 name=t3 class=gameTile></div> 
-				<div id=game4 name=t4 class=gameTile></div>  -->
 			</div>
 
 			<div id=gameBg2 class=gameBgs>
-				<div id=game5 name=t5 class=gameTile></div>
-				<div id=game6 name=t6 class=gameTile></div> 
-				<div id=game7 name=t7 class=gameTile></div> 
-				<div id=game8 name=t8 class=gameTile></div> 
+				<img src="images/Card1.svg" id=card1 name=t1 class=gameTile>
+				</img> 
+				<img src="images/Card1.svg" id=card2 name=t1 class=gameTile>
+				</img>
+				<img src="images/Card1.svg" id=card3 name=t1 class=gameTile>
+				</img>
+				<img src="images/Card1.svg" id=card4 name=t1 class=gameTile>
+				</img>
 			</div>
 		</div>
 
@@ -101,20 +100,16 @@
 
 	</div>
 
-
-
-
 	<script type="text/javascript" src="startMenu.js"></script>
 	<script type="text/javascript" src="dice.js"></script>
 	<script type="text/javascript" src="gameLogic.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 
-<!-- 	<script>
-		var charSelection = document.getElementById("charSelection");
-		var gameScreen = document.getElementById("gameScreen");
-
-		charSelection.style.display = "none";
-		gameScreen.style.display = "block";
+	<!-- <script>
+	var charSelection = document.getElementById("charSelection");
+	var gameScreen = document.getElementById("gameScreen");
+	charSelection.style.display = "none";
+	gameScreen.style.display = "block";
 	</script> -->
 
 </body>

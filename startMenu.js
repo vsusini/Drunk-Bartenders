@@ -1,17 +1,31 @@
-var NUMCHAR = 27
 
-var playerCount = document.getElementById("")
-var playerCount = window.prompt("How many players would you like?");
-// alert("You chose " + playerCount + " Players");
-
+//global Variables
+var NUMCHAR = 27;
+var playerCount = 0;
 var currentPlayerCount = 0;
-
-var characterNames = ["Kim Jong Un", "Storm Trooper", "McLovin", "George", "Steven Hawking", "Krimson Chin", "Asian Fellow", "Hoy Me Noy", "Dwight", "Trump", "Brian", "Forest Gump", "Sparta", "Jesus", "Jimmy Neutron", "Bud Light", "Oprah", "Tiger Woods", "Titanic", "Thanos", "Michael Jackson", "Thor", "Donkey", "Joey", "Hirambe", "Johnny Sins"];
-
+var playerList = [];
+var playerMoveCount = 0;
+var characterNames = ["Kim Jong Un", "Storm Trooper", "McLovin", "George", 
+    "Steven Hawking", "Krimson Chin", "Asian Fellow", "Hoy Me Noy", "Dwight", 
+    "Trump", "Brian", "Forest Gump", "Sparta", "Jesus", "Jimmy Neutron", "Bud Light", 
+    "Oprah", "Tiger Woods", "Titanic", "Thanos", "Michael Jackson", "Thor", "Donkey", 
+    "Joey", "Hirambe", "Johnny Sins"];
 var characterImages = ["images/stormtrooper_char.png"];
 
-var playerList = []
-var playerMoveCount = 0
+makeAllPlayerSelected();
+
+
+function numPlayersSelected(numPlayers){
+    playerCount = numPlayers;
+    for(var i = 1; i<13; i++){
+        var btn = document.getElementById("btn"+i);
+        if(!(i==numPlayers)){
+            btn.className += " selected";
+        }
+    }
+    var playerElm = document.getElementsByClassName("char");
+    removeClassSelectedFromPlayers(playerElm);
+}
 
 function choosePlayer(num) {
     switch (num) {
@@ -157,7 +171,37 @@ function makeAllPlayerSelected(){
     }
 }
 
-class Player {
+function removeClassSelectedFromPlayers(playerElm){
+    for (i = 0; i < playerElm.length; i++) {
+        playerElm[i].classList.remove("selected");
+    }
+}
+
+function changeScreen(){
+    var charSelection = document.getElementById("charSelection");
+    var gameScreen = document.getElementById("gameScreen");
+
+    charSelection.style.display = "none";
+    gameScreen.style.display = "block";
+}
+
+function createPlayer(num, name, imageName){
+    let player = new Player(currentPlayerCount, name, 0,imageName);
+    playerList[currentPlayerCount] = player;
+    console.log("Added Player " + playerList[currentPlayerCount].getPlayerID() + " whos name is " + playerList[currentPlayerCount].getName());
+    currentPlayerCount++;
+    console.log("currentPLayerOCunt " + currentPlayerCount + " Player count " + playerCount);
+    if (currentPlayerCount == playerCount) {
+        console.log(playerList);
+        makeAllPlayerSelected();
+        changeScreen();
+        startGame(playerList);
+    } else {
+        console.log("Missed it");
+    }
+}
+
+class Player{
 
     constructor(playerID, name, tileNum, picID) {
         this.playerID = playerID;
@@ -186,28 +230,3 @@ class Player {
         this.tileNum = this.tileNum + moveCount;
     }
 }
-
-function changeScreen(){
-    var charSelection = document.getElementById("charSelection");
-    var gameScreen = document.getElementById("gameScreen");
-
-    charSelection.style.display = "none";
-    gameScreen.style.display = "block";
-}
-
-function createPlayer(num, name, imageName) {
-    let player = new Player(currentPlayerCount, name, 0,imageName);
-    playerList[currentPlayerCount] = player;
-    console.log("Added Player " + playerList[currentPlayerCount].getPlayerID() + " whos name is " + playerList[currentPlayerCount].getName());
-    currentPlayerCount++;
-    console.log("currentPLayerOCunt " + currentPlayerCount + " Player count " + playerCount);
-    if (currentPlayerCount == playerCount) {
-        console.log(playerList);
-        makeAllPlayerSelected();
-        changeScreen();
-        startGame(playerList);
-    } else {
-        console.log("Missed it");
-    }
-}
-
