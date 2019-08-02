@@ -9,6 +9,10 @@
 .fill{
 
 }
+
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-family: 'Montserrat', sans-serif;
 	padding: none; margin: none;

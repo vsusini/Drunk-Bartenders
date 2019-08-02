@@ -6,6 +6,7 @@
 
 
 var playerMoveCount = 0;
+var findPlayerFlag = false;
 
 
 function increaseMoveCount(){
@@ -79,10 +80,18 @@ function moveToPlayer(){
     document.getElementById("dieValue").innerHTML = "";
     alert("Move to players current position")
 
+    var player = document.getElementById("player"+playerMoveCount);
+
+
+    var position = player.getBoundingClientRect();
+
+    window.scrollTo(position.x,position.y);
+
     dieText = document.getElementById("rollDieText");
     turnText = document.getElementById("rollTurnText");
     dieText.style.display = "block";
     turnText.style.display = "none";
+
 }
 
 
