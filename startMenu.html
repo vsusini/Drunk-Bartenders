@@ -92,12 +92,12 @@
 		<div id=controlPanel class=bottomPanel>
 
 			<div id=rollDie class=panelContainer>
-				<p id=rollDieText class=panelText> Roll Die </p>
+				<p id=rollDieText class=panelText onclick="continueGame();"> Roll Die </p>
 				<p id=rollTurnText class=panelText> > </p>
 			</div>
 
 			<div id=rollNum class=panelContainer>
-				<p id=rollNumText class=panelText> Roll # </p>
+				<p id=rollNumText class=panelText> Roll <span id="dieValue">_</span></p>
 			</div>
 
 
@@ -113,7 +113,6 @@
 	<script type="text/javascript" src="startMenu.js"></script>
 	<script type="text/javascript" src="dice.js"></script>
 	<script type="text/javascript" src="gameLogic.js"></script>
-	<script type="text/javascript" src="script.js"></script>
 
 	<!-- <script>
 	var charSelection = document.getElementById("charSelection");
