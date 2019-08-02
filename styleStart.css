@@ -490,6 +490,10 @@ body::-webkit-scrollbar-thumb {
 		background-color: #002266;
 		padding: 0; margin: 0;	
 	}
+	#rollDie:hover{
+		background-color: #001133;
+		cursor: pointer;
+	}
 	#rollDieText, #rollTurnText{
 		left: 0;
 		width: 50vw;
@@ -499,9 +503,6 @@ body::-webkit-scrollbar-thumb {
 	}
 	.panelController{
 		width: 	50%;
-	}
-	.panelController:hover{
-		background-color: #001133;
 	}
 	.panelText{
 		float: left;
@@ -515,10 +516,6 @@ body::-webkit-scrollbar-thumb {
 		position: absolute;
 		bottom: 0;	
 		height: 10vh; width: 50vw;
-	}
-	.panelText:hover{
-		background-color: #001133;
-		cursor: pointer;
 	}
 	#rollNumText{
 		left: 50vw;

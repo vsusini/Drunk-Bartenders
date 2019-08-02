@@ -7,12 +7,14 @@
 
 var playerMoveCount = 0;
 
+
 function increaseMoveCount(){
     playerMoveCount++;
     if (playerMoveCount == playerCount){
         playerMoveCount = 0;
     }
 }
+
 
 function layoutStartingPositions(){
     //display characters
@@ -43,6 +45,7 @@ function layoutStartingPositions(){
     }
 }
 
+
 function movePlayer(player,move){
     console.log("move player");
     console.log(player.getPlayerID());
@@ -59,6 +62,7 @@ function movePlayer(player,move){
     playerNumber = player.getPlayerID() + 1;
     turnText.innerHTML = "Go to player " + playerNumber + "'s turn";
 }
+
 
 function addDieValueToScreen(move){
     document.getElementById("dieValue").innerHTML = move;
@@ -94,5 +98,4 @@ function continueGame(){
     } else {
         alert ("game is over");
     }
-
 }

@@ -1,4 +1,11 @@
 
+//  Name: startMenu.js
+//  Author : Nicolas Gardin
+//  Author : Vincent Susinu
+//  Date Modified: 02/08/2019
+
+
+
 //global Variables
 var NUMCHAR = 27;
 var playerCount = 0; //FINAL PLAYER COUNT
@@ -16,6 +23,7 @@ var characterImages = ["characterModels/un.png","images/stormtrooper_char.png",
 makeAllPlayerSelected();
 
 
+
 function numPlayersSelected(numPlayers){
     for(var i = 1; i<13; i++){
         playerCount = numPlayers;
@@ -27,6 +35,7 @@ function numPlayersSelected(numPlayers){
     var playerElm = document.getElementsByClassName("char");
     removeClassSelectedFromPlayers(playerElm);
 }
+
 
 function choosePlayer(num) {
     switch (num) {
@@ -166,24 +175,19 @@ function choosePlayer(num) {
     }
 }
 
+
 function makeAllPlayerSelected(){
     for (var i = 1; i < NUMCHAR; i++){
         document.getElementById("char"+i).className += " selected";
     }
 }
 
+
 function removeClassSelectedFromPlayers(playerElm){
     for (i = 0; i < playerElm.length; i++) {
         playerElm[i].classList.remove("selected");
     }
 }
-
-
-//  Name: gameLogic.js
-//  Author : Nicolas Gardin
-//  Author : Vincent Susinu
-//  Date Modified: 02/08/2019
-
 
 
 function changeScreen(){
@@ -198,6 +202,7 @@ function changeScreen(){
         bottomBar[i].style.display = "block";
     }
 }
+
 
 function createPlayer(num, name, imageName){
     let player = new Player(currentPlayerCount, name, 0,imageName);
@@ -215,6 +220,7 @@ function createPlayer(num, name, imageName){
         console.log("Missed it");
     }
 }
+
 
 class Player{
 
