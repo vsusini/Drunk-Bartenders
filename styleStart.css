@@ -7,7 +7,7 @@ body{
 	padding: none; margin: none;
 }
 
-/*---------charSelection----------*/
+/*---------charSelection---------*/
 	#charSelection{
 		display: block;
 		height: 100vh; width: 100vw;
@@ -380,49 +380,49 @@ body{
 
 
 /*-----------gameScreen----------*/
-#gameScreen{
-	height: 90vh; width: 1000vw;
-	background-color: black;
-}
-#gameScreen2{
-	position: absolute;
-	height: 90vh; width: 1000vw;
-	display: inline-block;
-}
-.seperator{
-	height: 100vh; width: 5vw;
-	position: relative;
-	left: -2.5vw; top: 0;
-	padding: 0; margin: 0;
-}
-.gameTile{
-	height: 50vh; width: 17vw;
-	margin-top: 5vh; margin-left: 7vw;
-	/*box-shadow: 10px 10px 30px black;*/
-	display: inline-block;
-	/*background-color: black;*/
-	left: 0; right: 0;
-	position: relative;
-}
-.gameBgs{
-	display: inline-block;
-	height: 90vh; width: 100vw;
-	background-size: cover;
-	background-position: -10vh;
-	/*evenly distribute tiles*/
-	display: inline-block;
-}
+	#gameScreen{
+		height: 90vh; width: 1000vw;
+		background-color: black;
+	}
+	#gameScreen2{
+		position: absolute;
+		height: 90vh; width: 1000vw;
+		display: inline-block;
+	}
+	.seperator{
+		height: 100vh; width: 5vw;
+		position: relative;
+		left: -2.5vw; top: 0;
+		padding: 0; margin: 0;
+	}
+	.gameTile{
+		height: 80vh; width: 24.7%;
+		margin-top: 0vh; margin-left: 0vw;
+		/*box-shadow: 10px 10px 30px black;*/
+		display: inline-block;
+		/*background-color: black;*/
+		left: 0; right: 0;
+		position: relative;
+		padding: 20px;
+		box-sizing: border-box;
+	}
+	.gameBgs{
+		display: inline-block;
+		height: 90vh; width: 100vw;
+		background-size: cover;
+		background-position: -10vh;
+		/*evenly distribute tiles*/
+	}
 
 
-/*game background 1*/
+/*---------game background 1-----*/
 	#gameBg1{
-		background-image: url("images/gameBG8.jpg");
+		/*background-image: url("images/gameBG8.jpg");*/
 		background-position: -10vh;
 	}
 	#card1, #card2, #card3, #card4{
 		background-repeat: no-repeat;
 		background-size: contain;
-		background-image: url("images/Card2.png");
 	}
 	#tileText1{
 		color: white;
@@ -431,42 +431,89 @@ body{
 		font-size: 4vh;
 	}
 
-/*game background 2*/
+
+/*---------game background 2-----*/
 	#gameBg2{
-		background-image: url("images/gameScreen1.jpg");
+		/*background-image: url("images/gameScreen1.jpg");*/
 	}
 
 
 
-.bottomPanel{
-	position: fixed;
-	height: 10vh; 
-}
+/*bottom panel*/
+	.bottomPanel{
+		display: none;
+		position: fixed;
+		height: 10vh; 
+	}
+	#controlPanel{
+		bottom: 0; left: 0;
+		width: 100vw;
+		background-color: #002266;
+		box-sizing: border-box;
+		color: white;
+	}
+	#rollText{/**/
+		font-size: 3vh;
+		vertical-align: middle;
+		text-align: center;	
+	}
+	#rollDie{
+		height: 10vh; width: 50vw;
+		position: absolute;
+		left: 0; bottom: 0;	
+		background-color: #002266;
+		padding: 0; margin: 0;	
+	}
+	#rollDieText, #rollTurnText{
+		left: 0;
+		width: 50vw;
+	}
+	#rollTurnText{
+		display: none;
+	}
+	.panelController{
+		width: 	50%;
+	}
+	.panelController:hover{
+		background-color: #001133;
+	}
+	.panelText{
+		float: left;
+		vertical-align: middle;
+		text-align: center;	
+		font-size: 3vh;
+		line-height: 10vh;
+		vertical-align: middle;
+		text-align: center;	
+		padding: 0; margin: 0;
+		position: absolute;
+		bottom: 0;	
+		height: 10vh; width: 50vw;
+	}
+	.panelText:hover{
+		background-color: #001133;
+		cursor: pointer;
+	}
+	#rollNumText{
+		left: 50vw;
+	}
+	#rollNum{
+		left: 50vw;	
+		padding: 0; margin: 0;
+	}
+/*	#rollTurn{
+		left: 33.3vw;	
+		background-color: #002266;
+		padding: 0; margin: 0;
+	}*/
 
-#controlPanel{
-	bottom: 0; left: 0;
-	width: 80vw;
-	background-color: grey;
-	border: 20px solid black;
-	box-sizing: border-box;
-}
-#rollDice{
-	bottom: 0; right: 0;
-	width: 20vw;
-	background-color: red; color: white;
-	text-align: center;
-	margin: 0; padding: 0;
-}
-#rollText{
-	font-size: 2vh;
-}
-#rollNum{
-	font-size: 2vh;
-}
-.playerStyle{
-	background-image: url("images/stormtrooper_char.png");
-	height: 20vh; width: 8vh;
-	position: fixed; bottom: 20vh;
-}
+	
+
+
+	.playerStyle{
+		background-image: url("images/stormtrooper_char.png");
+		height: 20vh; width: 8vh;
+		position: fixed; bottom: 20vh;
+	}
 
 

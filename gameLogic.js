@@ -8,8 +8,8 @@ function increaseMoveCount(){
 function layoutStartingPositions(){
     //display characters
     var left = 0;
-    maxSpot = 40;
-    result = 40 / playerCount
+    maxSpot = 25;
+    result = maxSpot / playerCount
     for(var i=0; i<playerCount; i++){
         var game_screen = document.getElementById("gameScreen");
         var node = document.createElement("img");

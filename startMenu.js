@@ -183,6 +183,11 @@ function changeScreen(){
 
     charSelection.style.display = "none";
     gameScreen.style.display = "block";
+
+    var bottomBar = document.getElementsByClassName("bottomPanel");
+    for(var i = 0; i<bottomBar.length; i++){
+        bottomBar[i].style.display = "block";
+    }
 }
 
 function createPlayer(num, name, imageName){
