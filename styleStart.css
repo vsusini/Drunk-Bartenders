@@ -387,62 +387,54 @@ body{
 #gameScreen2{
 	position: absolute;
 	height: 90vh; width: 1000vw;
+	display: inline-block;
 }
 .seperator{
 	height: 100vh; width: 5vw;
-
 	position: relative;
 	left: -2.5vw; top: 0;
 	padding: 0; margin: 0;
 }
 .gameTile{
 	height: 50vh; width: 17vw;
-	 margin-top: 5vh;
+	margin-top: 5vh; margin-left: 7vw;
 	/*box-shadow: 10px 10px 30px black;*/
 	display: inline-block;
-/*	background-color: black;*/
-	margin-left: auto; margin-right: auto;
+	/*background-color: black;*/
 	left: 0; right: 0;
 	position: relative;
-
 }
 .gameBgs{
 	display: inline-block;
 	height: 90vh; width: 100vw;
 	background-size: cover;
 	background-position: -10vh;
-	margin-right: 1vw;
+	/*evenly distribute tiles*/
+	display: inline-block;
 }
 
 
-#gameBg1{
-	background-image: url("images/gameScreen1.jpg");
-	background-position: -10vh;
-	background-color: black;
-	display: flex;
-	 text-align: justify;
-	  -ms-text-justify: distribute-all-lines;
-	  text-justify: distribute-all-lines;
-}
-#card1, #card2, #card3, #card4{
-	background-repeat: no-repeat;
-	background-size: contain;
-/*	box-shadow: 10px 10px 30px black;*/
-	background-image: url("images/Card2.png");
-}
-#tileText1{
-	color: white;
-	text-align: center;
-	padding-top: 10vh;
-	font-size: 4vh;
-}
+/*game background 1*/
+	#gameBg1{
+		background-image: url("images/gameBG8.jpg");
+		background-position: -10vh;
+	}
+	#card1, #card2, #card3, #card4{
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-image: url("images/Card2.png");
+	}
+	#tileText1{
+		color: white;
+		text-align: center;
+		padding-top: 10vh;
+		font-size: 4vh;
+	}
 
-
-
-
-#gameBg2{
-	background-image: url("images/gameScreen1.jpg");
-}
+/*game background 2*/
+	#gameBg2{
+		background-image: url("images/gameScreen1.jpg");
+	}
 
 
 
