@@ -9,7 +9,9 @@ var characterNames = ["Kim Jong Un", "Storm Trooper", "McLovin", "George",
     "Trump", "Brian", "Forest Gump", "Sparta", "Jesus", "Jimmy Neutron", "Bud Light", 
     "Oprah", "Tiger Woods", "Titanic", "Thanos", "Michael Jackson", "Thor", "Donkey", 
     "Joey", "Hirambe", "Johnny Sins"];
-var characterImages = ["images/stormtrooper_char.png"];
+var characterImages = ["characterModels/un.png","images/stormtrooper_char.png", 
+"characterModels/lesley.png", "characterModels/george.png", "characterModels/crimsen.png", 
+"characterModels/crimsen.png", "", "", "", "", ""];
 
 makeAllPlayerSelected();
 

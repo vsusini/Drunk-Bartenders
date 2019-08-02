@@ -1,3 +1,6 @@
+
+
+
 var playerMoveCount = 0;
 
 function increaseMoveCount(){
