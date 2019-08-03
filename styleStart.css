@@ -501,18 +501,21 @@ body::-webkit-scrollbar-thumb {
 		z-index: 	10;
 		text-align: center;
 		box-shadow: 5px 5px 10px black;
+		transition: 0.5s;
 	}
 	#legendBtn:hover{
 		cursor: pointer;
 	}
 	#sidePanel{
 		position: fixed;
-		right: 0; top: 5vh;
+		right: 0; top: 10vh;
 		height: 70vh; width: 0vw;
 		z-index: 11;
-		background-color: white;
-		color: black;
+		background-color: #1f1f1f;
+		color: white;
 		transition: 0.5s;
+		box-shadow: 5px 5px 10px black;
+
 	}
 
 

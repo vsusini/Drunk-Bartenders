@@ -89,7 +89,7 @@
 
 		<!-- character divs appended here (from game logic) -->
 
-		<div id=legendBtn onclick="openNav()">☰ Legend</div>
+		<div id=legendBtn onclick="navFunction()">☰ Legend</div>
 		<div id=sidePanel>
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br>
 		  <a href="#">1</a><br>
@@ -194,12 +194,49 @@
 	<script type="text/javascript" src="gameLogic.js"></script>
 
 	<script>
+
+		function navFunction(){
+		  var sidePanel = document.getElementById("sidePanel");
+		  var legendBtn = document.getElementById("legendBtn");
+
+		  var panelState = legendBtn.innerText;
+		  if(!navIsOpen(panelState)){
+		  	//open nav
+		    sidePanel.style.width = "20vw";
+			legendBtn.style.width = "20vw";
+		  	legendBtn.innerHTML = "× Close Nav";
+		  }
+		  else{
+		  	//close nav
+		  	sidePanel.style.width = "0";
+		  	legendBtn.style.width = "10vw";
+		  	legendBtn.innerHTML = "☰ Legend";
+		  }
+		}
+
+		function navIsOpen(panelState){
+			if(panelState == "☰ Legend"){
+				return false;
+			}
+			return true;
+		}
+
+
 		function openNav() {
 		  document.getElementById("sidePanel").style.width = "20vw";
+		  document.getElementById("legendBtn");
+		  var legendBtn = document.getElementById("legendBtn");
+		  legendBtn.style.width = "20vw";
+		  legendBtn.innerHTML = "× Close";
+
 		}
 
 		function closeNav() {
 		  document.getElementById("sidePanel").style.width = "0";
+		  var legendBtn = document.getElementById("legendBtn");
+		  legendBtn.style.width = "10vw";
+		  legendBtn.innerHTML = "☰ Legend";
+
 		}
 	</script>
 

@@ -6,6 +6,36 @@
 
 
 
+
+//------ navbar functions -------------
+	function navFunction(){
+		var sidePanel = document.getElementById("sidePanel");
+		var legendBtn = document.getElementById("legendBtn");
+
+		var panelState = legendBtn.innerText;
+		if(!navIsOpen(panelState)){
+		   //open nav
+		    sidePanel.style.width = "20vw";
+			legendBtn.style.width = "20vw";
+		  	legendBtn.innerHTML = "× Close Nav";
+		  }
+		  else{
+		  	//close nav
+		  	sidePanel.style.width = "0";
+		  	legendBtn.style.width = "10vw";
+		  	legendBtn.innerHTML = "☰ Legend";
+		  }
+		}
+
+		function navIsOpen(panelState){
+			if(panelState == "☰ Legend"){
+				return false;
+			}
+			return true;
+		}
+
+
+
 function waitForAction(playerNum){
 	var nextPlayer = document.getElementById("nextPlayer");
 	nextPlayer.addEventListener("click", function(){nextPlayersTurn(playerNum)});
