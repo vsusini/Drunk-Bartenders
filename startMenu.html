@@ -86,7 +86,17 @@
 	</div>
 
 	<div id="gameScreen">
+
 		<!-- character divs appended here (from game logic) -->
+
+		<div id=legendBtn onclick="openNav()">☰ Legend</div>
+		<div id=sidePanel>
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br>
+		  <a href="#">1</a><br>
+		  <a href="#">2</a><br>
+		  <a href="#">3</a><br>
+		  <a href="#">4</a>
+		</div>
 
 		<div id="gameScreen2">
 			<div id=gameBg1 class=gameBgs>
@@ -183,12 +193,15 @@
 	<script type="text/javascript" src="dice.js"></script>
 	<script type="text/javascript" src="gameLogic.js"></script>
 
-	<!-- <script>
-	var charSelection = document.getElementById("charSelection");
-	var gameScreen = document.getElementById("gameScreen");
-	charSelection.style.display = "none";
-	gameScreen.style.display = "block";
-	</script> -->
+	<script>
+		function openNav() {
+		  document.getElementById("sidePanel").style.width = "20vw";
+		}
+
+		function closeNav() {
+		  document.getElementById("sidePanel").style.width = "0";
+		}
+	</script>
 
 </body>
 
