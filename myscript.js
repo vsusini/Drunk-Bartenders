@@ -7,7 +7,7 @@
 
 
 
-//------ navbar functions -------------
+//------ navbar functions (Currently running in startMenu.html) -------------
 	function navFunction(){
 		var sidePanel = document.getElementById("sidePanel");
 		var legendBtn = document.getElementById("legendBtn");
@@ -17,15 +17,15 @@
 		   //open nav
 		    sidePanel.style.width = "20vw";
 			legendBtn.style.width = "20vw";
-		  	legendBtn.innerHTML = "× Close Nav";
-		  }
-		  else{
+		  	legendBtn.innerHTML = "× Close";
+		}
+		else{
 		  	//close nav
 		  	sidePanel.style.width = "0";
 		  	legendBtn.style.width = "10vw";
 		  	legendBtn.innerHTML = "☰ Legend";
 		  }
-		}
+	}
 
 		function navIsOpen(panelState){
 			if(panelState == "☰ Legend"){

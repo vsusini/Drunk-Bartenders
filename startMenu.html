@@ -91,11 +91,42 @@
 
 		<div id=legendBtn onclick="navFunction()">☰ Legend</div>
 		<div id=sidePanel>
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br>
-		  <a href="#">1</a><br>
-		  <a href="#">2</a><br>
-		  <a href="#">3</a><br>
-		  <a href="#">4</a>
+			
+			<div id=item1Div class="itemDiv odd">
+				<div id=item1Img class=itemImg> </div>
+				<div id=item1Text class=itemText> - Take 2 shots </div>
+			</div>
+
+			<div id=item2Div class="itemDiv even">
+				<div id=item2Img class=itemImg> </div>
+				<div id=item2Text class=itemText> - Kings cup </div>
+			</div>
+
+			<div id=item3Div class="itemDiv odd">
+				<div id=item3Img class=itemImg> </div>
+				<div id=item3Text class=itemText> - Do something jere I hope this text fits </div>
+			</div>
+
+			<div id=item4Div class="itemDiv even">
+				<div id=item4Img class=itemImg> </div>
+				<div id=item4Text class=itemText> - Take 2 shots </div>
+			</div>
+
+			<div id=item5Div class="itemDiv odd">
+				<div id=item5Img class=itemImg> </div>
+				<div id=item5Text class=itemText> - Take 2 shots </div>
+			</div>
+
+			<div id=item6Div class="itemDiv even">
+				<div id=item6Img class=itemImg> </div>
+				<div id=item6Text class=itemText> - Take 2 shots </div>
+			</div>
+
+			<div id=item7Div class="itemDiv odd">
+				<div id=item7Img class=itemImg> </div>
+				<div id=item7Text class=itemText> - Take 2 shots </div>
+			</div>
+
 		</div>
 
 		<div id="gameScreen2">
@@ -169,7 +200,6 @@
 		<!-- <div id=floor></div> -->
 
 		<div id=controlPanel class=bottomPanel>
-
 			<div id=rollDie class=panelContainer>
 				<p id=rollDieText class=panelText onclick="continueGame();"> Roll Die </p>
 				<p id=rollTurnText class=panelText onclick="moveToPlayer();"> Player X's Turn > </p>
@@ -178,14 +208,7 @@
 			<div id=rollNum class=panelContainer>
 				<p id=rollNumText class=panelText> Roll: <span id="dieValue"> </span></p>
 			</div>
-
-
 		</div>
-
-<!-- 		<div id=rollDice class=bottomPanel>
-			<p id=rollText> Roll Dice </p>
-			<p id=rollNum> You rolled a _ </p>
-		</div> -->
 
 	</div>
 
@@ -204,7 +227,7 @@
 		  	//open nav
 		    sidePanel.style.width = "20vw";
 			legendBtn.style.width = "20vw";
-		  	legendBtn.innerHTML = "× Close Nav";
+		  	legendBtn.innerHTML = "× Close";
 		  }
 		  else{
 		  	//close nav
@@ -221,23 +244,6 @@
 			return true;
 		}
 
-
-		function openNav() {
-		  document.getElementById("sidePanel").style.width = "20vw";
-		  document.getElementById("legendBtn");
-		  var legendBtn = document.getElementById("legendBtn");
-		  legendBtn.style.width = "20vw";
-		  legendBtn.innerHTML = "× Close";
-
-		}
-
-		function closeNav() {
-		  document.getElementById("sidePanel").style.width = "0";
-		  var legendBtn = document.getElementById("legendBtn");
-		  legendBtn.style.width = "10vw";
-		  legendBtn.innerHTML = "☰ Legend";
-
-		}
 	</script>
 
 </body>

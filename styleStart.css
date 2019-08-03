@@ -501,7 +501,7 @@ body::-webkit-scrollbar-thumb {
 		z-index: 	10;
 		text-align: center;
 		box-shadow: 5px 5px 10px black;
-		transition: 0.5s;
+		transition: 0.3s;
 	}
 	#legendBtn:hover{
 		cursor: pointer;
@@ -515,7 +515,50 @@ body::-webkit-scrollbar-thumb {
 		color: white;
 		transition: 0.5s;
 		box-shadow: 5px 5px 10px black;
+		overflow-y: auto;
+	}
 
+	.itemDiv{
+		position: relative;
+		margin: 10px;
+		height: 15%; width: 90%;
+	}
+	.itemImg{
+		position: relative;
+		display: inline-block;
+		left: 0; top: 0;
+		height: 100%; width: 40%;
+		background-image: url("images/kirbyBG.jpg");
+		background-size: contain;
+		float: left;
+	}
+	.itemText{
+		position: relative;
+		display: inline-block;
+		height: 100%; width: 50%;
+		float: right;
+		overflow: hidden;
+	}
+	#sidePanel::-webkit-scrollbar {
+    width: 1em;
+	}
+	#sidePanel::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	}
+	#sidePanel::-webkit-scrollbar-thumb {
+	  background-color: darkgrey;
+	  outline: 1px solid slategrey;
+	}
+	.odd{
+		background-color: grey;
+	}
+	.even{
+		background-color: darkgrey;
+	}
+
+
+	#item2Div{
+		/*background-color: green;*/
 	}
 
 
