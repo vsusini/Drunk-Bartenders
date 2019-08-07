@@ -78,19 +78,25 @@ function addDieValueToScreen(move){
 
 function moveToPlayer(){
     document.getElementById("dieValue").innerHTML = "";
-    alert("Move to players current position")
-
     var player = document.getElementById("player"+playerMoveCount);
 
-
+    //Move to player position.
     var position = player.getBoundingClientRect();
-
     window.scrollTo(position.x,position.y);
 
     dieText = document.getElementById("rollDieText");
     turnText = document.getElementById("rollTurnText");
     dieText.style.display = "block";
     turnText.style.display = "none";
+
+    //Start Jump
+    player.style.setProperty("bottom","30vh");
+
+    //Stall for 1sec then lower player again. 
+    setTimeout(function(){
+        console.log("Running");
+        player.style.setProperty("bottom","15vh");
+    }, 1000);
 
 }
 
