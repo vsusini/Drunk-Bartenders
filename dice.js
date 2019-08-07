@@ -7,14 +7,7 @@ var dice = {
     }
 }
 
-function printNumber(number) {
-    //var placeholder = document.getElementById('dice');
-    //placeholder.innerHTML = number;
-    console.log("pribtn");
-}
-
 function rollDie(){
     var result = dice.roll();
-    printNumber(result);
     return result;
 }
