@@ -433,6 +433,7 @@ body::-webkit-scrollbar-thumb {
 		background-size: auto;
 		background-size: 100% 100%;
 		z-index: 3;
+		cursor: pointer;
 
 	}
 	.gameBgs{
@@ -444,6 +445,7 @@ body::-webkit-scrollbar-thumb {
 		overflow-y: hidden;
 		z-index: 3;
 	}
+
 
 /*-------------navbar----------*/
 
@@ -576,6 +578,12 @@ body::-webkit-scrollbar-thumb {
 		padding-top: 10vh;
 		font-size: 4vh;
 	}
+/*	.cardDesc{
+		position: relative;
+		left: 0; top: 0;
+		height: 10%; width: 100%;
+		background-color: red;
+	}*/
 
 
 /*---------game background 2-----*/
@@ -661,5 +669,66 @@ body::-webkit-scrollbar-thumb {
 		transform: skew(-0.07turn, 0deg);
 		background-image: url("characterModels/floorTile.jpg");
 	}
+
+
+/*------------Model---------------*/
+#modelDialog{
+	position: fixed; 
+	left: 20vw; top: 0;
+	margin-top: 15vh;
+	height: 50vh; width: 60vw;
+	background-color: #1f1f1f;
+	z-index: 20;
+	display: none;
+	border: 1px solid black;
+	box-shadow: 10px 10px 30px black;
+}
+/*#xBtn{
+	position: relative;
+	left: 0; top: 0;
+	height: 15vh; width: 15vw;
+	background-color: red;
+	display: block;
+}*/
+
+#coverProof{
+	position: fixed;
+	left: 0; top: 0;
+	height: 100vh; width: 100vw;
+	z-index: 19;
+	display: none;
+}
+#modelImg{
+	position: absolute;
+	left: 10px; top: 10px;
+	height: 47vh; width: 18vw;
+}
+/*#img2{
+	position: absolute;
+	left: 10px; top: 10px;
+	height: 10vh; width: 5vw;
+	background-color: red;	
+	display: block;
+}*/
+#modelText{
+	position: absolute;
+	right: 10px; top: 10px;
+	height: 47vh; width: 39vw;
+	background-color: darkgrey;
+	text-align: center;
+	padding-top: 8vh;
+	font-size: 4vh;
+	box-sizing: border-box;
+	padding-left: 6vw; padding-right: 6vw;
+}
+
+
+
+
+
+
+
+
+
 
 

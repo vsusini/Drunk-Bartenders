@@ -14,6 +14,8 @@
 		-make character selection seem more seamless
 		-on player hover, should we display player #/name?
 		-create legend for card icons
+		-*** NEED TO BLUR EVERYTHING ON SCREEN ON MODEL DIALOG OPEN
+		-*** SET MODEl IMG DYNAMICALLY USING cardNum
 	FIX:
 		-fix player images and gifs on char selection manu
 		-finding players on moveToPlayer() seems to mess up later in game.
@@ -88,7 +90,7 @@
 
 		<!-- character divs appended here (from game logic) -->
 
-		<div id=legendBtn onclick="navFunction()">☰ Legend</div>
+		<div id=legendBtn onclick="navFunction()">☰ Help</div>
 		<div id=sidePanel>
 			
 			<div id=item1Div class="itemDiv odd">
@@ -125,16 +127,24 @@
 				<div id=item7Img class=itemImg> </div>
 				<div id=item7Text class=itemText> - Take 2 shots </div>
 			</div>
+		</div>
 
+		<!-- coverProof ensures nothing can be click during game when dialog
+		pops up, closes dialog when somewhere else is clicked -->
+		<div id=coverProof onclick="closeModel()"></div>
+
+		<div id=modelDialog>
+			<img id=modelImg src="images/Card1Num1.png"></img>
+			<div id=modelText> </div>
 		</div>
 
 		<div id="gameScreen2">
 			<div id=gameBg1 class=gameBgs>
-				<img src="images/Card1Num1.png" id=card1 name=t1 class=gameTile>
-				</img> 
-				<img src="images/Card1Num2.png" id=card2 name=t1 class=gameTile>
+				<img src="images/Card1Num1.png" id=card1 name=t1 class=gameTile onclick="openModel(1)">
 				</img>
-				<img src="images/Card1Num3.png" id=card3 name=t1 class=gameTile>
+				<img src="images/Card1Num2.png" id=card2 name=t1 class=gameTile onclick="openModel(2)">
+				</img>
+				<img src="images/Card1Num3.png" id=card3 name=t1 class=gameTile onclick="openModel(3)">
 				</img>
 				<img src="images/Card1Num4.png" id=card4 name=t1 class=gameTile>
 				</img>
@@ -217,6 +227,50 @@
 
 	<script>
 
+			var model = document.getElementById("modelDialog");
+			var modelText = document.getElementById("modelText");
+
+			var gameScreen = document.getElementById("gameScreen2");
+			var coverProof = document.getElementById("coverProof");
+			var message;
+
+		function openModel(cardNum){
+
+			switch(cardNum){
+				case 1:
+					message = "This is the starting square, get ready to drink!";
+					break;
+				case 2:
+					message = "this is card 2's message";
+					break;
+				case 3:
+					message = "this is card 3's message";
+					break;
+			}
+			modelText.innerHTML = message;
+
+			model.style.display = "block";
+			modelText.style.display = "block";
+			modelImg.style.display = "block";
+
+			coverProof.style.display = "block";
+			gameScreen.style.filter = "blur(50px)";
+			
+		}
+
+		function closeModel(){
+			model.style.display = "none";
+			modelText.style.display = "none";
+			modelImg.style.display = "none";
+
+			coverProof.style.display = "none";
+			gameScreen.style.filter = "none";
+		}
+
+
+
+
+
 		function navFunction(){
 		  var sidePanel = document.getElementById("sidePanel");
 		  var legendBtn = document.getElementById("legendBtn");
@@ -232,12 +286,12 @@
 		  	//close nav
 		  	sidePanel.style.width = "0";
 		  	legendBtn.style.width = "10vw";
-		  	legendBtn.innerHTML = "☰ Legend";
+		  	legendBtn.innerHTML = "☰ Help";
 		  }
 		}
 
 		function navIsOpen(panelState){
-			if(panelState == "☰ Legend"){
+			if(panelState == "☰ Help"){
 				return false;
 			}
 			return true;
