@@ -94,38 +94,15 @@
 			
 			<div id=item1Div class="itemDiv odd">
 				<div id=item1Img class=itemImg> </div>
-				<div id=item1Text class=itemText> - Take 2 shots </div>
+				<div id=item1Text class=itemText> Hey! We know you'd be confused...<br><br> Heres how we can help: </div>
 			</div>
 
 			<div id=item2Div class="itemDiv even">
 				<div id=item2Img class=itemImg> </div>
-				<div id=item2Text class=itemText> - Kings cup </div>
+				<div id=item2Text class=itemText> </div>
 			</div>
 
-			<div id=item3Div class="itemDiv odd">
-				<div id=item3Img class=itemImg> </div>
-				<div id=item3Text class=itemText> - Do something jere I hope this text fits </div>
-			</div>
-
-			<div id=item4Div class="itemDiv even">
-				<div id=item4Img class=itemImg> </div>
-				<div id=item4Text class=itemText> - Take 2 shots </div>
-			</div>
-
-			<div id=item5Div class="itemDiv odd">
-				<div id=item5Img class=itemImg> </div>
-				<div id=item5Text class=itemText> - Take 2 shots </div>
-			</div>
-
-			<div id=item6Div class="itemDiv even">
-				<div id=item6Img class=itemImg> </div>
-				<div id=item6Text class=itemText> - Take 2 shots </div>
-			</div>
-
-			<div id=item7Div class="itemDiv odd">
-				<div id=item7Img class=itemImg> </div>
-				<div id=item7Text class=itemText> - Take 2 shots </div>
-			</div>
+			
 		</div>
 
 		<!-- coverProof ensures nothing can be click during game when dialog
@@ -284,16 +261,33 @@
 
 		  var panelState = legendBtn.innerText;
 		  if(!navIsOpen(panelState)){
+
 		  	//open nav
-		    sidePanel.style.width = "20vw";
-			legendBtn.style.width = "20vw";
+		    sidePanel.style.width = "30vw";
+			legendBtn.style.width = "30vw";
 		  	legendBtn.innerHTML = "× Close";
+
+		  	var textItems = document.getElementsByClassName("itemText");
+		  	var textImg = document.getElementsByClassName("itemImg");
+		  	for(var i=0; i<textItems.length; i++){
+		  		var textItem = textItems[i];
+		  		textItem.style.opacity = "1";
+		  		itemImg[i].style.opacity = "1";
+		  	}
 		  }
 		  else{
 		  	//close nav
 		  	sidePanel.style.width = "0";
-		  	legendBtn.style.width = "10vw";
+		  	legendBtn.style.width = "5vw";
 		  	legendBtn.innerHTML = "☰ Help";
+
+		  	var textItems = document.getElementsByClassName("itemText");
+		  	var itemImg = document.getElementsByClassName("itemImg");
+		  	for(var i=0; i<textItems.length; i++){
+		  		var textItem = textItems[i];
+		  		textItem.style.opacity = "0";
+		  		itemImg[i].style.opacity = "0";
+		  	}
 		  }
 		}
 
