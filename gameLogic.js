@@ -55,6 +55,8 @@ function addDieValueToScreen(move){
 }
 
 //Called when it needs to find the player on the screen
+//Broken I need to fix, I dont think getBoundingClient does what I want it to do. Once I fix
+//this is should lead to following the player while they move. 
 function moveToPlayer(){
     document.getElementById("dieValue").innerHTML = "";
     var player = document.getElementById("player"+playerMoveCount);
@@ -87,10 +89,17 @@ function playerJump(player){
 //Moves the players image to the correct board spot
 function movePlayer(player,move){
     //Movement of Player Div
-    var node = document.getElementById("player"+player.getPlayerID());
-    var leftVw = node.style.left;
-    leftVw = leftVw.substring(0,leftVw.length-2);
-    node.style.setProperty("left",(parseInt(leftVw,10)+(25*move))+"vw");
+
+    for (var i = 0; i < move;i++){
+        var node = document.getElementById("player"+player.getPlayerID());
+        console.log(player.getName());
+        var leftVw = node.style.left;
+        leftVw = leftVw.substring(0,leftVw.length-2);
+        console.log("leftVw:"+leftVw);
+        node.style.setProperty("left",parseInt(leftVw,10)+25+"vw");
+    }
+
+    //node.style.setProperty("left",(parseInt(leftVw,10)+(25*move))+"vw");
     //console.log("leftVw:"+(parseInt(leftVw,10)+(25*move))+"vw");
 }
 
