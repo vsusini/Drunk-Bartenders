@@ -15,7 +15,6 @@
 		-on player hover, should we display player #/name?
 		-create legend for card icons
 		-*** NEED TO BLUR EVERYTHING ON SCREEN ON MODEL DIALOG OPEN
-		-*** SET MODEl IMG DYNAMICALLY USING cardNum
 	FIX:
 		-fix player images and gifs on char selection manu
 		-finding players on moveToPlayer() seems to mess up later in game.
@@ -134,7 +133,7 @@
 		<div id=coverProof onclick="closeModel()"></div>
 
 		<div id=modelDialog>
-			<img id=modelImg src="images/Card1Num1.png"></img>
+			<img id=modelImg></img>
 			<div id=modelText> </div>
 		</div>
 
@@ -229,25 +228,33 @@
 
 			var model = document.getElementById("modelDialog");
 			var modelText = document.getElementById("modelText");
+			var modelImg = document.getElementById("modelImg");
+
+
 
 			var gameScreen = document.getElementById("gameScreen2");
 			var coverProof = document.getElementById("coverProof");
 			var message;
+			var imgSrc
 
 		function openModel(cardNum){
 
 			switch(cardNum){
 				case 1:
 					message = "This is the starting square, get ready to drink!";
+					imgSrc = "Card1Num1.png"
 					break;
 				case 2:
 					message = "this is card 2's message";
+					imgSrc = "Card1Num2.png"
 					break;
 				case 3:
 					message = "this is card 3's message";
+					imgSrc = "Card1Num3.png"
 					break;
 			}
 			modelText.innerHTML = message;
+			modelImg.src = ("images/" + imgSrc);
 
 			model.style.display = "block";
 			modelText.style.display = "block";
