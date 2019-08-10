@@ -31,14 +31,16 @@
 
 	<div id="charSelection">
 		<div id=controllerDiv>
-		<div id=inputSection>
+
+
+		<div id=btnSection>
 			<p class=inputText> Number of players </p>
 			<div id=btn1 class=btn onclick="numPlayersSelected(1)"> 1 </div>
 			<div id=btn2 class=btn onclick="numPlayersSelected(2)"> 2 </div>
 			<div id=btn3 class=btn onclick="numPlayersSelected(3)"> 3 </div>
 			<div id=btn4 class=btn onclick="numPlayersSelected(4)"> 4 </div>
 			<div id=btn5 class=btn onclick="numPlayersSelected(5)"> 5 </div>
-			<div id=btn6 class=btn onclick="numPlayersSelected(6)"> 6 </div>
+			<div id=btn6 class=btn onclick="numPlayersSelected(6)"> 6 </div><br>
 			<div id=btn7 class=btn onclick="numPlayersSelected(7)"> 7 </div>
 			<div id=btn8 class=btn onclick="numPlayersSelected(8)"> 8 </div>
 			<div id=btn9 class=btn onclick="numPlayersSelected(9)"> 9 </div>
@@ -46,6 +48,7 @@
 			<div id=btn11 class=btn onclick="numPlayersSelected(11)"> 11 </div>
 			<div id=btn12 class=btn onclick="numPlayersSelected(12)"> 12 </div>
 		</div>
+
 		<div id=selectionScreen>
 			<div class="char" id="char1" onclick="choosePlayer(0)"></div>
 			<div class="char" id="char2" onclick="choosePlayer(1)"></div>
@@ -73,11 +76,16 @@
 			<div class="char" id="char24" onclick="choosePlayer(23)"></div>
 			<div class="char" id="char25" onclick="choosePlayer(24)"></div>
 			<div class="char" id="char26" onclick="choosePlayer(25)"></div>
-
 			<div id="displayScreen"></div>
-			<!-- <div id=arrow> </div> -->
 		</div>
 		</div>
+
+		<div id="charSelBottomPanel"> 
+			<p id=normalText> How many people are playing? (1-12) </p>
+		 	<p id=smallText> </p>
+		</div>
+		
+
 	</div>
 
 	<div id="gameScreen">

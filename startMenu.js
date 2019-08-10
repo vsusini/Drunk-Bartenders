@@ -19,7 +19,9 @@ var characterNames = ["Kim Jong Un", "Storm Trooper", "McLovin", "George",
 var characterImages = ["characterModels/un.png","images/stormtrooper_char.png", 
 "characterModels/lesley.png", "characterModels/george.png", "characterModels/crimsen.png", 
 "characterModels/crimsen.png", "", "", "", "", ""];
-
+var charSelBottomPanel = document.getElementById("normalText");
+var smallText = document.getElementById("smallText");
+var playerNumber = 1;
 makeAllPlayerSelected();
 
 
@@ -34,10 +36,15 @@ function numPlayersSelected(numPlayers){
     }
     var playerElm = document.getElementsByClassName("char");
     removeClassSelectedFromPlayers(playerElm);
+    smallText.innerHTML = "You picked " + numPlayers + " players";
+    charSelBottomPanel.innerHTML = "Player " + playerNumber + "'s character selection";
 }
 
 
 function choosePlayer(num) {
+
+    playerNumber = playerNumber+1;
+    charSelBottomPanel.innerHTML = "Player " + playerNumber + "'s character selection";
     switch (num) {
         case 0:
             console.log("You picked Kim Jong Un");

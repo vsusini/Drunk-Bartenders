@@ -34,11 +34,11 @@ body::-webkit-scrollbar-thumb {
 	#charSelection{
 		display: block;
 		height: 100vh; width: 100vw;
-		background-color: grey;
+		background-color: #E0E0E0;
 	/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
 		overflow-y: scroll;
 	}
-/*	#controllerDiv{
+	#controllerDiv{
 		display: block;
 	    position: fixed;
 	    left: 20vw;
@@ -46,12 +46,11 @@ body::-webkit-scrollbar-thumb {
 	    margin-top: 15vh;
 	    height: 50vh;
 	    width: 60vw;
-	    background-color: red;
-	    z-index: 20;
-	    display: none;
+	    background-color: #1f1f1f;
 	    border: 1px solid black;
 	    box-shadow: 10px 10px 30px black;
-	}*/
+	    background-image: url("images/blackBg3.jpg");
+	}
 	#playerNum{
 		margin: 0; padding-left: 1vw;
 		color: white;
@@ -87,40 +86,41 @@ body::-webkit-scrollbar-thumb {
 	  }
 	} 
 
-	#inputSection{
-		height: 20vh; width: 45vw;
-		/*background: black;*/
-		position: fixed; left: 0; top: 0;
-	/*	box-shadow: inset 50px -50px 100px 40px black;*/
+	#btnSection{
+		position: absolute;
+		height: 40%; width: 45%;
+		left: 0; top: 0;
+		margin-left: 3vw;
+		margin-top: 1vh;
 	}
 	.btn{
 		font-size: 1vw;
-		height: 2.5vw; width: 2.5vw;
-		color: black; background-color: white;
+		height: 3vw; width: 3vw;
+		color: white; background-color:none;
 		border-radius: 50%;
 		text-align: center;
-		line-height: 2.5vw;
+		line-height: 3vw;
 		vertical-align: middle;
-		margin-left: 0.5vw;
+		margin-left: 0vw;
 		display: inline-block;
 		cursor: pointer;
 	}
 	.btn:hover{
 		background-color: #1f1f1f;
-		color: white;
+		color: black;
+		background-color: white;
 	}
-	#btn1{
-		margin-left: 2vw;
+	#btn1, #btn7{
+		margin-left: 0;
 	}
 	#input{
-		margin-left: 2vw; margin-top: 1vh;
+		margin-left: 0vw; margin-top: 1vh;
 		position: relative;
 		height: 10%; width: 30%;
 	}
 	.inputText{
 		color: white;
-		font-size: 1.5vw;
-		margin: 2vw;
+		font-size: 1vw;
 	}
 	#selectionText{
 		position: fixed;
@@ -139,31 +139,19 @@ body::-webkit-scrollbar-thumb {
 		margin-right: 3vw;
 		margin-top: 10vh;
 		margin-bottom: 2vh;
-		background-image: url("images/bg3.gif");
+		background-image: url("images/mainGif.gif");
 		background-size: cover;
-	}
-	#arrow{
-		height: 2vh; width: 5vw;
-		position: absolute;
-		bottom: 4vh; left: 72vw;
-		background-image: url("images/down.png");
-		background-size: contain;
-		background-repeat: no-repeat;
-
 	}
 
 	#selectionScreen{
 		padding: 2vw;
 		float: right;
-		height: 100vh; width: 50%;
-		background-image: url("images/bgBlack2.jpg");
+		height: 50vh; width: 50%;
 		background-size: cover;
 		background-repeat: no-repeat;
 		overflow-y: scroll;
-		border-top: 2px solid black;
-		border-bottom: 2px solid black;
-		box-shadow: inset 0 -10px 30px 10px black;
 		z-index: 100;
+		box-sizing: border-box;
 	}
 
 	#startInfo{
@@ -204,7 +192,43 @@ body::-webkit-scrollbar-thumb {
 		100%{opacity: 1;}
 	}
 
+	#selectionScreen::-webkit-scrollbar {
+	    width: 2em;
+	}
+	 
+	#selectionScreen::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	}
+	 
+	#selectionScreen::-webkit-scrollbar-thumb {
+	  background-color: darkgrey;
+	  outline: 1px solid slategrey;
+	}
 
+	#charSelBottomPanel{
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    height: 12vh;
+	    width: 100vw;
+	    background-color: #002266;
+	    text-align: center;
+	    color: white;
+	    vertical-align: middle;
+	    cursor: pointer;
+	}
+	#normalText{
+		font-size: 3vh;
+		padding: none;
+		margin-top: 2vh;
+	}
+	#smallText{
+		margin: none;
+		font-size: 2vh;
+	}
+	p{
+		margin: 1vh;
+	}
 
 	/*.char:hover{
 		transition: 0.5s;
@@ -412,7 +436,8 @@ body::-webkit-scrollbar-thumb {
 	.selected{
 		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 		filter: grayscale(100%);
-		pointer-events: none
+		pointer-events: none;
+		color: grey;
 	}
 
 
