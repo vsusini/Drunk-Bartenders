@@ -107,7 +107,9 @@
 
 		<!-- coverProof ensures nothing can be click during game when dialog
 		pops up, closes dialog when somewhere else is clicked -->
-		<div id=coverProof onclick="closeModel()"></div>
+		<div id=coverProof onclick="closeModel()">
+			<div id=bottomCover> Close Card Description </div>
+		</div>
 
 		<div id=modelDialog>
 			<img id=modelImg></img>
@@ -122,29 +124,29 @@
 				</img>
 				<img src="images/Card1Num3.png" id=card3 name=t1 class=gameTile onclick="openModel(3)">
 				</img>
-				<img src="images/Card1Num4.png" id=card4 name=t1 class=gameTile>
+				<img src="images/Card1Num4.png" id=card4 name=t1 class=gameTile onclick="openModel(4)">
 				</img>
 			</div>
 
 			<div id=gameBg2 class=gameBgs>
-				<img src="FinishedCards/card.png" id=card5 name=t1 class=gameTile>
+				<img src="FinishedCards/card.png" id=card5 name=t1 class=gameTile onclick="openModel(5)">
 				</img> 
-				<img src="FinishedCards/card2.png" id=card6 name=t1 class=gameTile>
+				<img src="FinishedCards/card2.png" id=card6 name=t1 class=gameTile onclick="openModel(6)">
 				</img>
-				<img src="FinishedCards/card6.png" id=card7 name=t1 class=gameTile>
+				<img src="FinishedCards/card6.png" id=card7 name=t1 class=gameTile onclick="openModel(7)">
 				</img>
-				<img src="FinishedCards/card4.png" id=card8 name=t1 class=gameTile>
+				<img src="FinishedCards/card4.png" id=card8 name=t1 class=gameTile onclick="openModel(8)">
 				</img>
 			</div>
 
 			<div id=gameBg3 class=gameBgs>
-				<img src="FinishedCards/card7.png" id=card9 name=t1 class=gameTile>
+				<img src="FinishedCards/card7.png" id=card9 name=t1 class=gameTile onclick="openModel(9)">
 				</img> 
-				<img src="FinishedCards/card8.png" id=card10 name=t1 class=gameTile>
+				<img src="FinishedCards/card8.png" id=card10 name=t1 class=gameTile onclick="openModel(10)">
 				</img>
-				<img src="FinishedCards/card9.png" id=card11 name=t1 class=gameTile>
+				<img src="FinishedCards/card9.png" id=card11 name=t1 class=gameTile onclick="openModel(11)">
 				</img>
-				<img src="FinishedCards/card10.png" id=card12 name=t1 class=gameTile>
+				<img src="FinishedCards/card10.png" id=card12 name=t1 class=gameTile onclick="openModel(12)">
 				</img>
 			</div>
 
@@ -219,19 +221,61 @@
 			switch(cardNum){
 				case 1:
 					message = "This is the starting square, get ready to drink!";
-					imgSrc = "Card1Num1.png"
+					imgSrc = "images/Card1Num1.png"
 					break;
 				case 2:
 					message = "this is card 2's message";
-					imgSrc = "Card1Num2.png"
+					imgSrc = "images/Card1Num2.png";
 					break;
 				case 3:
 					message = "this is card 3's message";
-					imgSrc = "Card1Num3.png"
+					imgSrc = "images/Card1Num3.png";
+					break;
+				case 4:
+					message = "this is card 4's message";
+					imgSrc = "images/Card1Num4.png";
+					break;
+
+
+
+				case 5:
+					message = "Team effort, <br><br> Everyone in the room drinks!";
+					imgSrc = "FinishedCards/card.png";
+					break;
+				case 6:
+					message = "Roast to the right <br><br> Complement to the left";
+					imgSrc = "FinishedCards/card2.png";
+					break;
+				case 7:
+					message = "If you're drinking beer, finish it before your next turn. <br><br> Otherwise you're safe.";
+					imgSrc = "FinishedCards/card6.png";
+					break;
+				case 8:
+					message = "Find the oldest person in the room and make them drink <br><br> * If 2nd land, find 2nd oldest *";
+					imgSrc = "FinishedCards/card4.png";
+					break;
+
+
+
+				case 9:
+					message = "Starring contest with a person in the room, loser drinks";
+					imgSrc = "FinishedCards/card7.png";
+					break;
+				case 10:
+					message = "Sometimes we need a break... <br><br> ...you're safe this round";
+					imgSrc = "FinishedCards/card8.png";
+					break;
+				case 11:
+					message = "Give out 6 shots to people in the room";
+					imgSrc = "FinishedCards/card9.png";
+					break;
+				case 12:
+					message = "All chicks drink!";
+					imgSrc = "FinishedCards/card10.png";
 					break;
 			}
 			modelText.innerHTML = message;
-			modelImg.src = ("images/" + imgSrc);
+			modelImg.src = (imgSrc);
 
 			model.style.display = "block";
 			modelText.style.display = "block";

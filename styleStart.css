@@ -739,6 +739,19 @@ body::-webkit-scrollbar-thumb {
 		background-repeat: no-repeat;
 		color: white;
 	}
+	#bottomCover{
+		position: absolute;
+		bottom: 0; left: 0;
+		height: 12vh; width: 100vw;
+		background-color: #002266;
+		text-align: center;
+		color: white;
+		font-size: 4vh;
+		line-height: 10vh;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
 
 
 
