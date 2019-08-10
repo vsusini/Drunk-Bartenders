@@ -34,10 +34,24 @@ body::-webkit-scrollbar-thumb {
 	#charSelection{
 		display: block;
 		height: 100vh; width: 100vw;
-		background-color: black;
+		background-color: grey;
 	/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
 		overflow-y: scroll;
 	}
+/*	#controllerDiv{
+		display: block;
+	    position: fixed;
+	    left: 20vw;
+	    top: 0;
+	    margin-top: 15vh;
+	    height: 50vh;
+	    width: 60vw;
+	    background-color: red;
+	    z-index: 20;
+	    display: none;
+	    border: 1px solid black;
+	    box-shadow: 10px 10px 30px black;
+	}*/
 	#playerNum{
 		margin: 0; padding-left: 1vw;
 		color: white;
@@ -74,16 +88,15 @@ body::-webkit-scrollbar-thumb {
 	} 
 
 	#inputSection{
-		height: 20vh; width: 46vw;
-		background: linear-gradient(to bottom right, #669999 0%, black 90%);
-		background: black;
+		height: 20vh; width: 45vw;
+		/*background: black;*/
 		position: fixed; left: 0; top: 0;
 	/*	box-shadow: inset 50px -50px 100px 40px black;*/
 	}
 	.btn{
 		font-size: 1vw;
 		height: 2.5vw; width: 2.5vw;
-		color: white; background-color: red;
+		color: black; background-color: white;
 		border-radius: 50%;
 		text-align: center;
 		line-height: 2.5vw;
@@ -93,8 +106,8 @@ body::-webkit-scrollbar-thumb {
 		cursor: pointer;
 	}
 	.btn:hover{
-		background-color: white;
-		color: black;
+		background-color: #1f1f1f;
+		color: white;
 	}
 	#btn1{
 		margin-left: 2vw;
@@ -119,13 +132,13 @@ body::-webkit-scrollbar-thumb {
 		border-radius: 20%;
 	}
 	#displayScreen{
-		position: absolute; top: 20vh; left: 0%;
+		position: absolute; bottom: 5vh; left: 0%;
 		height: 40%; width: 40%;
 		background-color: white;
-		border-left: 3vw solid black;
-		border-right: 3vw solid black;
-		border-top: 10vh solid black;
-		border-bottom: 20vh solid black;
+		margin-left: 3vw;
+		margin-right: 3vw;
+		margin-top: 10vh;
+		margin-bottom: 2vh;
 		background-image: url("images/bg3.gif");
 		background-size: cover;
 	}
@@ -142,11 +155,13 @@ body::-webkit-scrollbar-thumb {
 	#selectionScreen{
 		padding: 2vw;
 		float: right;
-		height: 68vh; width: 50%;
-		background: linear-gradient(to top left, #669999 0%, black 100%);
+		height: 100vh; width: 50%;
+		background-image: url("images/bgBlack2.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
 		overflow-y: scroll;
-		border-top: 15vh solid black;
-		border-bottom: 10vh solid black;
+		border-top: 2px solid black;
+		border-bottom: 2px solid black;
 		box-shadow: inset 0 -10px 30px 10px black;
 		z-index: 100;
 	}

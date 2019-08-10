@@ -13,8 +13,6 @@
 		-finish all tiles
 		-make character selection seem more seamless
 		-on player hover, should we display player #/name?
-		-create legend for card icons
-		-*** NEED TO BLUR EVERYTHING ON SCREEN ON MODEL DIALOG OPEN
 	FIX:
 		-fix player images and gifs on char selection manu
 		-finding players on moveToPlayer() seems to mess up later in game.
@@ -32,6 +30,7 @@
 <body>
 
 	<div id="charSelection">
+		<div id=controllerDiv>
 		<div id=inputSection>
 			<p class=inputText> Number of players </p>
 			<div id=btn1 class=btn onclick="numPlayersSelected(1)"> 1 </div>
@@ -48,11 +47,6 @@
 			<div id=btn12 class=btn onclick="numPlayersSelected(12)"> 12 </div>
 		</div>
 		<div id=selectionScreen>
-			<div id=selectionText>
-				<h1> Character Selection </h1>
-				<p id=playerNum> Player 1 </p>
-			</div>
-
 			<div class="char" id="char1" onclick="choosePlayer(0)"></div>
 			<div class="char" id="char2" onclick="choosePlayer(1)"></div>
 			<div class="char" id="char3" onclick="choosePlayer(2)"></div>
@@ -81,7 +75,8 @@
 			<div class="char" id="char26" onclick="choosePlayer(25)"></div>
 
 			<div id="displayScreen"></div>
-			<div id=arrow> </div>
+			<!-- <div id=arrow> </div> -->
+		</div>
 		</div>
 	</div>
 
@@ -209,8 +204,6 @@
 			var modelText = document.getElementById("modelText");
 			var modelImg = document.getElementById("modelImg");
 
-
-
 			var gameScreen = document.getElementById("gameScreen2");
 			var coverProof = document.getElementById("coverProof");
 			var message;
@@ -283,6 +276,12 @@
 
 			coverProof.style.display = "block";
 			gameScreen.style.filter = "blur(50px)";
+
+			//remove players during dialog popup
+			var chars = document.getElementsByClassName("playerStyle");
+			for(var i=0; i<chars.length; i++){
+				chars[i].style.display = "none";
+			}
 			
 		}
 
@@ -293,9 +292,13 @@
 
 			coverProof.style.display = "none";
 			gameScreen.style.filter = "none";
+
+			//remove players during dialog popup
+			var chars = document.getElementsByClassName("playerStyle");
+			for(var i=0; i<chars.length; i++){
+				chars[i].style.display = "block";
+			}
 		}
-
-
 
 
 
