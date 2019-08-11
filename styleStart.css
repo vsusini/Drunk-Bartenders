@@ -3,7 +3,7 @@
 	Name: gameLogic.js
 	Author : Nicolas Gardin
 	Author : Vincent Susinu
-	Date Modified: 02/08/2019
+
 */
 
 
@@ -33,6 +33,7 @@
 	}
 
 
+
 /*---------charSelection----------*/
 	#charSelection{
 		display: block;
@@ -44,15 +45,48 @@
 	#controllerDiv{
 		display: block;
 	    position: fixed;
-	    left: 20vw;
+	    left: 0vw;
 	    top: 0;
-	    margin-top: 15vh;
-	    height: 50vh;
-	    width: 60vw;
-	    background-color: #1f1f1f;
+	    margin-top: 0vh;
 	    border: 1px solid black;
 	    box-shadow: 10px 10px 30px black;
 	    background-image: url("images/blackBg3.jpg");
+
+	    padding: 2vw;
+		float: right;
+		height: 100vh; width: 100vw;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow-y: scroll;
+		z-index: 100;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		white-space: nowrap;
+	}
+	#controllerDiv::-webkit-scrollbar {
+	    width: 2em;
+	}
+	 
+	#controllerDiv::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	}
+	 
+	#controllerDiv::-webkit-scrollbar-thumb {
+	  background-color: darkgrey;
+	  outline: 1px solid slategrey;
+	}
+
+	#leftSectionDiv{
+		padding: 1vw;
+		float: left;
+		height: 330vh; width: 60%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow-y: scroll;
+		z-index: 100;
+		box-sizing: border-box;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 	#playerNum{
 		margin: 0; padding-left: 1vw;
@@ -87,11 +121,12 @@
 	  }
 	} 
 	#btnSection{
-		position: absolute;
-		height: 40%; width: 45%;
+		position: fixed;
+		height: 10%; width: 55%;
 		left: 0; top: 0;
 		margin-left: 3vw;
 		margin-top: 1vh;
+		z-index: 5000;
 	}
 	.btn{
 		font-size: 1vw;
@@ -131,6 +166,18 @@
 		display: inline-block;
 		border-radius: 20%;
 	}
+	#selectionScreen{
+		padding: 2vw;
+		float: right;
+		height: 60vh; width: 40%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow-y: scroll;
+		z-index: 100;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		white-space: nowrap;
+	}
 	#displayScreen{
 		position: absolute; bottom: 2vh; left: 0%;
 		height: 55%; width: 40%;
@@ -141,18 +188,6 @@
 		margin-bottom: 2vh;
 		background-image: url("images/character_assets/CharacterSelection_gifs/mainGif.gif");
 		background-size: cover;
-	}
-	#selectionScreen{
-		padding: 2vw;
-		float: right;
-		height: 50vh; width: 50%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		overflow-y: scroll;
-		z-index: 100;
-		box-sizing: border-box;
-		overflow-x: hidden;
-		white-space: nowrap;
 	}
 	#startInfo{
 		position: absolute;
@@ -184,19 +219,25 @@
 	  outline: 1px solid slategrey;
 	}
 	#charSelBottomPanel{
-	    position: absolute;
-	    bottom: 0;
-	    left: 0;
-	    height: 12vh;
-	    width: 100vw;
-	    background-color: #002266;
-	    text-align: center;
+	    position: fixed;
+	    top: 12vh;
+	    left: 0vw;
+	    height: 5vh;
+	    width: 25vw;
+	    background-color: black;
+	    text-align: left;
+	    line-height: 0.5vh;
 	    color: white;
 	    vertical-align: middle;
 	    cursor: pointer;
+	    z-index: 100;
+	    box-shadow: 10px 10px 30px #1f1f1f;
+	    opacity: 0.8;
+	    padding-left: 3vw;
 	}
 	#normalText{
-		font-size: 3vh;
+		font-family: 'Actor';
+		font-size: 2vh;
 		padding: none;
 		margin-top: 2vh;
 	}
@@ -208,7 +249,7 @@
 		margin: 1vh;
 	}
 	.char{
-		height: 25%; width: 45%;
+		height: 25%; width: 18%;
 		margin-left: 1vw; margin-top: 3vh;
 		background-color: black;
 		display: inline-block;
@@ -218,13 +259,260 @@
 	  	cursor: pointer;
 	  	animation-fill-mode: forwards;
 	  	transition: 0.5s;
+	  	z-index: 2000;
 	}
 	.char:hover{
 		box-shadow: 20px 20px 40px 5px black;
 	}
-	#char1:hover ~ #displayScreen {
-		background-image: url("images/character_assets/CharacterSelection_gifs/kim.gif");
+	.charModels{
+		height: 50vh; width: 16vw;
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+/*		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);*/
+		left: 0vw; bottom: 2vh;
+		opacity: 0.15;
+		transition: 0.2s;
+		/*display: none;*/
+		border: 0;
+		z-index: -2;
 	}
+
+	/*-----------group 1----------*/
+		#charModelUn{
+			left: 2vw; bottom: 20vh;
+			content: url("characterModels/kim.png");
+			z-index: 6;
+		}
+		#char1:hover ~ #charModelUn {
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrooper{
+			left: 9vw; bottom: 20vh;
+			content: url("characterModels/trooper.png");
+			z-index: 5;
+		}
+		#char2:hover ~ #charModelTrooper {
+			filter: none;
+			opacity: 1;
+		}
+		#charModelCrimsen{
+			left: 16vw; bottom: 20vh;
+			content: url("characterModels/crimsen.png");
+			z-index: 4;
+		}
+		#char3:hover ~ #charModelCrimsen{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrump{
+			left: 25vw; bottom: 20vh;
+			content: url("characterModels/trump.png");
+			z-index: 4;
+		}
+		#char4:hover ~ #charModelTrump{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelChow{
+			width: 25vw;
+			left: 30vw; bottom: 20vh;
+			content: url("characterModels/chow.png");
+			z-index: 4;
+		}
+		#char5:hover ~ #charModelChow{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelSpongebob{
+			width: 15vw;
+			left: 45vw; bottom: 20vh;
+			content: url("characterModels/spongebob.png");
+			z-index: 0;
+		}
+		#char6:hover ~ #charModelSpongebob{
+			filter: none;
+			opacity: 1;
+		}
+
+	/*-----------group 2----------*/
+		#charModelUn2{
+			left: 2vw; bottom: -45vh;
+			content: url("characterModels/kim.png");
+			z-index: 6;
+		}
+		#char7:hover ~ #charModelUn2 {
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrooper2{
+			left: 9vw; bottom: -45vh;
+			content: url("characterModels/trooper.png");
+			z-index: 5;
+		}
+		#char8:hover ~ #charModelTrooper2{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelCrimsen2{
+			left: 16vw; bottom: -45vh;
+			content: url("characterModels/crimsen.png");
+			z-index: 4;
+		}
+		#char9:hover ~ #charModelCrimsen2{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrump2{
+			left: 25vw; bottom: -45vh;
+			content: url("characterModels/trump.png");
+			z-index: 4;
+		}
+		#char10:hover ~ #charModelTrump2{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelChow2{
+			width: 15vw;
+			left: 30vw; bottom: -45vh;
+			content: url("characterModels/chow.png");
+			z-index: 4;
+		}
+		#char11:hover ~ #charModelChow2{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelSpongebob2{
+			width: 15vw;
+			left: 37vw; bottom: -45vh;
+			content: url("characterModels/spongebob.png");
+			z-index: 4;
+		}
+		#char12:hover ~ #charModelSpongebob2{
+			filter: none;
+			opacity: 1;
+		}
+
+	/*-----------group 3----------*/
+		#charModelUn3{
+			left: 2vw; bottom: -93vh;
+			content: url("characterModels/kim.png");
+			z-index: 6;
+		}
+		#char13:hover ~ #charModelUn3{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrooper3{
+			left: 9vw; bottom: -93vh;
+			content: url("characterModels/trooper.png");
+			z-index: 5;
+		}
+		#char14:hover ~ #charModelTrooper3{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelCrimsen3{
+			left: 16vw; bottom: -93vh;
+			content: url("characterModels/crimsen.png");
+			z-index: 4;
+		}
+		#char15:hover ~ #charModelCrimsen3{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrump3{
+			left: 25vw; bottom: -93vh;
+			content: url("characterModels/trump.png");
+			z-index: 4;
+		}
+		#char16:hover ~ #charModelTrump3{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelChow3{
+			width: 15vw;
+			left: 30vw; bottom: -93vh;
+			content: url("characterModels/chow.png");
+			z-index: 4;
+		}
+		#char17:hover ~ #charModelChow3{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelSpongebob3{
+			width: 15vw;
+			left: 37vw; bottom: -93vh;
+			content: url("characterModels/spongebob.png");
+			z-index: 4;
+		}
+		#char18:hover ~ #charModelSpongebob3{
+			filter: none;
+			opacity: 1;
+		}
+
+	/*-----------group 4----------*/
+		#charModelUn4{
+			left: 2vw; bottom: -142vh;
+			content: url("characterModels/kim.png");
+			z-index: 6
+		}
+		#char19:hover ~ #charModelUn4{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrooper4{
+			left: 9vw; bottom: -142vh;
+			content: url("characterModels/trooper.png");
+			z-index: 5;
+		}
+		#char20:hover ~ #charModelTrooper4{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelCrimsen4{
+			left: 16vw; bottom: -142vh;
+			content: url("characterModels/crimsen.png");
+			z-index: 4; 
+		}
+		#char21:hover ~ #charModelCrimsen4{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelTrump4{
+			left: 25vw; bottom: -142vh;
+			content: url("characterModels/trump.png");
+			z-index: 4;
+		}
+		#char22:hover ~ #charModelTrump4{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelChow4{
+			width: 15vw;
+			left: 30vw; bottom: -142vh;
+			content: url("characterModels/chow.png");
+			z-index: 4;
+		}
+		#char23:hover ~ #charModelChow4{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelSpongebob4{
+			width: 15vw;
+			left: 37vw; bottom: -142vh;
+			content: url("characterModels/spongebob.png");
+			z-index: 4;
+		}
+		#char24:hover ~ #charModelSpongebob4{
+			filter: none;
+			opacity: 1;
+		}
+
+
+
 	#char2:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/trooper.gif");
 	}
@@ -313,6 +601,9 @@
 	}
 
 
+
+
+
 /*---------gameScreen-------------*/
 	#gameScreen{
 		height: 90vh; width: 1000vw;
@@ -346,6 +637,7 @@
 		cursor: pointer;
 		overflow: visible;
 	}
+
 
 
 /*---------side bar---------------*/
@@ -387,7 +679,7 @@
 	  padding: 10px 15px;
 	  border: none;
 	}
-	#legendBtn{
+	#helpBtn{
 		position: fixed;
 		right: 0; top: 5vh;
 		height: 5vh; width: 5vw;
@@ -401,8 +693,9 @@
 		box-shadow: 5px 5px 10px black;
 		transition: 0.2s;
 	}
-	#legendBtn:hover{
+	#helpBtn:hover{
 		cursor: pointer;
+		width: 7vw;
 	}
 	#sidePanel{
 		position: fixed;
@@ -493,11 +786,6 @@
 	}
 
 
-/*---------game background 2------*/
-	#gameBg2{
-		/*background-image: url("images/gameScreen1.jpg");*/
-	}
-
 
 /*---------bottom panel-----------*/
 	.bottomPanel{
@@ -576,6 +864,8 @@
 		background-image: url("characterModels/floorTile.jpg");
 	}
 
+
+
 /*individual styles for characters*/
 	.kimStyle{
 		height: 30vh; width: 10vw;
@@ -587,9 +877,6 @@
 		height: 20vh; width: 10vw;
 		background-color: orange;
 	}
-
-
-
 
 
 

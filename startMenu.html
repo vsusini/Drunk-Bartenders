@@ -3,32 +3,24 @@
 	Name: startMenu.html
 	Author : Nicolas Gardin
 	Author : Vincent Susini
-	Date Modified: 02/08/2019
-
-	TODO: 
-		-moveToPlayerDiv()
-		-scroll with movement of divs
-		-Find character imagesS for game board (list in startMenu)
-		-decide on final character list for game
-		-finish all tiles
-		-on player hover, should we display player #/name?
-	FIX:
-		-finding players on moveToPlayer() seems to mess up later in game.
 -->
-
 
 <!DOCTYPE html>
 <html>
 
 <head>
 	<link rel="stylesheet" href="styleStart.css">
+	<link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
 	<title></title>
 </head>
 
 <body>
 
+	<!-- 1. Character Selection Screen  -->
 	<div id="charSelection">
 		<div id=controllerDiv>
+
+		<div id=leftSectionDiv>
 
 		<div id=btnSection>
 			<p class=inputText> Number of players </p>
@@ -37,7 +29,7 @@
 			<div id=btn3 class=btn onclick="numPlayersSelected(3)"> 3 </div>
 			<div id=btn4 class=btn onclick="numPlayersSelected(4)"> 4 </div>
 			<div id=btn5 class=btn onclick="numPlayersSelected(5)"> 5 </div>
-			<div id=btn6 class=btn onclick="numPlayersSelected(6)"> 6 </div><br>
+			<div id=btn6 class=btn onclick="numPlayersSelected(6)"> 6 </div><!--<br> -->
 			<div id=btn7 class=btn onclick="numPlayersSelected(7)"> 7 </div>
 			<div id=btn8 class=btn onclick="numPlayersSelected(8)"> 8 </div>
 			<div id=btn9 class=btn onclick="numPlayersSelected(9)"> 9 </div>
@@ -46,7 +38,9 @@
 			<div id=btn12 class=btn onclick="numPlayersSelected(12)"> 12 </div>
 		</div>
 
-		<div id=selectionScreen>
+		</div><!-- end leftSectionDiv -->
+
+		<!-- <div id=selectionScreen> -->
 			<img src="images/character_assets/CharacterSelection_images/kimjon.jpeg" class="char" id="char1" onclick="choosePlayer(0)"></img>
 			<img src="images/character_assets/CharacterSelection_images/trooper.png" class="char" id="char2" onclick="choosePlayer(1)"></img><br>
 			<img src="images/character_assets/CharacterSelection_images/lovin.jpg" class="char" id="char3" onclick="choosePlayer(2)"></img>
@@ -73,51 +67,83 @@
 			<img src="images/character_assets/CharacterSelection_images/joey.png" class="char" id="char24" onclick="choosePlayer(23)"></img><br>
 			<img src="images/character_assets/CharacterSelection_images/hirambe.jpg" class="char" id="char25" onclick="choosePlayer(24)"></img>
 			<img src="images/character_assets/CharacterSelection_images/spongebob.jpg" class="char" id="char26" onclick="choosePlayer(25)"></img>
-			<div id="displayScreen"></div>
-		</div>
-		</div>
 
-		<div id="charSelBottomPanel"> 
-			<p id=normalText> How many people are playing? (1-12) </p>
-		 	<p id=smallText> </p>
-		</div>
-		
+			<img class=charModels id=charModelUn> </img>
+			<img class=charModels id=charModelTrooper> </img>
+			<img class=charModels id=charModelCrimsen> </img>
+			<img class=charModels id=charModelTrump> </img>
+			<img class=charModels id=charModelChow> </img>
+			<img class=charModels id=charModelSpongebob> </img>
 
-	</div>
+			<img class=charModels id=charModelUn2> </img>
+			<img class=charModels id=charModelTrooper2> </img>
+			<img class=charModels id=charModelCrimsen2> </img>
+			<img class=charModels id=charModelTrump2> </img>
+			<img class=charModels id=charModelChow2> </img>
+			<img class=charModels id=charModelSpongebob2> </img>
 
-	<div id="gameScreen">
-
-		<!-- character divs appended here (from game logic) -->
-
-		<div id=legendBtn onclick="navFunction()">☰ Help</div>
-		<div id=sidePanel>
+<!-- 			<img class=charModels id=charModelUn3> </img>
+			<img class=charModels id=charModelTrooper3> </img>
+			<img class=charModels id=charModelCrimsen3> </img>
+			<img class=charModels id=charModelTrump3> </img>
+			<img class=charModels id=charModelChow3> </img>
+			<img class=charModels id=charModelSpongebob3> </img>
 			
-			<div id=item1Div class="itemDiv odd">
+			<img class=charModels id=charModelUn4> </img>
+			<img class=charModels id=charModelTrooper4> </img>
+			<img class=charModels id=charModelCrimsen4> </img>
+			<img class=charModels id=charModelTrump4> </img>
+			<img class=charModels id=charModelChow4> </img>
+			<img class=charModels id=charModelSpongebob4> </img> -->
+
+<!-- 			<img src="characterModels/kim.png" class="charModels" id="charModel1"></img> -->
+
+			<!-- <div id="displayScreen"></div> -->
+
+			 <!-- onclick="choosePlayer(0)" -->
+			
+		<!-- </div> -->
+		</div>
+
+			<div id="charSelBottomPanel"> 
+				<p id=normalText> How many people are playing? (1-12) </p>
+			 	<p id=smallText> </p>
+			</div>
+		</div><!--end controllerDiv -->
+	 </div><!--end charSelection -->
+
+
+	<!-- 2. Character Selection Screen  -->
+	<div id="gameScreen">
+		<!-- character divs appended here (from gameLogic.js) -->
+
+		<!-- 2.1 Side panel / HELP button  -->
+		<div id=helpBtn onclick="navFunction()">☰ Help</div>
+		<div id=sidePanel>
+			<div id=item1Div class="itemDiv">
 				<div id=item1Img class=itemImg> </div>
 				<div id=item1Text class=itemText> Hey! We throught you might get confused...<br><br> Heres how we can help: </div>
 			</div>
 
-			<div id=item2Div class="itemDiv even">
+			<div id=item2Div class="itemDiv">
 				<div id=item2Img class=itemImg> </div>
-				<div id=item2Text class=itemText> </div>
+				<div id=item2Text class=itemText> More info ...</div>
 			</div>
-
-			
 		</div>
 
-		<!-- coverProof ensures nothing can be click during game when dialog
-		pops up, closes dialog when somewhere else is clicked -->
-		<div id=coverProof onclick="closeModel()">
-			<div id=bottomCover> Close Card Description </div>
-		</div>
-
+		<!-- 2.2 Modal Dialog -->
 		<div id=modelDialog>
 			<img id=modelImg></img>
 			<div id=modelText> </div>
+			<!-- coverProof ensures nothing can be click during game when dialog
+			pops up, closes dialog when somewhere else is clicked -->
+			<div id=coverProof onclick="closeModel()">
+				<div id=bottomCover> Close Card Description </div>
+			</div>
 		</div>
 
+		<!-- 2.3 Card images -->
 		<div id="gameScreen2">
-
 				<img src="images/Card1Num1.png" id=card1 name=t1 class=gameTile onclick="openModel(1)">
 				</img>
 				<img src="images/Card1Num2.png" id=card2 name=t1 class=gameTile onclick="openModel(2)">
@@ -126,8 +152,6 @@
 				</img>
 				<img src="images/Card1Num4.png" id=card4 name=t1 class=gameTile onclick="openModel(4)">
 				</img>
-
-
 
 				<img src="FinishedCards/card.png" id=card5 name=t1 class=gameTile onclick="openModel(5)">
 				</img> 
@@ -138,8 +162,7 @@
 				<img src="FinishedCards/card4.png" id=card8 name=t1 class=gameTile onclick="openModel(8)">
 				</img>
 
-
-<!-- 			<div id=gameBg3 class=gameBgs> -->
+				<!-- 			<div id=gameBg3 class=gameBgs> -->
 				<img src="FinishedCards/card7.png" id=card9 name=t1 class=gameTile onclick="openModel(9)">
 				</img> 
 				<img src="FinishedCards/card8.png" id=card10 name=t1 class=gameTile onclick="openModel(10)">
@@ -148,12 +171,10 @@
 				</img>
 				<img src="FinishedCards/card10.png" id=card12 name=t1 class=gameTile onclick="openModel(12)">
 				</img>
-<!-- 			</div> -->
-
+				<!-- 			</div> -->
 		</div>
 
-		<!-- <div id=floor></div> -->
-
+		<!-- 2.4 Control panel / Bottom panel -->
 		<div id=controlPanel class=bottomPanel>
 			<div id=rollDie class=panelContainer>
 				<p id=rollDieText class=panelText onclick="continueGame();"> Roll Die </p>
@@ -164,7 +185,6 @@
 				<p id=rollNumText class=panelText> Roll: <span id="dieValue"> </span></p>
 			</div>
 		</div>
-
 	</div>
 
 	<script type="text/javascript" src="startMenu.js"></script>
@@ -201,9 +221,6 @@
 					message = "this is card 4's message";
 					imgSrc = "images/Card1Num4.png";
 					break;
-
-
-
 				case 5:
 					message = "Team effort, <br><br> Everyone in the room drinks!";
 					imgSrc = "FinishedCards/card.png";
@@ -277,7 +294,7 @@
 
 		function navFunction(){
 		  var sidePanel = document.getElementById("sidePanel");
-		  var legendBtn = document.getElementById("legendBtn");
+		  var legendBtn = document.getElementById("helpBtn");
 
 		  var panelState = legendBtn.innerText;
 		  if(!navIsOpen(panelState)){

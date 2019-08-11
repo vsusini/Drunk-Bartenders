@@ -2,7 +2,6 @@
 //  Name: startMenu.js
 //  Author : Nicolas Gardin
 //  Author : Vincent Susinu
-//  Date Modified: 02/08/2019
 
 
 
@@ -71,7 +70,6 @@ function numPlayersSelected(numPlayers){
     }
     var playerElm = document.getElementsByClassName("char");
     removeClassSelectedFromPlayers(playerElm);
-    smallText.innerHTML = "You picked " + numPlayers + " players";
     charSelBottomPanel.innerHTML = "Player " + playerNumber + "'s character selection";
 }
 
@@ -79,6 +77,7 @@ function numPlayersSelected(numPlayers){
 function choosePlayer(num) {
 
     playerNumber = playerNumber+1;
+
     charSelBottomPanel.innerHTML = "Player " + playerNumber + "'s character selection";
     switch (num) {
         case 0:
