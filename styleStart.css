@@ -132,14 +132,14 @@ body::-webkit-scrollbar-thumb {
 		border-radius: 20%;
 	}
 	#displayScreen{
-		position: absolute; bottom: 5vh; left: 0%;
-		height: 40%; width: 40%;
+		position: absolute; bottom: 2vh; left: 0%;
+		height: 55%; width: 40%;
 		background-color: white;
 		margin-left: 3vw;
 		margin-right: 3vw;
 		margin-top: 10vh;
 		margin-bottom: 2vh;
-		background-image: url("images/mainGif.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/mainGif.gif");
 		background-size: cover;
 	}
 
@@ -163,24 +163,6 @@ body::-webkit-scrollbar-thumb {
 		border: 1px black solid;
 		box-shadow: 5px 5px 10px black;
 	}
-
-
-	.char{
-	/*	backface-visibility: hidden;*/
-		height: 25%; width: 45%;
-		margin-left: 1vw; margin-top: 3vh;
-		background-color: black;
-		display: inline-block;
-	  	box-shadow: 5px 5px 10px black;
-	  	background-size: cover;
-	  	background-position: 0px 125px;
-	  	cursor: pointer;
-	  	animation-fill-mode: forwards;
-	}
-	.char:hover{
-		box-shadow: 5px 5px 80px 5px white;
-	}
-
 	@keyframes flipOne{
 		0%{}
 		100%{opacity: 0;}
@@ -230,201 +212,208 @@ body::-webkit-scrollbar-thumb {
 		margin: 1vh;
 	}
 
-	/*.char:hover{
-		transition: 0.5s;
-		border-right: 25px black solid;
-		border-left: 25px black solid;
-		height: 14%; width: 18%;
-		box-shadow: 10px 10px 100px 10px red;
-	}*/
-	#char1{
-		background-image: url("images/kimjon.jpeg");
+	.char{
+		height: 25%; width: 45%;
+		margin-left: 1vw; margin-top: 3vh;
+		background-color: black;
+		display: inline-block;
+	  	box-shadow: 5px 5px 10px black;
+	  	background-size: cover;
+	  	background-position: 0px 125px;
+	  	cursor: pointer;
+	  	animation-fill-mode: forwards;
+	  	transition: 0.5s;
+	}
+	.char:hover{
+		box-shadow: 20px 20px 40px 5px black;
+	}
+/*	#char1{
 		background-position: 0px -30px;
 		margin-top: 1vh;
 
-	}
+	}*/
 	#char1:hover ~ #displayScreen {
-		background-image: url("images/kim.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/kim.gif");
 	}
-	#char2{
+/*	#char2{
 		background-image: url("images/trooper.png");
-	}
+	}*/
 	#char2:hover ~ #displayScreen{
-		background-image: url("images/trooper.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/trooper.gif");
 	}
 
-	#char3{
+/*	#char3{
 		background-image: url("images/lovin.jpg");
 		background-position: 0px 0px;
-	}
+	}*/
 	#char3:hover ~ #displayScreen{
-		background-image: url("images/lovin.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/lovin.gif");
 	}
 
-	#char4{
+/*	#char4{
 		background-image: url("images/george.jpg");
 		background-position: 0px -50px; 
-	}
+	}*/
 	#char4:hover ~ #displayScreen{
-		background-image: url("images/george.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/george.gif");
 	}
 
-	#char5{
+/*	#char5{
 		background-image: url("images/steve.jpg");
 		background-position: 0px 0px; 
 		background-repeat: no-repeat;
-	}
+	}*/
 	#char5:hover ~ #displayScreen{
-		background-image: url("images/steve.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/steve.gif");
 	}
 
-	#char6{
+/*	#char6{
 		background-image: url("images/krimsen.jpg");
 		background-position: 0px 150px; 
-	}
+	}*/
 	#char6:hover ~ #displayScreen{
-		background-image: url("images/krimsen1.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/krimsen1.gif");
 	}
-	#char7{
+/*	#char7{
 		background-image: url("images/show.jpg");
 		background-position: 0px -50px; 
-	}
+	}*/
 	#char7:hover ~ #displayScreen{
-		background-image: url("images/chow.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/chow.gif");
 	}
 
-	#char8{
+/*	#char8{
 		background-image: url("images/hoy.jpg");
-	}
+	}*/
 	#char8:hover ~ #displayScreen{
-		background-image: url("images/hoy1.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/hoy1.gif");
 	}
 
-	#char9{
+/*	#char9{
 		background-image: url("images/dwight.jpg");
 		background-position: 0px 0px; 
-	}
+	}*/
 	#char9:hover ~ #displayScreen{
-		background-image: url("images/dwight.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/dwight.gif");
 	}
 
-	#char10{
+/*	#char10{
 		background-image: url("images/trump.jpg");
-	}
+	}*/
 	#char10:hover ~ #displayScreen{
-		background-image: url("images/trump.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/trump.gif");
 	}
 
-	#char11{
+/*	#char11{
 		background-image: url("images/brian.jpg");
-	}
+	}*/
 	#char11:hover ~ #displayScreen{
-		background-image: url("images/brian1.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/brian1.gif");
 	}
-	#char12{
+/*	#char12{
 		background-image: url("images/gump.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char12:hover ~ #displayScreen{
-		background-image: url("images/gump.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/gump.gif");
 	}
-	#char13{
+/*	#char13{
 		background-image: url("images/sparta.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char13:hover ~ #displayScreen{
-		background-image: url("images/sparta.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/sparta.gif");
 	}
-	#char14{
+/*	#char14{
 		background-image: url("images/jesus.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char14:hover ~ #displayScreen{
-		background-image: url("images/jesus.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/jesus.gif");
 	}
-	#char15{
+/*	#char15{
 		background-image: url("images/neutron.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char15:hover ~ #displayScreen{
-		background-image: url("images/neutron.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/neutron.gif");
 	}
-	#char16{
+/*	#char16{
 		background-image: url("images/bud.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char16:hover ~ #displayScreen{
-		background-image: url("images/bud.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/bud.gif");
 	}
-	#char17{
+/*	#char17{
 		background-image: url("images/oprah.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char17:hover ~ #displayScreen{
-		background-image: url("images/oprah.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/oprah.gif");
 	}
-	#char18{
+/*	#char18{
 		background-image: url("images/tiger.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char18:hover ~ #displayScreen{
-		background-image: url("images/tiger.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/tiger.gif");
 	}
-	#char19{
+/*	#char19{
 		background-image: url("images/titanic.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char19:hover ~ #displayScreen{
-		background-image: url("images/titanic.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/titanic.gif");
 	}
-	#char20{
+/*	#char20{
 		background-image: url("images/thanos.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char20:hover ~ #displayScreen{
-		background-image: url("images/thanos.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/thanos.gif");
 	}
-	#char21{
+/*	#char21{
 		background-image: url("images/mj.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char21:hover ~ #displayScreen{
-		background-image: url("images/mj.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/mj.gif");
 	}
-	#char22{
+/*	#char22{
 		background-image: url("images/fatThor.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char22:hover ~ #displayScreen{
-		background-image: url("images/thor.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/thor.gif");
 	}
-	#char23{
+/*	#char23{
 		background-image: url("images/donkey.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char23:hover ~ #displayScreen{
-		background-image: url("images/donkey.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/donkey.gif");
 	}
-	#char24{
+/*	#char24{
 		background-image: url("images/joey.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char24:hover ~ #displayScreen{
-		background-image: url("images/joey.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/joey.gif");
 	}
-	#char25{
+/*	#char25{
 		background-image: url("images/hirambe.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char25:hover ~ #displayScreen{
-		background-image: url("images/hirambe.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/hirambe.gif");
 	}
-	#char26{
+/*	#char26{
 		background-image: url("images/jonny.jpg");
 		background-position: 0px -40px;
-	}
+	}*/
 	#char26:hover ~ #displayScreen{
-		background-image: url("images/jonny.gif");
+		background-image: url("images/character_assets/CharacterSelection_gifs/jonny.gif");
 	}
 
 	body{
@@ -587,12 +576,13 @@ body::-webkit-scrollbar-thumb {
 		background-repeat: no-repeat;
 	}
 	.itemText{
+		margin-top: 1vh;
 		position: relative;
 		display: inline-block;
 		height: 100%; width: 75%;
 		float: right;
 		overflow: show;
-		font-size: 3vh;
+		font-size: 2vh;
 		opacity: 0;
 		transition: 2s;
 	}
