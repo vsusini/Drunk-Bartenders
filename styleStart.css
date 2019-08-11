@@ -51,7 +51,7 @@
 	    border: 1px solid black;
 	    box-shadow: 10px 10px 30px black;
 	    background-image: url("images/blackBg3.jpg");
-
+		background-image: url("images/bgBlack2.jpg");
 	    padding: 2vw;
 		float: right;
 		height: 100vh; width: 100vw;
@@ -236,14 +236,9 @@
 	    padding-left: 3vw;
 	}
 	#normalText{
-		font-family: 'Actor';
 		font-size: 2vh;
 		padding: none;
 		margin-top: 2vh;
-	}
-	#smallText{
-		margin: none;
-		font-size: 2vh;
 	}
 	p{
 		margin: 1vh;
