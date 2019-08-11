@@ -6,31 +6,34 @@
 	Date Modified: 02/08/2019
 */
 
-.fill{
 
-}
 
-html{
-	scroll-behavior: smooth;
-}
-body{
-	font-family: 'Montserrat', sans-serif;
-	padding: none; margin: none;
-}
-body::-webkit-scrollbar {
-    width: 2em;
-}
- 
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
+/*---------mainStyles----------*/
+	.fill{
+	}
 
-/*---------charSelection---------*/
+	html{
+		scroll-behavior: smooth;
+	}
+	body{
+		font-family: 'Montserrat', sans-serif;
+		padding: none; margin: none;
+	}
+	body::-webkit-scrollbar {
+	    width: 2em;
+	}
+	 
+	body::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	}
+	 
+	body::-webkit-scrollbar-thumb {
+	  background-color: darkgrey;
+	  outline: 1px solid slategrey;
+	}
+
+
+/*---------charSelection----------*/
 	#charSelection{
 		display: block;
 		height: 100vh; width: 100vw;
@@ -75,8 +78,6 @@ body::-webkit-scrollbar-thumb {
 	/*	animation: bounce 2s infinite;*/
 		cursor: pointer;
 	}
-
-
 	@keyframes bounce{
 		0%, 100% {
 	    transform: translateY(0);
@@ -85,7 +86,6 @@ body::-webkit-scrollbar-thumb {
 	    transform: translateY(20px);
 	  }
 	} 
-
 	#btnSection{
 		position: absolute;
 		height: 40%; width: 45%;
@@ -142,7 +142,6 @@ body::-webkit-scrollbar-thumb {
 		background-image: url("images/character_assets/CharacterSelection_gifs/mainGif.gif");
 		background-size: cover;
 	}
-
 	#selectionScreen{
 		padding: 2vw;
 		float: right;
@@ -153,7 +152,6 @@ body::-webkit-scrollbar-thumb {
 		z-index: 100;
 		box-sizing: border-box;
 	}
-
 	#startInfo{
 		position: absolute;
 		right: 15vw; top: 10vh;
@@ -173,20 +171,16 @@ body::-webkit-scrollbar-thumb {
 		0%{ opacity: 0; }
 		100%{opacity: 1;}
 	}
-
 	#selectionScreen::-webkit-scrollbar {
 	    width: 2em;
 	}
-	 
 	#selectionScreen::-webkit-scrollbar-track {
 	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	}
-	 
 	#selectionScreen::-webkit-scrollbar-thumb {
 	  background-color: darkgrey;
 	  outline: 1px solid slategrey;
 	}
-
 	#charSelBottomPanel{
 	    position: absolute;
 	    bottom: 0;
@@ -211,7 +205,6 @@ body::-webkit-scrollbar-thumb {
 	p{
 		margin: 1vh;
 	}
-
 	.char{
 		height: 25%; width: 45%;
 		margin-left: 1vw; margin-top: 3vh;
@@ -227,201 +220,89 @@ body::-webkit-scrollbar-thumb {
 	.char:hover{
 		box-shadow: 20px 20px 40px 5px black;
 	}
-/*	#char1{
-		background-position: 0px -30px;
-		margin-top: 1vh;
-
-	}*/
 	#char1:hover ~ #displayScreen {
 		background-image: url("images/character_assets/CharacterSelection_gifs/kim.gif");
 	}
-/*	#char2{
-		background-image: url("images/trooper.png");
-	}*/
 	#char2:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/trooper.gif");
 	}
-
-/*	#char3{
-		background-image: url("images/lovin.jpg");
-		background-position: 0px 0px;
-	}*/
 	#char3:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/lovin.gif");
 	}
-
-/*	#char4{
-		background-image: url("images/george.jpg");
-		background-position: 0px -50px; 
-	}*/
 	#char4:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/george.gif");
 	}
-
-/*	#char5{
-		background-image: url("images/steve.jpg");
-		background-position: 0px 0px; 
-		background-repeat: no-repeat;
-	}*/
 	#char5:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/steve.gif");
 	}
-
-/*	#char6{
-		background-image: url("images/krimsen.jpg");
-		background-position: 0px 150px; 
-	}*/
 	#char6:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/krimsen1.gif");
 	}
-/*	#char7{
-		background-image: url("images/show.jpg");
-		background-position: 0px -50px; 
-	}*/
 	#char7:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/chow.gif");
 	}
-
-/*	#char8{
-		background-image: url("images/hoy.jpg");
-	}*/
 	#char8:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/hoy1.gif");
 	}
-
-/*	#char9{
-		background-image: url("images/dwight.jpg");
-		background-position: 0px 0px; 
-	}*/
 	#char9:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/dwight.gif");
 	}
-
-/*	#char10{
-		background-image: url("images/trump.jpg");
-	}*/
 	#char10:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/trump.gif");
 	}
-
-/*	#char11{
-		background-image: url("images/brian.jpg");
-	}*/
 	#char11:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/brian1.gif");
 	}
-/*	#char12{
-		background-image: url("images/gump.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char12:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/gump.gif");
 	}
-/*	#char13{
-		background-image: url("images/sparta.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char13:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/sparta.gif");
 	}
-/*	#char14{
-		background-image: url("images/jesus.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char14:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/jesus.gif");
 	}
-/*	#char15{
-		background-image: url("images/neutron.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char15:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/neutron.gif");
 	}
-/*	#char16{
-		background-image: url("images/bud.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char16:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/bud.gif");
 	}
-/*	#char17{
-		background-image: url("images/oprah.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char17:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/oprah.gif");
 	}
-/*	#char18{
-		background-image: url("images/tiger.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char18:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/tiger.gif");
 	}
-/*	#char19{
-		background-image: url("images/titanic.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char19:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/titanic.gif");
 	}
-/*	#char20{
-		background-image: url("images/thanos.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char20:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/thanos.gif");
 	}
-/*	#char21{
-		background-image: url("images/mj.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char21:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/mj.gif");
 	}
-/*	#char22{
-		background-image: url("images/fatThor.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char22:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/thor.gif");
 	}
-/*	#char23{
-		background-image: url("images/donkey.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char23:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/donkey.gif");
 	}
-/*	#char24{
-		background-image: url("images/joey.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char24:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/joey.gif");
 	}
-/*	#char25{
-		background-image: url("images/hirambe.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char25:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/hirambe.gif");
 	}
-/*	#char26{
-		background-image: url("images/jonny.jpg");
-		background-position: 0px -40px;
-	}*/
 	#char26:hover ~ #displayScreen{
 		background-image: url("images/character_assets/CharacterSelection_gifs/jonny.gif");
 	}
-
 	body{
 		padding: 0;
 		margin: 0px;
 		background-color: black;
 	}
-
 	.selected{
 		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 		filter: grayscale(100%);
@@ -430,7 +311,7 @@ body::-webkit-scrollbar-thumb {
 	}
 
 
-/*-----------gameScreen----------*/
+/*---------gameScreen-------------*/
 	#gameScreen{
 		height: 90vh; width: 1000vw;
 		background-color: black;
@@ -476,7 +357,7 @@ body::-webkit-scrollbar-thumb {
 	}
 
 
-/*-------------side bar----------*/
+/*---------side bar---------------*/
 
 	.sidepanel  {
 	  width: 0;
@@ -551,6 +432,7 @@ body::-webkit-scrollbar-thumb {
 		position: relative;
 		margin: 10px;
 		height: 15%; width: 90%;
+		margin: 0;
 	}
 	.itemImg{
 		position: relative;
@@ -608,7 +490,7 @@ body::-webkit-scrollbar-thumb {
 	}
 
 
-/*---------game background 1-----*/
+/*---------game background 1------*/
 	#gameBg1{
 		/*background-image: url("images/gameBG8.jpg");*/
 		background-position: -10vh;
@@ -622,21 +504,15 @@ body::-webkit-scrollbar-thumb {
 		padding-top: 10vh;
 		font-size: 4vh;
 	}
-/*	.cardDesc{
-		position: relative;
-		left: 0; top: 0;
-		height: 10%; width: 100%;
-		background-color: red;
-	}*/
 
 
-/*---------game background 2-----*/
+/*---------game background 2------*/
 	#gameBg2{
 		/*background-image: url("images/gameScreen1.jpg");*/
 	}
 
 
-/*----------bottom panel----------*/
+/*---------bottom panel-----------*/
 	.bottomPanel{
 		display: none;
 		position: fixed;
@@ -715,7 +591,7 @@ body::-webkit-scrollbar-thumb {
 	}
 
 
-/*------------Model---------------*/
+/*---------Model------------------*/
 	#modelDialog{
 		position: fixed; 
 		left: 20vw; top: 0;
