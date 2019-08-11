@@ -21,4 +21,4 @@ IDEA LIST:
 
 1. save game state using cookies? Could be a nice feature - "Resume last game (y/n)"
 2. player thorws dice? lol
-3.card idea: drink if you cant rememeber last card, swearing
+3. card idea: drink if you cant rememeber last card, no swearing for x rounds
