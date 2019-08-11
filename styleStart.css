@@ -151,6 +151,8 @@
 		overflow-y: scroll;
 		z-index: 100;
 		box-sizing: border-box;
+		overflow-x: hidden;
+		white-space: nowrap;
 	}
 	#startInfo{
 		position: absolute;
