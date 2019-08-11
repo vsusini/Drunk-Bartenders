@@ -314,7 +314,7 @@
 /*---------gameScreen-------------*/
 	#gameScreen{
 		height: 90vh; width: 1000vw;
-		background-color: black;
+		background-color: #1f1f1f;
 		display: none;
 	}
 	#gameScreen2{
@@ -329,37 +329,26 @@
 		padding: 0; margin: 0;
 	}
 	.gameTile{
-		height: 80vh; width: 24.7%;
+		height: 70vh; width: 21vw;
 		margin-top: 0vh; margin-left: 0vw;
-		/*box-shadow: 10px 10px 30px black;*/
+		box-shadow: 10px 10px 30px black;
 		display: inline-block;
-		/*background-color: black;*/
 		left: 0; right: 0;
 		position: relative;
-		padding: 20px;
+		margin-left: 3vw;
+		margin-top: 4vh;
 		box-sizing: border-box;
-		overflow-y: hidden;
-
 		background-size: auto;
 		background-size: 100% 100%;
 		z-index: 3;
 		cursor: pointer;
-
-	}
-	.gameBgs{
-		display: inline-block;
-		height: 90vh; width: 100vw;
-		background-size: cover;
-		background-position: -10vh;
-		/*evenly distribute tiles*/
-		overflow-y: hidden;
-		z-index: 3;
+		overflow: visible;
 	}
 
 
 /*---------side bar---------------*/
 
-	.sidepanel  {
+	.sidepanel {
 	  width: 0;
 	  position: fixed;
 	  z-index: 1;
@@ -400,7 +389,7 @@
 		position: fixed;
 		right: 0; top: 5vh;
 		height: 5vh; width: 5vw;
-		background-color: #1f1f1f;
+		background-color: black;
 		color: white;
 		user-select: none;
 		line-height: 5vh; vertical-align: middle;	
@@ -490,11 +479,7 @@
 	}
 
 
-/*---------game background 1------*/
-	#gameBg1{
-		/*background-image: url("images/gameBG8.jpg");*/
-		background-position: -10vh;
-	}
+
 	#card1, #card2, #card3, #card4{
 		background-repeat: no-repeat;
 	}
@@ -573,8 +558,7 @@
 		padding: 0; margin: 0;
 	}
 	.playerStyle{
-		background-image: url("images/stormtrooper_char.png");
-		height: 20vh; width: 8vh;
+		/*height: 20vh; width: 8vh;*/
 		position: absolute; bottom: 15vh;
 		float: left;
 		transition: 2s;
@@ -589,6 +573,22 @@
 		transform: skew(-0.07turn, 0deg);
 		background-image: url("characterModels/floorTile.jpg");
 	}
+
+/*individual styles for characters*/
+	.kimStyle{
+		height: 30vh; width: 10vw;
+	}
+	.trooperStyle{
+		height: 30vh; width: 20vw;
+	}
+	.mcLovinStyle{
+		height: 20vh; width: 10vw;
+		background-color: orange;
+	}
+
+
+
+
 
 
 /*---------Model------------------*/

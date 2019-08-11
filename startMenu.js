@@ -11,14 +11,49 @@ var NUMCHAR = 27;
 var playerCount = 0; //FINAL PLAYER COUNT
 var currentPlayerCount = 0; //FOR COUNTING CLICKS ON CHARACTERS
 var playerList = [];
-var characterNames = ["Kim Jong Un", "Storm Trooper", "McLovin", "George", 
-    "Steven Hawking", "Krimson Chin", "Asian Fellow", "Hoy Me Noy", "Dwight", 
-    "Trump", "Brian", "Forest Gump", "Sparta", "Jesus", "Jimmy Neutron", "Bud Light", 
-    "Oprah", "Tiger Woods", "Titanic", "Thanos", "Michael Jackson", "Thor", "Donkey", 
-    "Joey", "Hirambe", "Johnny Sins"];
-var characterImages = ["characterModels/un.png","images/stormtrooper_char.png", 
-"characterModels/lesley.png", "characterModels/george.png", "characterModels/crimsen.png", 
-"characterModels/crimsen.png", "", "", "", "", ""];
+
+var characterNames = [
+    "Kim Jong Un", 
+    "Storm Trooper", 
+    "McLovin", 
+    "George", 
+    "Steven Hawking", 
+    "Krimson Chin", 
+    "Asian Fellow", 
+    "Hoy Me Noy", 
+    "Dwight", 
+    "Trump", 
+    "Brian", 
+    "Forest Gump", 
+    "Sparta", 
+    "Jesus", 
+    "Jimmy Neutron", 
+    "Bud Light", 
+    "Oprah", 
+    "Tiger Woods", 
+    "Titanic", 
+    "Thanos", 
+    "Michael Jackson", 
+    "Thor", 
+    "Donkey", 
+    "Joey", 
+    "Hirambe", 
+    "Johnny Sins"];
+
+
+var characterImages = [
+    "characterModels/kim.png",
+    "characterModels/trooper.png", 
+    "characterModels/lesley.png", 
+    "characterModels/george.png", 
+    "characterModels/crimsen.png", 
+    "characterModels/crimsen.png", 
+    "", 
+    "", 
+    "", 
+    "", 
+    ""];
+
 var charSelBottomPanel = document.getElementById("normalText");
 var smallText = document.getElementById("smallText");
 var playerNumber = 1;
@@ -237,7 +272,6 @@ class Player{
         this.tileNum = tileNum;
         this.picID = picID;
     }
-
     getPicID() {
         return this.picID;
     }

@@ -41,6 +41,24 @@ function layoutStartingPositions(){
         node.style.setProperty("left",left+"vw");
         node.setAttribute("src", player.getPicID());
         left = left + result;
+
+        //allows specific sizing for different character models
+        addPlayerStyle(node, player.getName());
+    }
+}
+
+function addPlayerStyle(player, name){
+
+    switch(name){
+        case "Kim Jong Un":
+            player.className += " kimStyle";
+            break;
+        case "Storm Trooper":
+            player.className += " trooperStyle";
+            break;
+        case "McLovin":
+            player.className += " mcLovinStyle";
+            break;
     }
 }
 
@@ -60,9 +78,12 @@ function addDieValueToScreen(move){
 function moveToPlayer(){
     document.getElementById("dieValue").innerHTML = "";
     var player = document.getElementById("player"+playerMoveCount);
-
+    // player.scrollIntoView();
+    alert("player" + playerMoveCount);
     //Move to player position.
     var position = player.getBoundingClientRect();
+
+    alert("player position: x:" + position.x + ", y:" + position.y);
     window.scrollTo(position.x,position.y);
 
     //Blank out dice value
@@ -75,7 +96,6 @@ function moveToPlayer(){
 
 //Player jumps when called
 function playerJump(player){
-    
         //Start Jump
         player.style.setProperty("bottom","30vh");
 
@@ -83,13 +103,11 @@ function playerJump(player){
         setTimeout(function(){
             player.style.setProperty("bottom","15vh");
         }, 1000);
-
 }
 
 //Moves the players image to the correct board spot
 function movePlayer(player,move){
     //Movement of Player Div
-
     for (var i = 0; i < move;i++){
         var node = document.getElementById("player"+player.getPlayerID());
         console.log(player.getName());
@@ -106,7 +124,7 @@ function movePlayer(player,move){
 //Ran when rollDie button is clicked
 function continueGame(){
     if (playerList[playerMoveCount].getTileNum() < 80){
-        var move = rollDie()
+        var move = rollDie();
         addDieValueToScreen(move);
         //console.log(playerList[playerMoveCount].getPlayerID()+" got:"+move+"!");
         movePlayer(playerList[playerMoveCount],move);

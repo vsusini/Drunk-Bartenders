@@ -6,7 +6,7 @@
 
 
 
-
+alert("here");
 //------ navbar functions (Currently running in startMenu.html) -------------
 	function navFunction(){
 		var sidePanel = document.getElementById("sidePanel");

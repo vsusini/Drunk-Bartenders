@@ -11,10 +11,8 @@
 		-Find character imagesS for game board (list in startMenu)
 		-decide on final character list for game
 		-finish all tiles
-		-make character selection seem more seamless
 		-on player hover, should we display player #/name?
 	FIX:
-		-fix player images and gifs on char selection manu
 		-finding players on moveToPlayer() seems to mess up later in game.
 -->
 
@@ -96,7 +94,7 @@
 			
 			<div id=item1Div class="itemDiv odd">
 				<div id=item1Img class=itemImg> </div>
-				<div id=item1Text class=itemText> Hey! We know you'd be confused...<br><br> Heres how we can help: </div>
+				<div id=item1Text class=itemText> Hey! We throught you might get confused...<br><br> Heres how we can help: </div>
 			</div>
 
 			<div id=item2Div class="itemDiv even">
@@ -119,7 +117,7 @@
 		</div>
 
 		<div id="gameScreen2">
-			<div id=gameBg1 class=gameBgs>
+
 				<img src="images/Card1Num1.png" id=card1 name=t1 class=gameTile onclick="openModel(1)">
 				</img>
 				<img src="images/Card1Num2.png" id=card2 name=t1 class=gameTile onclick="openModel(2)">
@@ -128,9 +126,9 @@
 				</img>
 				<img src="images/Card1Num4.png" id=card4 name=t1 class=gameTile onclick="openModel(4)">
 				</img>
-			</div>
 
-			<div id=gameBg2 class=gameBgs>
+
+
 				<img src="FinishedCards/card.png" id=card5 name=t1 class=gameTile onclick="openModel(5)">
 				</img> 
 				<img src="FinishedCards/card2.png" id=card6 name=t1 class=gameTile onclick="openModel(6)">
@@ -139,9 +137,9 @@
 				</img>
 				<img src="FinishedCards/card4.png" id=card8 name=t1 class=gameTile onclick="openModel(8)">
 				</img>
-			</div>
 
-			<div id=gameBg3 class=gameBgs>
+
+<!-- 			<div id=gameBg3 class=gameBgs> -->
 				<img src="FinishedCards/card7.png" id=card9 name=t1 class=gameTile onclick="openModel(9)">
 				</img> 
 				<img src="FinishedCards/card8.png" id=card10 name=t1 class=gameTile onclick="openModel(10)">
@@ -150,40 +148,8 @@
 				</img>
 				<img src="FinishedCards/card10.png" id=card12 name=t1 class=gameTile onclick="openModel(12)">
 				</img>
-			</div>
+<!-- 			</div> -->
 
-			<div id=gameBg4 class=gameBgs>
-				<img src="gif_asset/gif16.gif" id=card9 name=t1 class=gameTile>
-				</img> 
-				<img src="gif_asset/gif16.gif" id=card10 name=t1 class=gameTile>
-				</img>
-				<img src="gif_asset/gif16.gif" id=card11 name=t1 class=gameTile>
-				</img>
-				<img src="gif_asset/gif16.gif" id=card12 name=t1 class=gameTile>
-				</img>
-			</div>
-
-			<div id=gameBg5 class=gameBgs>
-				<img src="gif_asset/gif20.gif" id=card9 name=t1 class=gameTile>
-				</img> 
-				<img src="gif_asset/gif20.gif" id=card10 name=t1 class=gameTile>
-				</img>
-				<img src="gif_asset/gif20.gif" id=card11 name=t1 class=gameTile>
-				</img>
-				<img src="gif_asset/gif20.gif" id=card12 name=t1 class=gameTile>
-				</img>
-			</div>
-
-			<div id=gameBg4 class=gameBgs>
-				<img src="gif_asset/pic2.jpg" id=card9 name=t1 class=gameTile>
-				</img> 
-				<img src="gif_asset/pic2.jpg" id=card10 name=t1 class=gameTile>
-				</img>
-				<img src="gif_asset/pic2.jpg" id=card11 name=t1 class=gameTile>
-				</img>
-				<img src="gif_asset/pic2.jpg" id=card12 name=t1 class=gameTile>
-				</img>
-			</div>
 		</div>
 
 		<!-- <div id=floor></div> -->
