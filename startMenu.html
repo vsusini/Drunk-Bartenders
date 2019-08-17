@@ -173,6 +173,26 @@
 				<img src="FinishedCards/card10.png" id=card12 name=t1 class=gameTile onclick="openModel(12)">
 				</img>
 				<!-- 			</div> -->
+
+
+				<img src="FinishedCards/goBack2.png" id=card13 name=t1 class=gameTile onclick="openModel(13)">
+				</img> 
+				<img src="FinishedCards/ban2Words.png" id=card14 name=t1 class=gameTile onclick="openModel(14)">
+				</img>
+				<img src="FinishedCards/drum.png" id=card15 name=t1 class=gameTile onclick="openModel(15)">
+				</img>
+				<img src="FinishedCards/mostSober.png" id=card16 name=t1 class=gameTile onclick="openModel(16)">
+				</img>
+
+
+				<img src="FinishedCards/saveAFriend.png" id=card17 name=t1 class=gameTile onclick="openModel(17)">
+				</img> 
+				<img src="FinishedCards/sameDrink.png" id=card18 name=t1 class=gameTile onclick="openModel(18)">
+				</img>
+				<img src="FinishedCards/thumbWar.png" id=card19 name=t1 class=gameTile onclick="openModel(19)">
+				</img>
+				<img src="FinishedCards/goingOut.png" id=card20 name=t1 class=gameTile onclick="openModel(20)">
+				</img>
 		</div>
 
 		<!-- 2.4 Control panel / Bottom panel -->
@@ -256,6 +276,40 @@
 				case 12:
 					message = "All chicks drink!";
 					imgSrc = "FinishedCards/card10.png";
+					break;
+
+				case 13:
+					message = "Go back 2 spaces! <br><br>  Goodluck everyone...";
+					imgSrc = "FinishedCards/goBack2.png";
+					break;
+				case 14:
+					message = "Choose 2 words to ban for 1 round <br><br>  Whoever says the word drinks ";
+					imgSrc = "FinishedCards/ban2Words.png";
+					break;
+				case 15:
+					message = "You must drum a beat on the table <br> The people on your right and left must repeat it <br>Otherwise they drink";
+					imgSrc = "FinishedCards/drum.png";
+					break;
+				case 16:
+					message = "<br>Most sober person in the room drinks.";
+					imgSrc = "FinishedCards/mostSober.png";
+					break;
+
+				case 17:
+					message = "Choose a friend to save <br><br> Everyone else drinks";
+					imgSrc = "FinishedCards/saveAFriend.png";
+					break;
+				case 18:
+					message = "Everyone with the same drink as you drinks ";
+					imgSrc = "FinishedCards/sameDrink.png";
+					break;
+				case 19:
+					message = "Have a thub war with a person of your choice <br><br> Loser drinks";
+					imgSrc = "FinishedCards/thumbWar.png";
+					break;
+				case 20:
+					message = "<br>Everyone whos going out drinks";
+					imgSrc = "FinishedCards/goingOut.png";
 					break;
 			}
 			modelText.innerHTML = message;
