@@ -5,6 +5,7 @@
 
 
 var playerMoveCount = 0;
+const MOVING_VALUE = 25; //Value that a players vw must be increased. 
 
 //Helps increase the move count when it is on the last player.
 function increaseMoveCount(){
@@ -21,8 +22,7 @@ function increaseMoveCount(){
 function layoutStartingPositions(){
     //display characters
     var left = 0;
-    maxSpot = 25;
-    result = maxSpot / playerCount;
+    result = MOVING_VALUE / playerCount;
     for(var i=0; i<playerCount; i++){
         var game_screen = document.getElementById("gameScreen");
         var node = document.createElement("img");
@@ -77,14 +77,10 @@ function addDieValueToScreen(move){
 function moveToPlayer(){
     document.getElementById("dieValue").innerHTML = "";
     var player = document.getElementById("player"+playerMoveCount);
-    // player.scrollIntoView();
-    alert("player" + playerMoveCount);
-    //Move to player position.
-    var position = player.getBoundingClientRect();
-
-    alert("player position: x:" + position.x + ", y:" + position.y);
-    window.scrollTo(position.x,position.y);
-
+    //Movement to player, currently goes to end of element and is smooth. 
+    //If players are movedTo to quickly after they move, moveToPlayer will be a couple vw behind.
+    //Not a problem if we have more than 1 player. 
+    player.scrollIntoView({block:'end', behavior: 'smooth'}+100);
     //Blank out dice value
     dieText = document.getElementById("rollDieText");
     turnText = document.getElementById("rollTurnText");
@@ -109,15 +105,14 @@ function movePlayer(player,move){
     //Movement of Player Div
     for (var i = 0; i < move;i++){
         var node = document.getElementById("player"+player.getPlayerID());
-        console.log(player.getName());
         var leftVw = node.style.left;
         leftVw = leftVw.substring(0,leftVw.length-2);
         console.log("leftVw:"+leftVw);
-        node.style.setProperty("left",parseInt(leftVw,10)+25+"vw");
+        node.style.setProperty("left",parseInt(leftVw,10)+MOVING_VALUE+"vw");
+        //node.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+        leftVw = node.style.left;
     }
-
-    //node.style.setProperty("left",(parseInt(leftVw,10)+(25*move))+"vw");
-    //console.log("leftVw:"+(parseInt(leftVw,10)+(25*move))+"vw");
+    window.scrollBy((window.innerWidth / 4)*move,0);
 }
 
 //Ran when rollDie button is clicked
