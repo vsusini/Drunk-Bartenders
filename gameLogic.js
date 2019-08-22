@@ -71,9 +71,7 @@ function addDieValueToScreen(move){
     turnText.style.display = "block";
 }
 
-//Called when it needs to find the player on the screen
-//Broken I need to fix, I dont think getBoundingClient does what I want it to do. Once I fix
-//this is should lead to following the player while they move. 
+//Called when it needs to find the player on the screen 
 function moveToPlayer(){
     document.getElementById("dieValue").innerHTML = "";
     var player = document.getElementById("player"+playerMoveCount);
@@ -109,7 +107,6 @@ function movePlayer(player,move){
         leftVw = leftVw.substring(0,leftVw.length-2);
         console.log("leftVw:"+leftVw);
         node.style.setProperty("left",parseInt(leftVw,10)+MOVING_VALUE+"vw");
-        //node.scrollIntoView({ block: 'end',  behavior: 'smooth' });
         leftVw = node.style.left;
     }
     window.scrollBy((window.innerWidth / 4)*move,0);
