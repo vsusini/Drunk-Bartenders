@@ -625,7 +625,7 @@
 
 /*---------gameScreen-------------*/
 	#gameScreen{
-		height: 90vh; width: 1000vw;
+		height: 90vh; width: 1500vw;
 		background-color: #1f1f1f;
 		display: none;
 	}
