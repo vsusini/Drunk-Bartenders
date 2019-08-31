@@ -631,7 +631,7 @@
 	}
 	#gameScreen2{
 		position: absolute;
-		height: 90vh; width: 1000vw;
+		height: 90vh; width: 1500vw;
 		display: inline-block;
 	}
 	.seperator{
