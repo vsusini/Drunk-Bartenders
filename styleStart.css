@@ -641,13 +641,13 @@
 		padding: 0; margin: 0;
 	}
 	.gameTile{
-		height: 70vh; width: 21vw;
+		height: 67vh; width: 23vw;
 		margin-top: 0vh; margin-left: 0vw;
 		box-shadow: 10px 10px 30px black;
 		display: inline-block;
 		left: 0; right: 0;
 		position: relative;
-		margin-left: 3vw;
+		margin-left: 1.5vw;
 		margin-top: 4vh;
 		box-sizing: border-box;
 		background-size: auto;
