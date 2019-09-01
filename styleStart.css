@@ -317,21 +317,21 @@
 			filter: none;
 			opacity: 1;
 		}
-		#charModelCrimsen{
-			left: 16vw; bottom: 20vh;
-			content: url("characterModels/crimsen.png");
-			z-index: 4;
-		}
-		#char3:hover ~ #charModelCrimsen{
-			filter: none;
-			opacity: 1;
-		}
 		#charModelTrump{
-			left: 25vw; bottom: 20vh;
+			left: 16vw; bottom: 20vh;
 			content: url("characterModels/trump.png");
 			z-index: 4;
 		}
-		#char4:hover ~ #charModelTrump{
+		#char3:hover ~ #charModelTrump{
+			filter: none;
+			opacity: 1;
+		}
+		#charModelGeorge{
+			left: 25vw; bottom: 20vh;
+			content: url("characterModels/george.png");
+			z-index: 4;
+		}
+		#char4:hover ~ #charModelGeorge{
 			filter: none;
 			opacity: 1;
 		}
