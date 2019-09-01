@@ -6,7 +6,7 @@
 
 
 //global Variables
-var NUMCHAR = 27;
+var NUMCHAR = 12;
 var playerCount = 0; //FINAL PLAYER COUNT
 var currentPlayerCount = 0; //FOR COUNTING CLICKS ON CHARACTERS
 var playerList = [];
