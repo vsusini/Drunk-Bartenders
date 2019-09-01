@@ -284,7 +284,7 @@
 		box-shadow: 20px 20px 40px 5px black;
 	}
 	.charModels{
-		height: 50vh; width: 16vw;
+		height: 40vh; width: 10vw;
 		position: absolute;
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -299,6 +299,94 @@
 	}
 
 	/*-----------group 1----------*/
+
+
+		#budlight{
+			left: 2vw; bottom: 20vh;
+			content: url("Characters/Char/budlight.png");
+			z-index: 6;
+			height: 30vh;
+		}
+		#corona{
+			left: 10vw; bottom: 19vh;
+			content: url("Characters/Char/corona.png");
+			z-index: 6;
+			height: 50vh;
+		}
+		#redbull{
+			left: 13vw; bottom: 15vh;
+			content: url("Characters/Char/redbull.png");
+			z-index: 6;
+			height: 40vh; width: 20vw;
+		}
+		#stella{
+			left: 18vw; bottom: 16vh;
+			content: url("Characters/Char/stella.png");
+			z-index: 6;
+			height: 52vh; width: 28vw;
+		}
+		#smirnoff{
+			left: 33vw; bottom: 14vh;
+			content: url("Characters/Char/whiskey.png");
+			z-index: 6;
+			height: 60vh; width: 18vw;
+		}
+		#guinness{
+			left: 44vw; bottom: 17vh;
+			content: url("Characters/Char/guinness.png");
+			z-index: 6;
+			height: 50vh; width: 15vw;
+		}
+		#whiskey{
+			left: 2vw; bottom: -45vh;
+			content: url("Characters/Char/budlight.png");
+			z-index: 6;
+		}
+		#rumCoke{
+			left: 9vw; bottom: -45vh;
+			content: url("Characters/Char/budlight.png");
+			z-index: 6;
+		}
+		#martini{
+			left: 16vw; bottom: -45vh;
+			content: url("Characters/Char/budlight.png");
+			z-index: 6;
+		}
+
+
+
+
+		#char1:hover ~ #budlight {
+			filter: none;
+			opacity: 1;
+		}
+		#char2:hover ~ #corona {
+			filter: none;
+			opacity: 1;
+		}
+		#char3:hover ~ #redbull {
+			filter: none;
+			opacity: 1;
+		}
+		#char4:hover ~ #stella {
+			filter: none;
+			opacity: 1;
+		}
+		#char5:hover ~ #smirnoff {
+			filter: none;
+			opacity: 1;
+		}
+		#char6:hover ~ #guinness {
+			filter: none;
+			opacity: 1;
+		}
+
+
+
+
+
+
+
 		#charModelUn{
 			left: 2vw; bottom: 20vh;
 			content: url("characterModels/kim.png");
