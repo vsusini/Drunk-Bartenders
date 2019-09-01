@@ -325,31 +325,46 @@
 			z-index: 6;
 			height: 52vh; width: 28vw;
 		}
-		#smirnoff{
+		#whiskey{
 			left: 33vw; bottom: 14vh;
 			content: url("Characters/Char/whiskey.png");
 			z-index: 6;
-			height: 60vh; width: 18vw;
 		}
 		#guinness{
-			left: 44vw; bottom: 17vh;
+			left: 37vw; bottom: 17vh;
 			content: url("Characters/Char/guinness.png");
 			z-index: 6;
 			height: 50vh; width: 15vw;
 		}
-		#whiskey{
-			left: 2vw; bottom: -45vh;
-			content: url("Characters/Char/budlight.png");
+		#smirnoff{
+			left: 0vw; bottom: -45vh;
+			content: url("Characters/Char/smirnof.png");
+			z-index: 6;
+			height: 60vh; width: 18vw;
+		}
+		#heineken{
+			left: 10vw; bottom: -45vh;
+			content: url("Characters/Char/heineken.png");
 			z-index: 6;
 		}
 		#rumCoke{
 			left: 9vw; bottom: -45vh;
-			content: url("Characters/Char/budlight.png");
+			content: url("Characters/Char/martini.png");
 			z-index: 6;
 		}
 		#martini{
 			left: 16vw; bottom: -45vh;
-			content: url("Characters/Char/budlight.png");
+			content: url("Characters/Char/martini.png");
+			z-index: 6;
+		}
+		#wine{
+			left: 25vw; bottom: -45vh;
+			content: url("Characters/Char/wine.png");
+			z-index: 6;
+		}
+		#whiteclaw{
+			left: 35vw; bottom: -45vh;
+			content: url("Characters/Char/whiteClaw.png");
 			z-index: 6;
 		}
 
@@ -372,7 +387,7 @@
 			filter: none;
 			opacity: 1;
 		}
-		#char5:hover ~ #smirnoff {
+		#char5:hover ~ #whiskey {
 			filter: none;
 			opacity: 1;
 		}
@@ -380,321 +395,31 @@
 			filter: none;
 			opacity: 1;
 		}
-
-
-
-
-
-
-
-		#charModelUn{
-			left: 2vw; bottom: 20vh;
-			content: url("characterModels/kim.png");
-			z-index: 6;
-		}
-		#char1:hover ~ #charModelUn {
+		#char7:hover ~ #smirnoff {
 			filter: none;
 			opacity: 1;
 		}
-		#charModelTrooper{
-			left: 9vw; bottom: 20vh;
-			content: url("characterModels/trooper.png");
-			z-index: 5;
-		}
-		#char2:hover ~ #charModelTrooper {
+		#char8:hover ~ #heineken {
 			filter: none;
 			opacity: 1;
 		}
-		#charModelTrump{
-			left: 16vw; bottom: 20vh;
-			content: url("characterModels/trump.png");
-			z-index: 4;
-		}
-		#char3:hover ~ #charModelTrump{
+		#char9:hover ~ #rumCoke {
 			filter: none;
 			opacity: 1;
 		}
-		#charModelGeorge{
-			left: 25vw; bottom: 20vh;
-			content: url("characterModels/george.png");
-			z-index: 4;
-		}
-		#char4:hover ~ #charModelGeorge{
+		#char10:hover ~ #martini {
 			filter: none;
 			opacity: 1;
 		}
-		#charModelChow{
-			width: 25vw;
-			left: 30vw; bottom: 20vh;
-			content: url("characterModels/chow.png");
-			z-index: 4;
-		}
-		#char5:hover ~ #charModelChow{
+		#char11:hover ~ #wine {
 			filter: none;
 			opacity: 1;
 		}
-		#charModelSpongebob{
-			width: 15vw;
-			left: 45vw; bottom: 20vh;
-			content: url("characterModels/spongebob.png");
-			z-index: 0;
-		}
-		#char6:hover ~ #charModelSpongebob{
+		#char12:hover ~ #whiteclaw {
 			filter: none;
 			opacity: 1;
 		}
 
-	/*-----------group 2----------*/
-		#charModelUn2{
-			left: 2vw; bottom: -45vh;
-			content: url("characterModels/kim.png");
-			z-index: 6;
-		}
-		#char7:hover ~ #charModelUn2 {
-			filter: none;
-			opacity: 1;
-		}
-		#charModelTrooper2{
-			left: 9vw; bottom: -45vh;
-			content: url("characterModels/trooper.png");
-			z-index: 5;
-		}
-		#char8:hover ~ #charModelTrooper2{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelCrimsen2{
-			left: 16vw; bottom: -45vh;
-			content: url("characterModels/crimsen.png");
-			z-index: 4;
-		}
-		#char9:hover ~ #charModelCrimsen2{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelTrump2{
-			left: 25vw; bottom: -45vh;
-			content: url("characterModels/trump.png");
-			z-index: 4;
-		}
-		#char10:hover ~ #charModelTrump2{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelChow2{
-			width: 15vw;
-			left: 30vw; bottom: -45vh;
-			content: url("characterModels/chow.png");
-			z-index: 4;
-		}
-		#char11:hover ~ #charModelChow2{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelSpongebob2{
-			width: 15vw;
-			left: 37vw; bottom: -45vh;
-			content: url("characterModels/spongebob.png");
-			z-index: 4;
-		}
-		#char12:hover ~ #charModelSpongebob2{
-			filter: none;
-			opacity: 1;
-		}
-
-	/*-----------group 3----------*/
-		#charModelUn3{
-			left: 2vw; bottom: -93vh;
-			content: url("characterModels/kim.png");
-			z-index: 6;
-		}
-		#char13:hover ~ #charModelUn3{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelTrooper3{
-			left: 9vw; bottom: -93vh;
-			content: url("characterModels/trooper.png");
-			z-index: 5;
-		}
-		#char14:hover ~ #charModelTrooper3{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelCrimsen3{
-			left: 16vw; bottom: -93vh;
-			content: url("characterModels/crimsen.png");
-			z-index: 4;
-		}
-		#char15:hover ~ #charModelCrimsen3{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelTrump3{
-			left: 25vw; bottom: -93vh;
-			content: url("characterModels/trump.png");
-			z-index: 4;
-		}
-		#char16:hover ~ #charModelTrump3{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelChow3{
-			width: 15vw;
-			left: 30vw; bottom: -93vh;
-			content: url("characterModels/chow.png");
-			z-index: 4;
-		}
-		#char17:hover ~ #charModelChow3{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelSpongebob3{
-			width: 15vw;
-			left: 37vw; bottom: -93vh;
-			content: url("characterModels/spongebob.png");
-			z-index: 4;
-		}
-		#char18:hover ~ #charModelSpongebob3{
-			filter: none;
-			opacity: 1;
-		}
-
-	/*-----------group 4----------*/
-		#charModelUn4{
-			left: 2vw; bottom: -142vh;
-			content: url("characterModels/kim.png");
-			z-index: 6
-		}
-		#char19:hover ~ #charModelUn4{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelTrooper4{
-			left: 9vw; bottom: -142vh;
-			content: url("characterModels/trooper.png");
-			z-index: 5;
-		}
-		#char20:hover ~ #charModelTrooper4{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelCrimsen4{
-			left: 16vw; bottom: -142vh;
-			content: url("characterModels/crimsen.png");
-			z-index: 4; 
-		}
-		#char21:hover ~ #charModelCrimsen4{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelTrump4{
-			left: 25vw; bottom: -142vh;
-			content: url("characterModels/trump.png");
-			z-index: 4;
-		}
-		#char22:hover ~ #charModelTrump4{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelChow4{
-			width: 15vw;
-			left: 30vw; bottom: -142vh;
-			content: url("characterModels/chow.png");
-			z-index: 4;
-		}
-		#char23:hover ~ #charModelChow4{
-			filter: none;
-			opacity: 1;
-		}
-		#charModelSpongebob4{
-			width: 15vw;
-			left: 37vw; bottom: -142vh;
-			content: url("characterModels/spongebob.png");
-			z-index: 4;
-		}
-		#char24:hover ~ #charModelSpongebob4{
-			filter: none;
-			opacity: 1;
-		}
-
-
-
-	#char2:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/trooper.gif");
-	}
-	#char3:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/lovin.gif");
-	}
-	#char4:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/george.gif");
-	}
-	#char5:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/steve.gif");
-	}
-	#char6:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/krimsen1.gif");
-	}
-	#char7:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/chow.gif");
-	}
-	#char8:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/hoy1.gif");
-	}
-	#char9:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/dwight.gif");
-	}
-	#char10:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/trump.gif");
-	}
-	#char11:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/brian1.gif");
-	}
-	#char12:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/gump.gif");
-	}
-	#char13:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/sparta.gif");
-	}
-	#char14:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/jesus.gif");
-	}
-	#char15:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/neutron.gif");
-	}
-	#char16:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/bud.gif");
-	}
-	#char17:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/oprah.gif");
-	}
-	#char18:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/tiger.gif");
-	}
-	#char19:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/titanic.gif");
-	}
-	#char20:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/thanos.gif");
-	}
-	#char21:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/mj.gif");
-	}
-	#char22:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/thor.gif");
-	}
-	#char23:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/donkey.gif");
-	}
-	#char24:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/joey.gif");
-	}
-	#char25:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/hirambe.gif");
-	}
-	#char26:hover ~ #displayScreen{
-		background-image: url("images/character_assets/CharacterSelection_gifs/jonny.gif");
-	}
 	body{
 		padding: 0;
 		margin: 0px;
