@@ -305,36 +305,38 @@
 			left: 2vw; bottom: 20vh;
 			content: url("Characters/Char/budlight.png");
 			z-index: 6;
-			height: 30vh;
+			height: 33vh; width: 8;
 		}
 		#corona{
 			left: 10vw; bottom: 19vh;
 			content: url("Characters/Char/corona.png");
 			z-index: 6;
-			height: 50vh;
+			height: 60vh;
+			width: 10.5vw;
 		}
 		#redbull{
-			left: 13vw; bottom: 15vh;
+			left: 12vw; bottom: 15.5vh;
 			content: url("Characters/Char/redbull.png");
 			z-index: 6;
-			height: 40vh; width: 20vw;
+			height: 42vh; width: 22vw;
 		}
 		#stella{
-			left: 18vw; bottom: 16vh;
+			left: 16vw; bottom: 17vh;
 			content: url("Characters/Char/stella.png");
 			z-index: 6;
-			height: 52vh; width: 28vw;
+			height: 60vh; width: 29vw;
 		}
 		#whiskey{
-			left: 33vw; bottom: 14vh;
+			left: 30.5vw; bottom: 14.5vh;
 			content: url("Characters/Char/whiskey.png");
 			z-index: 6;
+			height: 72vh; width: 17vw;
 		}
 		#guinness{
-			left: 37vw; bottom: 17vh;
+			left: 40vw; bottom: 16vh;
 			content: url("Characters/Char/guinness.png");
 			z-index: 6;
-			height: 50vh; width: 15vw;
+			height: 54vh; width: 15vw;
 		}
 		#smirnoff{
 			left: 0vw; bottom: -45vh;
