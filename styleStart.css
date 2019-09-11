@@ -333,10 +333,10 @@
 			height: 72vh; width: 17vw;
 		}
 		#guinness{
-			left: 40vw; bottom: 16vh;
+			left: 40vw; bottom: 15vh;
 			content: url("Characters/Char/guinness.png");
 			z-index: 6;
-			height: 54vh; width: 15vw;
+			height: 65vh; width: 15vw;
 		}
 		#smirnoff{
 			left: 2vw; bottom: -54.5vh;
