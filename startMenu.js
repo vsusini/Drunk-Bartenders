@@ -14,16 +14,16 @@ var playerList = [];
 var characterNames = [
     "Budlight", 
     "Corona", 
-    "Red Bull", 
+    "RedBull", 
     "Stella", 
     "Whiskey", 
     "Guinness", 
     "Smirnoff", 
-    "Heineken", 
-    "Rum and Coke", 
+    "Heineken",
+    "RumAndCoke", 
     "Martini", 
     "Wine", 
-    "White Clas"];
+    "WhiteClaw"];
 
 
 var characterImages = [

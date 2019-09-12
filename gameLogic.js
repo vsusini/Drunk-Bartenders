@@ -41,22 +41,63 @@ function layoutStartingPositions(){
         node.setAttribute("src", player.getPicID());
         left = left + result;
 
+        
         //allows specific sizing for different character models
         addPlayerStyle(node, player.getName());
+
     }
 }
 
-function addPlayerStyle(player, name){
+function addPlayerStyle(node, name){
 
     switch(name){
-        case "Kim Jong Un":
-            player.className += " kimStyle";
+        case "Budlight":
+            node.style.setProperty("height",  "25vh");
+            node.style.setProperty("width",  "7vw");
             break;
-        case "Storm Trooper":
-            player.className += " trooperStyle";
+        case "Corona":
+            node.style.setProperty("height",  "30vh");
+            node.style.setProperty("width",  "7vw");
             break;
-        case "McLovin":
-            player.className += " mcLovinStyle";
+        case "RedBull":
+            document.getElementById("player2").style.height = "20vh";
+            document.getElementById("player2").style.width = "5vw";
+            break;
+        case "Stella":
+            document.getElementById("player3").style.height = "20vh";
+            document.getElementById("player3").style.width = "5vw";
+            break;
+        case "Whiskey":
+            document.getElementById("player4").style.height = "20vh";
+            document.getElementById("player4").style.width = "5vw";
+            break;
+        case "Guinness":
+            document.getElementById("player5").style.height = "20vh";
+            document.getElementById("player5").style.width = "5vw";
+            break;
+        case "Smirnoff":
+            document.getElementById("player6").style.height = "20vh";
+            document.getElementById("player6").style.width = "5vw";
+            break;
+        case "Heineken":
+            document.getElementById("player7").style.height = "20vh";
+            document.getElementById("player7").style.width = "5vw";
+            break;
+        case "RumAndCoke":
+            document.getElementById("player8").style.height = "20vh";
+            document.getElementById("player8").style.width = "5vw";
+            break;
+         case "Martini":
+            document.getElementById("player9").style.height = "20vh";
+            document.getElementById("player9").style.width = "5vw";
+            break;
+        case "Wine":
+            document.getElementById("player10").style.height = "20vh";
+            document.getElementById("player10").style.width = "5vw";
+            break;
+        case "WhiteClaw":
+            document.getElementById("player11").style.height = "20vh";
+            document.getElementById("player11").style.width = "5vw";
             break;
     }
 }
