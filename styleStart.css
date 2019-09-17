@@ -446,13 +446,13 @@
 
 /*---------gameScreen-------------*/
 	#gameScreen{
-		height: 90vh; width: 1600vw;
+		height: 90vh; width: 1580vw;
 		background-color: #1f1f1f;
 		display: none;
 	}
 	#gameScreen2{
 		position: absolute;
-		height: 90vh; width: 1600vw;
+		height: 90vh; width: 1580vw;
 		display: inline-block;
 	}
 	.seperator{
@@ -478,9 +478,9 @@
 		overflow: visible;
 	}
 	.lastCard{
-		width: 90vw;
+		width: 80vw;
 		background-color: red;
-		margin-left: 7vw;
+		margin-left: 2vw;
 	}
 
 
