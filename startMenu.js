@@ -207,7 +207,7 @@ function changeScreen(){
 
 
 function createPlayer(num, name, imageName){
-    let player = new Player(currentPlayerCount, name, 0,imageName);
+    let player = new Player(currentPlayerCount, name, 1,imageName);
     playerList[currentPlayerCount] = player;
     console.log("Added Player " + playerList[currentPlayerCount].getPlayerID() + " whos name is " + playerList[currentPlayerCount].getName());
     currentPlayerCount++;

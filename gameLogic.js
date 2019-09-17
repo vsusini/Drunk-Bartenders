@@ -139,32 +139,48 @@ function playerJump(player){
         }, 1000);
 }
 
-//Moves the players image to the correct board spot
+
 function movePlayer(player,move){
+    if(player.getTileNum()+move >= 60){
+        move = 60 - player.getTileNum();
+        console.log("Move:"+move);
+    }
     //Movement of Player Div
     for (var i = 0; i < move;i++){
         var node = document.getElementById("player"+player.getPlayerID());
         var leftVw = node.style.left;
         leftVw = leftVw.substring(0,leftVw.length-2);
         console.log("leftVw:"+leftVw);
-        node.style.setProperty("left",parseInt(leftVw,10)+MOVING_VALUE+"vw");
+        node.style.setProperty("left",parseInt(leftVw,10)+(MOVING_VALUE)+"vw");
         leftVw = node.style.left;
     }
     window.scrollBy((window.innerWidth / 4)*move,0);
 }
 
+function gameWinAction(){
+    var node = document.getElementById("player"+player.getPlayerID());
+    node.style.setProperty("left","50vw");
+    //scroll to the div of the background win pic
+    setTimeout(function(){
+        node.style.setProperty("bottom","60vh");
+    }, 3000);
+}
+
 //Ran when rollDie button is clicked
 function continueGame(){
-    if (playerList[playerMoveCount].getTileNum() < 80){
-        var move = rollDie();
-        addDieValueToScreen(move);
-        //console.log(playerList[playerMoveCount].getPlayerID()+" got:"+move+"!");
-        movePlayer(playerList[playerMoveCount],move);
-        increaseMoveCount();
+    var move = rollDie();
+    addDieValueToScreen(move);
+    console.log(playerList[playerMoveCount].getPlayerID()+" got:"+move+"!");
+    movePlayer(playerList[playerMoveCount],move);
+    playerList[playerMoveCount].increaseTileNum(move);
+    increaseMoveCount();
+    if (playerList[playerMoveCount].getTileNum() <= 60){
         turnText.innerHTML = "Go to player " + playerList[playerMoveCount].getName() + "'s turn";
-        playerList[playerMoveCount].increaseTileNum(move);
+        console.log(playerList[playerMoveCount].getTileNum());
         //console.log(playerList[playerMoveCount].getTileNum());
     } else {
-        alert ("game is over");
+        turnText.innerHTML = "Game Over!";
+        gameWinAction();
+        console.log("game is over");
     }
 }
