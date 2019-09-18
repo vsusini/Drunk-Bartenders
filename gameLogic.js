@@ -166,6 +166,11 @@ function gameWinAction(){
     }, 3000);
 }
 
+function moveBack(player, move){
+    console.log("Moving back player: "+player.getName()+"and hes moving back: "+move);
+
+}
+
 //Ran when rollDie button is clicked
 function continueGame(){
     var move = rollDie();
@@ -173,14 +178,26 @@ function continueGame(){
     console.log(playerList[playerMoveCount].getPlayerID()+" got:"+move+"!");
     movePlayer(playerList[playerMoveCount],move);
     playerList[playerMoveCount].increaseTileNum(move);
-    increaseMoveCount();
-    if (playerList[playerMoveCount].getTileNum() <= 60){
-        turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
-        console.log(playerList[playerMoveCount].getTileNum());
-        //console.log(playerList[playerMoveCount].getTileNum());
-    } else {
+    console.log("Move for:"+playerList[playerMoveCount].getName()+" its at:"+playerList[playerMoveCount].getTileNum());
+    if (playerList[playerMoveCount].getTileNum() > 60){
         turnText.innerHTML = "Game Over!";
         gameWinAction();
-        console.log("game is over");
+        alert("game is over");
+    }else if(playerList[playerMoveCount].getTileNum() == 5){
+        moveBack(playerList[playerMoveCount],4);
+        
+    }else if(playerList[playerMoveCount].getTileNum() == 12){
+        moveBack(playerList[playerMoveCount],2);
+
+    }else if(playerList[playerMoveCount].getTileNum() == 26){
+        moveBack(playerList[playerMoveCount],3);
+
+    }else if(playerList[playerMoveCount].getTileNum() == 40){
+        moveBack(playerList[playerMoveCount],4);
+
+    }else if(playerList[playerMoveCount].getTileNum() == 50){
+        moveBack(playerList[playerMoveCount],1);
     }
+    increaseMoveCount();
+    turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
 }
