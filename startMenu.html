@@ -107,7 +107,7 @@
 
 		<img src="images/README.png" id="clickMeHand"></img>
 
-		<img src="images/mysteryBox.png" id="mysteryBox" class="confetti-container" onclick="emit()"></img>
+		<img src="images/mysteryBox.png" id="mysteryBox1" class="confetti-container" onclick="mysteryBox1()"></img>
 
 		<!-- DONT REMOVE YET -->
 		<!-- 2.1 Side panel / HELP button  -->
@@ -247,11 +247,26 @@
 			var message;
 			var imgSrc
 
+		function mysteryBox1(){
+			openModel(0);
+		}
+
 		function openModel(cardNum){
 
 			var cardImg = document.getElementsByClassName("gameTile");
 
+			// even number = bad luck, odd number = good luck
+			var chanceCards = ["Bad luck - \n\n Take a shot", "\n\nGive out 2 shots", "Have a drink, pal", "Pick a friend, make them truth or drink", ""];
+			var randNum = Math.floor(Math.random() * 4);
+
 			switch(cardNum){
+				case 0:
+					if(randNum%2 == 0 || randNum==0){
+						imgSrc = "images/badLuck.png";
+					}else{imgSrc = "images/goodLuck.png";}
+					message = chanceCards[randNum];
+					document.getElementById("mysteryBox1").style.display = "none";
+					break;
 				case 1:
 					//Start Here
 					message = "Welcome to the game. Get ready to get hammered. Feel free to click on any card to learn how to play. Good Luck.";

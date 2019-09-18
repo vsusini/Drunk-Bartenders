@@ -501,7 +501,7 @@
 		z-index: 100;
 	}
 
-	#mysteryBox{
+	#mysteryBox1{
 		height: 20vh;
 		width: 10vw;
 		position: absolute;
@@ -510,7 +510,7 @@
 		z-index: 10;
 		transition: 0.2s;
 	}
-	#mysteryBox:hover{
+	#mysteryBox1:hover{
 		opacity: 0.5;
 		cursor: pointer;
 		z-index: 20;
@@ -870,7 +870,7 @@
 		left: 20vw; top: 0;
 		margin-top: 15vh;
 		height: 50vh; width: 60vw;
-		background-color: #1f1f1f;
+		background-color: black;
 		z-index: 20;
 		display: none;
 		border: 1px solid black;
