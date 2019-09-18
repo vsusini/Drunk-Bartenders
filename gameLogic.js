@@ -167,12 +167,23 @@ function gameWinAction(){
 }
 
 function moveBack(player, move){
-    console.log("Moving back player: "+player.getName()+"and hes moving back: "+move);
+    player.increaseTileNum(move*-1);
+    for (var i = 0; i < move;i++){
+        console.log("Moving back player: "+player.getName()+"and hes moving back: "+move);
+        var node = document.getElementById("player"+player.getPlayerID());
+        var leftVw = node.style.left;
+        leftVw = leftVw.substring(0,leftVw.length-2);
+        console.log("leftVw:"+leftVw);
+        node.style.setProperty("left",parseInt(leftVw,10)-(MOVING_VALUE)+"vw");
+        leftVw = node.style.left;
+    }
+    window.scrollBy(0,(window.innerWidth / 4)*move);
 
 }
 
 //Ran when rollDie button is clicked
 function continueGame(){
+    var flag = false;
     var move = rollDie();
     addDieValueToScreen(move);
     console.log(playerList[playerMoveCount].getPlayerID()+" got:"+move+"!");
@@ -184,20 +195,39 @@ function continueGame(){
         gameWinAction();
         alert("game is over");
     }else if(playerList[playerMoveCount].getTileNum() == 5){
-        moveBack(playerList[playerMoveCount],4);
-        
+        flag = true;
+        setTimeout(function(){
+            //console.log("PLAYER NAME: "+playerList[playerMoveCount].getName());
+            moveBack(playerList[playerMoveCount],4);
+        }, 3000);
     }else if(playerList[playerMoveCount].getTileNum() == 12){
-        moveBack(playerList[playerMoveCount],2);
-
+        flag = true;
+        setTimeout(function(){
+            //console.log("PLAYER NAME: "+playerList[playerMoveCount].getName());
+            moveBack(playerList[playerMoveCount],2);
+        }, 3000);
     }else if(playerList[playerMoveCount].getTileNum() == 26){
-        moveBack(playerList[playerMoveCount],3);
+        setTimeout(function(){
+            moveBack(playerList[playerMoveCount],3);
+        }, 3000);
 
     }else if(playerList[playerMoveCount].getTileNum() == 40){
-        moveBack(playerList[playerMoveCount],4);
+        setTimeout(function(){
+            moveBack(playerList[playerMoveCount],4);
+        }, 3000);
 
     }else if(playerList[playerMoveCount].getTileNum() == 50){
-        moveBack(playerList[playerMoveCount],1);
+        setTimeout(function(){
+            moveBack(playerList[playerMoveCount],1);
+        }, 3000);
     }
-    increaseMoveCount();
-    turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
+    if (flag == true){
+        setTimeout(function(){
+            increaseMoveCount();
+            turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
+        },4000);
+    } else {
+        increaseMoveCount();
+        turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
+    }
 }
