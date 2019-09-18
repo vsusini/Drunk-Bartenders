@@ -27,7 +27,6 @@
 	body::-webkit-scrollbar {
 	    width: 2em;
 	}
-	 
 	body::-webkit-scrollbar-track {
 	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	}
@@ -303,7 +302,7 @@
 		z-index: -2;
 	}
 
-	/*-----------group 1----------*/
+	/*-----------Char Models----------*/
 
 
 		#budlight{
@@ -380,9 +379,6 @@
 			height: 50vh; width: 11.5vw;
 		}
 
-
-
-
 		#char1:hover ~ #budlight {
 			filter: none;
 			opacity: 1;
@@ -450,13 +446,13 @@
 
 /*---------gameScreen-------------*/
 	#gameScreen{
-		height: 90vh; width: 1500vw;
+		height: 90vh; width: 1580vw;
 		background-color: #1f1f1f;
 		display: none;
 	}
 	#gameScreen2{
 		position: absolute;
-		height: 90vh; width: 1500vw;
+		height: 90vh; width: 1580vw;
 		display: inline-block;
 	}
 	.seperator{
@@ -465,7 +461,7 @@
 		left: -2.5vw; top: 0;
 		padding: 0; margin: 0;
 	}
-	.gameTile{
+	.gameTile, .lastCard{
 		height: 67vh; width: 23vw;
 		margin-top: 0vh; margin-left: 0vw;
 		box-shadow: 10px 10px 30px black;
@@ -480,6 +476,11 @@
 		z-index: 3;
 		cursor: pointer;
 		overflow: visible;
+	}
+	.lastCard{
+		width: 80vw;
+		background-color: red;
+		margin-left: 2vw;
 	}
 
 
