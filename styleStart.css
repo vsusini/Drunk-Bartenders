@@ -446,14 +446,18 @@
 
 /*---------gameScreen-------------*/
 	#gameScreen{
-		height: 90vh; width: 1580vw;
+		height: 90vh; width: 1600vw;
 		background-color: #1f1f1f;
 		display: none;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	#gameScreen2{
 		position: absolute;
-		height: 90vh; width: 1580vw;
+		height: 90vh; width: 1600vw;
 		display: inline-block;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	.seperator{
 		height: 100vh; width: 5vw;
@@ -475,7 +479,7 @@
 		background-size: 100% 100%;
 		z-index: 10;
 		cursor: pointer;
-		overflow: visible;
+		overflow: hidden;
 	}
 	#card1{
 		animation-name: jump;
@@ -486,12 +490,14 @@
 	.lastCard{
 		width: 80vw;
 		background-color: red;
-		margin-left: 2vw;
+		margin-left: 0; margin-top: 0; margin: 0;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	#clickMeHand{
 		position: absolute;
 		height: 7vh; max-width: 7vw;
-		top: 3vw; left: 20vw;
+		top: 15vw; left: 2vw;
 		background-image: none;
 		transform: rotate(30deg);
 		animation-name: click;
@@ -501,20 +507,26 @@
 		z-index: 100;
 	}
 
-	#mysteryBox1{
-		height: 20vh;
-		width: 10vw;
+	#mysteryBox1, #mysteryBox2, #mysteryBox3,
+	#mysteryBox4, #mysteryBox5, #mysteryBox6{
+		height: 40vh;width: 20vw;
 		position: absolute;
-		left: 510vw; bottom: 27vh;
-		opacity: 0.2;
+		left: 510vw; bottom: 20vh;
+		opacity: 0.15;
 		z-index: 10;
 		transition: 0.2s;
 	}
-	#mysteryBox1:hover{
-		opacity: 0.5;
+	#mysteryBox1:hover, #mysteryBox2:hover, #mysteryBox3:hover,
+	#mysteryBox4:hover, #mysteryBox5:hover, #mysteryBox6:hover{
+		opacity: 0.7;
 		cursor: pointer;
 		z-index: 20;
 	}
+	#mysteryBox2{left: 220vw;}
+	#mysteryBox3{left: 750vw;}
+	#mysteryBox4{left: 1230vw;}
+	#mysteryBox5{left: 1410vw;}
+	#mysteryBox6{left: 1100vw;}
 
 
 

@@ -107,7 +107,17 @@
 
 		<img src="images/README.png" id="clickMeHand"></img>
 
-		<img src="images/mysteryBox.png" id="mysteryBox1" class="confetti-container" onclick="mysteryBox1()"></img>
+		<img src="images/mysteryBox.png" id="mysteryBox1" onclick="mysteryBox1()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox2" onclick="mysteryBox2()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox3" onclick="mysteryBox3()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox4" onclick="mysteryBox4()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox5" onclick="mysteryBox5()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox6" onclick="mysteryBox6()"></img>
 
 		<!-- DONT REMOVE YET -->
 		<!-- 2.1 Side panel / HELP button  -->
@@ -216,7 +226,7 @@
 			<img src="images/Backgrounds/group15/60.2.png" id=card60 name=t1 class="gameTile" onclick="openModel(60)"></img>
 
 			<!-- "go to last image-->
-			<img src="images/Backgrounds/group15/lastCard.gif" id=card61 name=t1 class= "gameTile lastCard" onclick="openModel(60)"></img>
+			<img src="images/Backgrounds/group15/lastCard.gif" id=card61 name=t1 class= "lastCard" onclick="openModel(60)"></img>
 		</div>
 
 		<!-- 2.4 Control panel / Bottom panel -->
@@ -250,6 +260,21 @@
 		function mysteryBox1(){
 			openModel(0);
 		}
+		function mysteryBox2(){
+			openModel(-1);
+		}
+		function mysteryBox3(){
+			openModel(-2);
+		}
+		function mysteryBox4(){
+			openModel(-3);
+		}
+		function mysteryBox5(){
+			openModel(-4);
+		}
+		function mysteryBox6(){
+			openModel(-5);
+		}
 
 		function openModel(cardNum){
 
@@ -260,6 +285,41 @@
 			var randNum = Math.floor(Math.random() * 4);
 
 			switch(cardNum){
+				case -5:
+					if(randNum%2 == 0 || randNum==0){
+						imgSrc = "images/badLuck.png";
+					}else{imgSrc = "images/goodLuck.png";}
+					message = chanceCards[randNum];
+					document.getElementById("mysteryBox6").style.display = "none";
+					break;
+				case -4:
+					if(randNum%2 == 0 || randNum==0){
+						imgSrc = "images/badLuck.png";
+					}else{imgSrc = "images/goodLuck.png";}
+					message = chanceCards[randNum];
+					document.getElementById("mysteryBox5").style.display = "none";
+					break;
+				case -3:
+					if(randNum%2 == 0 || randNum==0){
+						imgSrc = "images/badLuck.png";
+					}else{imgSrc = "images/goodLuck.png";}
+					message = chanceCards[randNum];
+					document.getElementById("mysteryBox4").style.display = "none";
+					break;
+				case -2:
+					if(randNum%2 == 0 || randNum==0){
+						imgSrc = "images/badLuck.png";
+					}else{imgSrc = "images/goodLuck.png";}
+					message = chanceCards[randNum];
+					document.getElementById("mysteryBox3").style.display = "none";
+					break;
+				case -1:
+					if(randNum%2 == 0 || randNum==0){
+						imgSrc = "images/badLuck.png";
+					}else{imgSrc = "images/goodLuck.png";}
+					message = chanceCards[randNum];
+					document.getElementById("mysteryBox2").style.display = "none";
+					break;
 				case 0:
 					if(randNum%2 == 0 || randNum==0){
 						imgSrc = "images/badLuck.png";
