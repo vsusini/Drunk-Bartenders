@@ -490,8 +490,8 @@
 	}
 	#clickMeHand{
 		position: absolute;
-		height: 12vh; max-width: 9vw;
-		top: 15vw; left: -2vw;
+		height: 7vh; max-width: 7vw;
+		top: 3vw; left: 20vw;
 		background-image: none;
 		transform: rotate(30deg);
 		animation-name: click;
