@@ -14,6 +14,7 @@
 
 	html{
 		scroll-behavior: smooth;
+
 	}
 	body{
 		font-family: 'Montserrat', sans-serif;
@@ -25,7 +26,7 @@
         -o-user-select: none;
 	}
 	body::-webkit-scrollbar {
-	    width: 2em;
+	    width: 2vh;
 	}
 	body::-webkit-scrollbar-track {
 	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -454,7 +455,7 @@
 	}
 	#gameScreen2{
 		position: absolute;
-		height: 90vh; width: 1600vw;
+		height: 95vh; width: 1600vw;
 		display: inline-block;
 		overflow-x: hidden;
 		overflow-y: hidden;
@@ -792,7 +793,7 @@
 	#controlPanel{
 		bottom: 0; left: 0;
 		width: 100vw;
-		background-color: #002266;
+		background-color: #1f1f1f;
 		box-sizing: border-box;
 		color: white;
 		letter-spacing: 10px;
@@ -803,41 +804,37 @@
 		text-align: center;	
 	}
 	#rollDie{
-		height: 10vh; width: 50vw;
 		position: absolute;
 		left: 0; bottom: 0;	
-		background-color: #002266;
+		/*background-color: #002266;*/
 		padding: 0; margin: 0;	
 	}
-	#rollDie:hover{
-		background-color: #001133;
-		cursor: pointer;
-	}
+
 	#rollDieText, #rollTurnText{
 		left: 0;
 		width: 50vw;
 	}
+
 	#rollTurnText{
 		display: none;
-	}
-	.panelController{
-		width: 	50%;
 	}
 	.panelText{
 		float: left;
 		vertical-align: middle;
 		text-align: center;	
 		font-size: 4vh;
-		line-height: 10vh;
 		vertical-align: middle;
 		text-align: center;	
 		padding: 0; margin: 0;
-		position: absolute;
 		bottom: 0;	
 		height: 10vh; width: 50vw;
 	}
+	#rollDieText{
+		padding: top: 2vh;
+	}
 	#rollNumText{
 		left: 50vw;
+		position: fixed;
 	}
 	#rollNum{
 		left: 50vw;	
@@ -941,5 +938,45 @@
 		line-height: 10vh;
 		vertical-align: middle;
 		cursor: pointer;
+	}
+
+	/*buttons*/
+	@font-face {
+  		font-family: 'Press Start 2p';
+	}
+	body {
+	  background-color: black;
+	}
+	 
+	.start-btn{
+	    text-align: center;
+	    display: inline-block;
+	    margin:5px;
+	    font-weight: bold;
+	    padding: 2vh 0 10px 10px ;
+	    background-color: lightgray;
+	    text-shadow: -1px -1px black, 1px 1px white;
+	    color: gray;
+	    -webkit-border-radius: 7px;
+	    -moz-border-radius: 7px;
+	    -o-border-radius: 7px;
+	    border-radius: 7px;
+	    box-shadow: 0 .2em gray;
+	    cursor: pointer;
+	    font-family: 'Press Start 2p';
+	    font-size: 2vw;
+	    bottom: 12vh;
+	    height: 3vw;
+	    margin-bottom: 3vh;
+
+	}
+	.start-btn:active {
+	    box-shadow: none;
+	    position: relative;
+	    top: .2em;
+	}
+
+	@font-face {
+	  font-family: 'Press Start 2p';
 	}
 

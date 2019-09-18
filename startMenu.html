@@ -11,6 +11,7 @@
 <head>
 	<link rel="stylesheet" href="styleStart.css">
 	<link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 	<title></title>
 </head>
 
@@ -145,7 +146,6 @@
 			</div>
 		</div>
 
-		<div id="zz-check-switch"> </div>
 
 		<!-- 2.3 Card images -->
 		<div id="gameScreen2">
@@ -232,12 +232,17 @@
 		<!-- 2.4 Control panel / Bottom panel -->
 		<div id=controlPanel class=bottomPanel>
 			<div id=rollDie class=panelContainer>
-				<p id=rollDieText class=panelText onclick="continueGame();"> Roll Die </p>
-				<p id=rollTurnText class=panelText onclick="moveToPlayer();"> Player X's Turn > </p>
+
+				<span id=rollDieText class='start-btn' onclick="continueGame();">Roll Die</span>
+
+				<span class='start-btn panelText' id=rollTurnText onclick="moveToPlayer();"> Player X's turn </span>
+
+<!-- 				<p id=rollDieText class=panelText onclick="continueGame();"> Roll Die </p> -->
+<!-- 				<p id=rollTurnText class=panelText onclick="moveToPlayer();"> Player X's Turn > </p> -->
 			</div>
 
 			<div id=rollNum class=panelContainer>
-				<p id=rollNumText class=panelText> Roll: <span id="dieValue"> </span></p>
+				<p id=rollNumText class=panelText>Roll: <span id="dieValue"> </span></p>
 			</div>
 		</div>
 	</div>
@@ -247,6 +252,18 @@
 	<script type="text/javascript" src="gameLogic.js"></script>
 
 	<script>
+
+		var x = 0;
+		document.body.onkeyup = function(e){
+		    if(e.keyCode == 32){
+		        if(x%2==0){
+		        	continueGame();
+		        }else{
+		        	moveToPlayer();
+		        }
+		        x++;
+		    }
+		}
 
 			var model = document.getElementById("modelDialog");
 			var modelText = document.getElementById("modelText");
