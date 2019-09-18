@@ -833,8 +833,9 @@
 		padding: top: 2vh;
 	}
 	#rollNumText{
-		left: 50vw;
+		left: 38vw;
 		position: fixed;
+		font-family: 'Press Start 2p';
 	}
 	#rollNum{
 		left: 50vw;	
@@ -855,6 +856,12 @@
 		z-index: 0;
 		transform: skew(-0.07turn, 0deg);
 		background-image: url("characterModels/floorTile.jpg");
+	}
+
+	#die{
+		height: 10vh; width: 6vw;
+		position: fixed;
+		left: 53vw; bottom: 3vh;
 	}
 
 
@@ -951,17 +958,17 @@
 	.start-btn{
 	    text-align: center;
 	    display: inline-block;
-	    margin:5px;
+	    margin: 5px;
 	    font-weight: bold;
 	    padding: 2vh 0 10px 10px ;
-	    background-color: lightgray;
+	    background-color: #56545c;
 	    text-shadow: -1px -1px black, 1px 1px white;
-	    color: gray;
+	    color: lightgrey;
 	    -webkit-border-radius: 7px;
 	    -moz-border-radius: 7px;
 	    -o-border-radius: 7px;
 	    border-radius: 7px;
-	    box-shadow: 0 .2em gray;
+	    box-shadow: 0 .2em darkgray;
 	    cursor: pointer;
 	    font-family: 'Press Start 2p';
 	    font-size: 2vw;

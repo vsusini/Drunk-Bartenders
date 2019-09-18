@@ -242,7 +242,8 @@
 			</div>
 
 			<div id=rollNum class=panelContainer>
-				<p id=rollNumText class=panelText>Roll: <span id="dieValue"> </span></p>
+				<p id=rollNumText class=panelText> <span id="dieValue"> </span></p>
+				<img src="images/die.png" id="die"></img>
 			</div>
 		</div>
 	</div>
@@ -591,12 +592,9 @@
 					break;
 
 			}
-
-
-
-
-
-
+			document.getElementById("clickMeHand").style.display = "none";
+			document.getElementById("die").style.display = "none";
+			document.getElementById("rollDie").style.display = "none";
 
 			modelText.innerHTML = message;
 			modelImg.src = (imgSrc);
@@ -623,6 +621,10 @@
 
 			coverProof.style.display = "none";
 			gameScreen.style.filter = "none";
+
+			document.getElementById("clickMeHand").style.display = "block";
+			document.getElementById("die").style.display = "block";
+			document.getElementById("rollDie").style.display = "block";
 
 			//remove players during dialog popup
 			var chars = document.getElementsByClassName("playerStyle");
