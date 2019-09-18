@@ -175,7 +175,7 @@ function continueGame(){
     playerList[playerMoveCount].increaseTileNum(move);
     increaseMoveCount();
     if (playerList[playerMoveCount].getTileNum() <= 60){
-        turnText.innerHTML = "Go to player " + playerList[playerMoveCount].getName() + "'s turn";
+        turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
         console.log(playerList[playerMoveCount].getTileNum());
         //console.log(playerList[playerMoveCount].getTileNum());
     } else {
