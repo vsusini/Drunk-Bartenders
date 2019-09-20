@@ -154,7 +154,8 @@ function movePlayer(player,move){
         node.style.setProperty("left",parseInt(leftVw,10)+(MOVING_VALUE)+"vw");
         leftVw = node.style.left;
     }
-    window.scrollBy((window.innerWidth / 4)*move,0);
+    window.scrollBy(((window.innerWidth / 4)*move)/1.5,0);
+    console.log("Window Offset: "+window.pageXOffset);
 }
 
 function gameWinAction(){
