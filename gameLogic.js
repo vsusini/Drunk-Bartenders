@@ -119,13 +119,14 @@ function moveToPlayer(){
     //Movement to player, currently goes to end of element and is smooth. 
     //If players are movedTo to quickly after they move, moveToPlayer will be a couple vw behind.
     //Not a problem if we have more than 1 player. 
-    player.scrollIntoView({block:'end', behavior: 'smooth'}+100);
+    player.scrollIntoView({block:'end', behavior: 'smooth'});
     //Blank out dice value
     dieText = document.getElementById("rollDieText");
     turnText = document.getElementById("rollTurnText");
     dieText.style.display = "block";
     turnText.style.display = "none";
     playerJump(player);
+    //consider trying to discover which way it scrolls and send it.
 }
 
 //Player jumps when called
@@ -159,12 +160,16 @@ function movePlayer(player,move){
 }
 
 function gameWinAction(){
-    var node = document.getElementById("player"+player.getPlayerID());
-    node.style.setProperty("left","50vw");
-    //scroll to the div of the background win pic
+    //console.log("made it");
     setTimeout(function(){
-        node.style.setProperty("bottom","60vh");
-    }, 3000);
+        //console.log("made it *2");
+        var node = document.getElementById("player"+player.getPlayerID());
+        node.style.setProperty("left","60vw");
+        //scroll to the div of the background win pic
+        setTimeout(function(){
+            node.style.setProperty("bottom","60vh");
+        }, 5000);
+    })
 }
 
 function moveBack(player, move){
@@ -184,7 +189,8 @@ function moveBack(player, move){
 
 //Ran when rollDie button is clicked
 function continueGame(){
-    var flag = false;
+    gameOverFlag = true;
+    var moveBackFlag = false;
     var move = rollDie();
     addDieValueToScreen(move);
     console.log(playerList[playerMoveCount].getPlayerID()+" got:"+move+"!");
@@ -192,43 +198,49 @@ function continueGame(){
     playerList[playerMoveCount].increaseTileNum(move);
     console.log("Move for:"+playerList[playerMoveCount].getName()+" its at:"+playerList[playerMoveCount].getTileNum());
     if (playerList[playerMoveCount].getTileNum() > 60){
+        var gameOverFlag = false
         turnText.innerHTML = "Game Over!";
         gameWinAction();
         alert("game is over");
     }else if(playerList[playerMoveCount].getTileNum() == 5){
-        flag = true;
+        moveBackFlag = true;
         setTimeout(function(){
             //console.log("PLAYER NAME: "+playerList[playerMoveCount].getName());
             moveBack(playerList[playerMoveCount],4);
         }, 3000);
     }else if(playerList[playerMoveCount].getTileNum() == 12){
-        flag = true;
+        moveBackFlag = true;
         setTimeout(function(){
             //console.log("PLAYER NAME: "+playerList[playerMoveCount].getName());
             moveBack(playerList[playerMoveCount],2);
         }, 3000);
     }else if(playerList[playerMoveCount].getTileNum() == 26){
+        moveBackFlag = true;
         setTimeout(function(){
             moveBack(playerList[playerMoveCount],3);
         }, 3000);
 
     }else if(playerList[playerMoveCount].getTileNum() == 40){
+        moveBackFlag = true;
         setTimeout(function(){
             moveBack(playerList[playerMoveCount],4);
         }, 3000);
 
     }else if(playerList[playerMoveCount].getTileNum() == 50){
+        moveBackFlag = true;
         setTimeout(function(){
             moveBack(playerList[playerMoveCount],1);
         }, 3000);
     }
-    if (flag == true){
-        setTimeout(function(){
+    if (gameOverFlag){
+        if (moveBackFlag){
+                setTimeout(function(){
+                increaseMoveCount();
+                turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
+            },4000);
+        } else {
             increaseMoveCount();
             turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
-        },4000);
-    } else {
-        increaseMoveCount();
-        turnText.innerHTML = playerList[playerMoveCount].getName() + "'s turn";
+        }
     }
 }
