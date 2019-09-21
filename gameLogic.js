@@ -6,6 +6,7 @@
 
 var playerMoveCount = 0;
 const MOVING_VALUE = 25; //Value that a players vw must be increased. 
+const CARD_NUM = 60; //Total number of cards
 
 //Helps increase the move count when it is on the last player.
 function increaseMoveCount(){
@@ -142,8 +143,8 @@ function playerJump(player){
 
 
 function movePlayer(player,move){
-    if(player.getTileNum()+move >= 60){
-        move = 60 - player.getTileNum();
+    if(player.getTileNum()+move >= CARD_NUM){
+        move = CARD_NUM - player.getTileNum();
         console.log("Move:"+move);
     }
     //Movement of Player Div
@@ -159,15 +160,21 @@ function movePlayer(player,move){
     console.log("Window Offset: "+window.pageXOffset);
 }
 
-function gameWinAction(){
-    //console.log("made it");
+function gameWinAction(player){
+    console.log("made it");
     setTimeout(function(){
-        //console.log("made it *2");
+        console.log("made it *2");
+        console.log("PlayerID: "+player.getName());
         var node = document.getElementById("player"+player.getPlayerID());
-        node.style.setProperty("left","60vw");
+        console.log("Left:" +node.style.left);
+        var leftVw = node.style.left;
+        leftVw = leftVw.substring(0,leftVw.length-2);
+        node.style.setProperty("left",parseInt(leftVw,10)+(50)+"vw"); //Increase 50 value to push to the right.
         //scroll to the div of the background win pic
+        console.log("Left:"+ node.style.left);
         setTimeout(function(){
-            node.style.setProperty("bottom","60vh");
+            console.log("made it *3");
+            node.style.setProperty("bottom","60vh"); //vertical height value
         }, 5000);
     })
 }
@@ -197,11 +204,11 @@ function continueGame(){
     movePlayer(playerList[playerMoveCount],move);
     playerList[playerMoveCount].increaseTileNum(move);
     console.log("Move for:"+playerList[playerMoveCount].getName()+" its at:"+playerList[playerMoveCount].getTileNum());
-    if (playerList[playerMoveCount].getTileNum() > 60){
-        var gameOverFlag = false
+    if (playerList[playerMoveCount].getTileNum() > CARD_NUM){
+        var gameOverFlag = false;
         turnText.innerHTML = "Game Over!";
-        gameWinAction();
-        alert("game is over");
+        gameWinAction(playerList[playerMoveCount]);
+        console.log("game is over");
     }else if(playerList[playerMoveCount].getTileNum() == 5){
         moveBackFlag = true;
         setTimeout(function(){
