@@ -390,50 +390,46 @@
 
 
 
-		function navFunction(){
-		  var sidePanel = document.getElementById("sidePanel");
-		  var legendBtn = document.getElementById("helpBtn");
+		// function navFunction(){
+		//   var sidePanel = document.getElementById("sidePanel");
+		//   var legendBtn = document.getElementById("helpBtn");
 
-		  var panelState = legendBtn.innerText;
-		  if(!navIsOpen(panelState)){
+		//   var panelState = legendBtn.innerText;
+		//   if(!navIsOpen(panelState)){
 
-		  	//open nav
-		    sidePanel.style.width = "30vw";
-			legendBtn.style.width = "30vw";
-		  	legendBtn.innerHTML = "× Close";
+		//   	//open nav
+		//     sidePanel.style.width = "30vw";
+		// 	legendBtn.style.width = "30vw";
+		//   	legendBtn.innerHTML = "× Close";
 
-		  	var textItems = document.getElementsByClassName("itemText");
-		  	var textImg = document.getElementsByClassName("itemImg");
-		  	for(var i=0; i<textItems.length; i++){
-		  		var textItem = textItems[i];
-		  		textItem.style.opacity = "1";
-		  		itemImg[i].style.opacity = "1";
-		  	}
-		  }
-		  else{
-		  	//close nav
-		  	sidePanel.style.width = "0";
-		  	legendBtn.style.width = "5vw";
-		  	legendBtn.innerHTML = "☰ Help";
+		//   	var textItems = document.getElementsByClassName("itemText");
+		//   	var textImg = document.getElementsByClassName("itemImg");
+		//   	for(var i=0; i<textItems.length; i++){
+		//   		var textItem = textItems[i];
+		//   		textItem.style.opacity = "1";
+		//   		itemImg[i].style.opacity = "1";
+		//   	}
+		//   }
+		//   else{
+		//   	//close nav
+		//   	sidePanel.style.width = "0";
+		//   	legendBtn.style.width = "5vw";
+		//   	legendBtn.innerHTML = "☰ Help";
 
-		  	var textItems = document.getElementsByClassName("itemText");
-		  	var itemImg = document.getElementsByClassName("itemImg");
-		  	for(var i=0; i<textItems.length; i++){
-		  		var textItem = textItems[i];
-		  		textItem.style.opacity = "0";
-		  		itemImg[i].style.opacity = "0";
-		  	}
-		  }
-		}
-
-
-		function navIsOpen(panelState){
-			if(panelState == "☰ Help"){
-				return false;
-			}
-			return true;
-		}
+		//   	var textItems = document.getElementsByClassName("itemText");
+		//   	var itemImg = document.getElementsByClassName("itemImg");
+		//   	for(var i=0; i<textItems.length; i++){
+		//   		var textItem = textItems[i];
+		//   		textItem.style.opacity = "0";
+		//   		itemImg[i].style.opacity = "0";
+		//   	}
+		//   }
+		// }
 
 
-
-
+		// function navIsOpen(panelState){
+		// 	if(panelState == "☰ Help"){
+		// 		return false;
+		// 	}
+		// 	return true;
+		// }
