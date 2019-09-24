@@ -148,7 +148,7 @@
 					imgSrc = cardImg[11].src;
 					break;
 				case 13:
-					message = "****NOT FINISHED****";
+					message = "You've gotta have a pong ball... <br> From your seat, hit the closest pong cup. <br> You hit it, you get to give out 6 drinks.";
 					imgSrc = cardImg[12].src;
 					break;
 				case 14:
@@ -252,7 +252,7 @@
 					imgSrc = cardImg[37].src;
 					break;
 				case 39:
-					message = "*****NOT FINISHED*****";
+					message = "You've gotta have a pong ball... <br> From your seat, hit the closest pong cup. <br> You hit it, you get to give out 6 drinks.";
 					imgSrc = cardImg[38].src;
 					break;
 				case 40:
