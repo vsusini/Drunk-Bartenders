@@ -586,58 +586,6 @@
 	  justify-content: center
 	}
 
-	/*// ----- For Vue component*/
-
-	$check-switch-space: 5px;
-	$check-switch-outer-background-color: #cfcfcf;
-	$check-switch-background-color: #2772ff;
-	$check-switch-width: 100px;
-	$check-switch-height: 100px;
-	$check-switch-padding: 0 25px 35px 25px;
-	$check-switch-border: solid $check-switch-space #000000;
-	$check-switch-box-shadow: 0 20px #000000;
-	$check-switch-transform: translateY(-15px);
-	$check-switch-transition:
-	  background-color 300ms cubic-bezier(.18,.89,.32,1.28),
-	  box-shadow 300ms cubic-bezier(.18,.89,.32,1.28),
-	  transform 300ms cubic-bezier(.18,.89,.32,1.28);
-	$check-switch-active-background-color: #0031eb;
-	$check-switch-active-box-shadow: 0 0 #000000;
-	$check-switch-active-transform: translateY(5px);
-	$check-switch-active-transition:
-	  background-color 200ms ease-out,
-	  box-shadow 200ms ease-out,
-	  transform 200ms ease-out;
-
-	.zz-check-switch {
-	  background-color: $check-switch-outer-background-color;
-	  width: $check-switch-width;
-	  height: $check-switch-height;
-	  padding: $check-switch-padding;
-	  border: $check-switch-border;
-	  & > input[type="checkbox"] {
-	    display: none;
-	    &:checked + span {
-	      background-color: $check-switch-active-background-color;
-	      box-shadow: $check-switch-active-box-shadow;
-	      transform: $check-switch-active-transform;
-	      transition: $check-switch-active-transition;
-	    }
-	  }
-	  & > span {
-	    background-color: $check-switch-background-color;
-	    width: $check-switch-width;
-	    height: $check-switch-height;
-	    border: $check-switch-border;
-	    display: block;
-	    box-sizing: border-box;
-	    box-shadow: $check-switch-box-shadow;
-	    transform: $check-switch-transform;
-	    transition: $check-switch-transition;
-	  }
-	}
-
-
 /*---------side bar---------------*/
 
 	.sidepanel {
@@ -882,6 +830,15 @@
 
 
 /*---------Model------------------*/
+	#closeModelIcon{
+		position: fixed; right: 5vw; top: 6vh;
+		color: white;
+		display: none;
+		font-size: 5vh;
+		opacity: 0.3;
+		z-index: 100;
+	}
+
 	#modelDialog{
 		position: fixed; 
 		left: 20vw; top: 0;
@@ -907,6 +864,7 @@
 		height: 100vh; width: 100vw;
 		z-index: 19;
 		display: none;
+		cursor: pointer;
 	}
 	#modelImg{
 		position: absolute;

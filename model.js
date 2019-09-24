@@ -357,6 +357,8 @@
 			coverProof.style.display = "block";
 			gameScreen.style.filter = "blur(50px)";
 
+			document.getElementById("closeModelIcon").style.display = "block";
+
 			//remove players during dialog popup
 			var chars = document.getElementsByClassName("playerStyle");
 			for(var i=0; i<chars.length; i++){
@@ -372,6 +374,8 @@
 
 			coverProof.style.display = "none";
 			gameScreen.style.filter = "none";
+
+			document.getElementById("closeModelIcon").style.display = "none";
 
 			document.getElementById("clickMeHand").style.display = "block";
 			document.getElementById("die").style.display = "block";
@@ -422,9 +426,14 @@
 		  }
 		}
 
+
 		function navIsOpen(panelState){
 			if(panelState == "☰ Help"){
 				return false;
 			}
 			return true;
 		}
+
+
+
+
