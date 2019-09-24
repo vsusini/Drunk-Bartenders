@@ -43,9 +43,14 @@
 
 			var cardImg = document.getElementsByClassName("gameTile");
 
-			// even number = bad luck, odd number = good luck
-			var chanceCards = ["Bad luck - \n\n Take a shot", "\n\nGive out 2 shots", "Have a drink, pal", "Pick a friend, make them truth or drink", ""];
-			var randNum = Math.floor(Math.random() * 4);
+            var chanceCards = [
+                "Sorry bud, thats gonna cost you a shot!", 
+                "I'm impressed... get the rest of them drunk. \nYou've got 4 to give out.", 
+                "You're cute, you though't I would give away things in these.", 
+                "Who put these in here. Pointless. \n You get to give out a shot though!", 
+                "I'm impressed... get the rest of them drunk. \nYou've got 2 to give out.",
+                "I'm impressed... get the rest of them drunk. \nYou've got 6 to give out."];
+			var randNum = Math.floor(Math.random() * chanceCards.length);
 
 			switch(cardNum){
 				case -5:
