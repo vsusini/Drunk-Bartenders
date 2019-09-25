@@ -441,6 +441,16 @@
 
 
 
+	#startLine{
+		position: absolute;
+		z-index: 0; bottom: -20vh;
+		left: 0vw;
+		transform: skewY(90deg); 
+		transform: rotate(45deg);
+		height: 105vh; width: 40vw;
+		overflow: hidden;
+	}
+
 
 
 /*---------gameScreen-------------*/
@@ -715,9 +725,6 @@
 		cursor: pointer;
 	}
 	/*buttons*/
-	body {
-		background-color: black;
-	}
 	
 	.start-btn{
 		text-align: center;
@@ -744,6 +751,12 @@
 		box-shadow: none;
 		position: relative;
 		top: .2em;
+	}
+	.start-btn:hover{
+		cursor: pointer;
+	}
+	#rollDieText:hover{
+		cursor: pointer;
 	}
 
 
