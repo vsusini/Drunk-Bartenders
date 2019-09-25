@@ -492,7 +492,9 @@
 		width: 80vw;
 		background-color: red;
 		margin-left: 0; margin-top: 0; margin: 0;
-		margin-left: 11.5vw;
+		float: right;
+		margin-right: 11.5vw;
+		margin-top: 28.84px;
 		overflow-x: hidden;
 		overflow-y: hidden;
 	}
@@ -766,6 +768,7 @@
 
 	#rollTurnText{
 		display: none;
+		z-index: 1000;
 	}
 	.panelText{
 		float: left;
@@ -776,15 +779,18 @@
 		text-align: center;	
 		padding: 0; margin: 0;
 		bottom: 0;	
-		height: 10vh; width: 50vw;
+		height: 10vh; width: 5vw;
+		z-index: 200 !important;
+		left: 62vw;
 	}
 	#rollDieText{
 		padding: top: 2vh;
+		z-index: 1000;
 	}
 	#rollNumText{
-		left: 38vw;
 		position: fixed;
 		font-family: 'Press Start 2p';
+		z-index: 200 !important;
 	}
 	#rollNum{
 		left: 50vw;	
@@ -811,6 +817,7 @@
 		height: 10vh; width: 6vw;
 		position: fixed;
 		left: 53vw; bottom: 3vh;
+
 	}
 
 

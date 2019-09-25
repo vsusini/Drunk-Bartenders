@@ -357,13 +357,18 @@
 			coverProof.style.display = "block";
 			gameScreen.style.filter = "blur(50px)";
 
+			document.getElementById("rollNumText").style.display = "none";
 			document.getElementById("closeModelIcon").style.display = "block";
+
 
 			//remove players during dialog popup
 			var chars = document.getElementsByClassName("playerStyle");
 			for(var i=0; i<chars.length; i++){
 				chars[i].style.display = "none";
 			}
+
+			document.getElementById("panelText").style.display = "none";
+			document.getElementsByClassName("dieValue")[0].style.display = "none";
 			
 		}
 
@@ -375,6 +380,7 @@
 			coverProof.style.display = "none";
 			gameScreen.style.filter = "none";
 
+			document.getElementById("rollNumText").style.display = "block";
 			document.getElementById("closeModelIcon").style.display = "none";
 
 			document.getElementById("clickMeHand").style.display = "block";
