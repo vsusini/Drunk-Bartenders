@@ -35,7 +35,7 @@ var characterImages = [
     "Characters/Char/guinness.png", 
     "Characters/Char/smirnof.png", 
     "Characters/Char/heineken.png", 
-    "Characters/Char/.png",  
+    "Characters/Char/rumAndCoke.png",  
     "Characters/Char/martini.png", 
     "Characters/Char/wine.png", 
     "Characters/Char/whiteclaw.png"];

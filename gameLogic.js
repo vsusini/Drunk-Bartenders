@@ -57,48 +57,56 @@ function addPlayerStyle(node, name){
             node.style.setProperty("width",  "7vw");
             break;
         case "Corona":
-            node.style.setProperty("height",  "30vh");
+            node.style.setProperty("height",  "40vh");
             node.style.setProperty("width",  "7vw");
             break;
         case "RedBull":
-            document.getElementById("player2").style.height = "20vh";
-            document.getElementById("player2").style.width = "5vw";
+            node.style.setProperty("height",  "30vh");
+            node.style.setProperty("width",  "6vw");
+            node.style.setProperty("bottom",  "12vh");
             break;
         case "Stella":
-            document.getElementById("player3").style.height = "20vh";
-            document.getElementById("player3").style.width = "5vw";
+            node.style.setProperty("height",  "41vh");
+            node.style.setProperty("width",  "7vw");
+            node.style.setProperty("bottom",  "13vh");
             break;
         case "Whiskey":
-            document.getElementById("player4").style.height = "20vh";
-            document.getElementById("player4").style.width = "5vw";
+            node.style.setProperty("height",  "40vh");
+            node.style.setProperty("width",  "7vw");
             break;
         case "Guinness":
-            document.getElementById("player5").style.height = "20vh";
-            document.getElementById("player5").style.width = "5vw";
+            node.style.setProperty("height",  "30vh");
+            node.style.setProperty("width",  "8vw");
+            node.style.setProperty("bottom",  "11.3vh")
             break;
         case "Smirnoff":
-            document.getElementById("player6").style.height = "20vh";
-            document.getElementById("player6").style.width = "5vw";
+            node.style.setProperty("height",  "25vh");
+            node.style.setProperty("width",  "7vw");
             break;
         case "Heineken":
-            document.getElementById("player7").style.height = "20vh";
-            document.getElementById("player7").style.width = "5vw";
+            node.style.setProperty("height",  "41vh");
+            node.style.setProperty("width",  "6vw");
+            node.style.setProperty("bottom",  "14vh")
             break;
         case "RumAndCoke":
-            document.getElementById("player8").style.height = "20vh";
-            document.getElementById("player8").style.width = "5vw";
+            node.style.setProperty("height",  "32vh");
+            node.style.setProperty("width",  "7vw");
+            node.style.setProperty("bottom",  "12.3vh")
             break;
          case "Martini":
-            document.getElementById("player9").style.height = "20vh";
-            document.getElementById("player9").style.width = "5vw";
+            node.style.setProperty("height",  "36vh");
+            node.style.setProperty("width",  "7vw");
+            node.style.setProperty("bottom",  "10.5vh")
             break;
         case "Wine":
-            document.getElementById("player10").style.height = "20vh";
-            document.getElementById("player10").style.width = "5vw";
+            node.style.setProperty("height",  "34vh");
+            node.style.setProperty("width",  "5.5vw");
+            node.style.setProperty("bottom",  "14vh")
             break;
         case "WhiteClaw":
-            document.getElementById("player11").style.height = "20vh";
-            document.getElementById("player11").style.width = "5vw";
+            node.style.setProperty("height",  "28vh");
+            node.style.setProperty("width",  "5vw");
+            node.style.setProperty("bottom",  "14vh")
             break;
     }
 }

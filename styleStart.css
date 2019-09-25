@@ -307,77 +307,77 @@
 
 
 	#budlight{
-		left: 2vw; bottom: 20vh;
+		left: 2vw; bottom: 13vh;
 		content: url("Characters/Char/budlight.png");
 		z-index: 6;
 		height: 33vh; width: 8;
 	}
 	#corona{
-		left: 10vw; bottom: 19vh;
+		left: 11vw; bottom: 13vh;
 		content: url("Characters/Char/corona.png");
 		z-index: 6;
 		height: 60vh;
-		width: 10.5vw;
+		width: 9.5vw;
 	}
 	#redbull{
-		left: 12vw; bottom: 15.5vh;
+		left: 20vw; bottom: 8.5vh;
 		content: url("Characters/Char/redbull.png");
 		z-index: 6;
-		height: 42vh; width: 22vw;
+		height: 40vh; width: 8vw;
 	}
 	#stella{
-		left: 16vw; bottom: 17vh;
+		left: 27.4vw; bottom: 9.5vh;
 		content: url("Characters/Char/stella.png");
 		z-index: 6;
-		height: 60vh; width: 29vw;
+		height: 62vh; width: 9.5vw;
 	}
 	#whiskey{
-		left: 30.5vw; bottom: 14.5vh;
+		left: 35.5vw; bottom: 12vh;
 		content: url("Characters/Char/whiskey.png");
 		z-index: 6;
-		height: 72vh; width: 17vw;
+		height: 72vh; width: 11vw;
 	}
 	#guinness{
-		left: 40vw; bottom: 15vh;
+		left: 44vw; bottom: 6vh;
 		content: url("Characters/Char/guinness.png");
 		z-index: 6;
-		height: 65vh; width: 15vw;
+		height: 48vh; width: 12vw;
 	}
 	#smirnoff{
 		left: 2vw; bottom: -54.5vh;
 		content: url("Characters/Char/smirnof.png");
 		z-index: 6;
-		height: 35vh; width: 10vw;
+		height: 32vh; width: 10vw;
 	}
 	#heineken{
-		left: 8vw; bottom: -57vh;
+		left: 12vw; bottom: -56vh;
 		content: url("Characters/Char/heineken.png");
 		z-index: 6;
-		height: 62vh; width: 16vw;
+		height: 54vh; width: 8.5vw;
 	}
 	#rumCoke{
-		left: 16vw; bottom: -59vh;
+		left: 20vw; bottom: -59vh;
 		content: url("Characters/Char/rumAndCoke.png");
 		z-index: 6;
-		height: 57vh; width: 16vw;
+		height: 45vh; width: 10vw;
 	}
 	#martini{
-		left: 19.5vw; bottom: -61vh;
+		left: 27vw; bottom: -61vh;
 		content: url("Characters/Char/martini.png");
 		z-index: 6;
-		height: 60vh; width: 24vw;
+		height: 50vh; width: 10vw;
 	}
 	#wine{
-		left: 33vw; bottom: -56vh;
+		left: 36vw; bottom: -56vh;
 		content: url("Characters/Char/wine.png");
 		z-index: 6;
-		height: 60vh; width: 12vw;
+		height: 50vh; width: 10vw;
 	}
 	#whiteclaw{
-		left: 41vw; bottom: -57vh;
+		left: 45vw; bottom: -57vh;
 		content: url("Characters/Char/whiteClaw.png");
 		z-index: 6;
-		height: 50vh; width: 11.5vw;
+		height: 45vh; width: 9vw;
 	}
 	#char1:hover ~ #budlight {
 		filter: none;
