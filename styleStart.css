@@ -49,14 +49,9 @@
 	}
 	#controllerDiv{
 		display: block;
-	    position: fixed;
-	    left: 0vw;
-	    top: 0;
-	    margin-top: 0vh;
-	    border: 1px solid black;
-	    box-shadow: 10px 10px 30px black;
-	    background-image: url("images/blackBg3.jpg");
 		background-image: url("images/bgBlack2.jpg");
+	    position: fixed;
+	    left: 0vw; top: 0;
 	    padding: 2vw;
 		float: right;
 		height: 100vh; width: 100vw;
@@ -286,6 +281,7 @@
 	  	z-index: 2000;
 	}
 	.char:hover{
+		height: 27%; width: 19%;
 		box-shadow: 20px 20px 40px 5px black;
 	}
 	.charModels{
@@ -313,11 +309,11 @@
 		height: 33vh; width: 8;
 	}
 	#corona{
-		left: 11vw; bottom: 13vh;
+		left: 11.5vw; bottom: 13vh;
 		content: url("Characters/Char/corona.png");
 		z-index: 6;
-		height: 60vh;
-		width: 9.5vw;
+		height: 61vh;
+		width: 9vw;
 	}
 	#redbull{
 		left: 20vw; bottom: 8.5vh;
@@ -338,10 +334,10 @@
 		height: 72vh; width: 11vw;
 	}
 	#guinness{
-		left: 44vw; bottom: 6vh;
+		left: 45vw; bottom: 6vh;
 		content: url("Characters/Char/guinness.png");
 		z-index: 6;
-		height: 48vh; width: 12vw;
+		height: 48vh; width: 11vw;
 	}
 	#smirnoff{
 		left: 2vw; bottom: -54.5vh;
