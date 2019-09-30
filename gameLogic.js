@@ -23,12 +23,12 @@ function increaseMoveCount(){
 function layoutStartingPositions(){
     //display characters
     var left = 0;
-    result = MOVING_VALUE / playerCount;
+    var result = MOVING_VALUE / playerCount;
     for(var i=0; i<playerCount; i++){
         var game_screen = document.getElementById("gameScreen");
         var node = document.createElement("img");
 
-        player = playerList[i];
+        var player = playerList[i];
 
         //add div element to gameScreen
         game_screen.appendChild(node);
