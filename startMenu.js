@@ -55,9 +55,17 @@ function numPlayersSelected(numPlayers){
             btn.className += " selected";
         }
     }
+    document.getElementById("charSelBtn").style.opacity = "0.7";
+
     var playerElm = document.getElementsByClassName("char");
     removeClassSelectedFromPlayers(playerElm);
     charSelBottomPanel.innerHTML = "Player " + playerNumber + "'s character selection";
+}
+
+
+function toCharSelection() {
+    document.getElementById("startScreen").style.display = "none";
+    document.getElementById("charSelection").style.opacity = "1";
 }
 
 

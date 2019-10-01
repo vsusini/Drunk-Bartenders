@@ -38,6 +38,86 @@
 	}
 
 
+/*---------startScreen----------*/
+
+#startScreen{
+	position: fixed; left: 0; top: 0;
+	display: block;
+	height: 100vh; width: 100vw;
+	/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
+	z-index: 300000;
+	background-image: url("images/bgBlack2.jpg");
+}
+#logo{
+	position: fixed;
+	left: 0; right: 0; top: 25vh;
+	margin-left: auto; margin-right: auto;
+	height: 35vh; width: 20vw; 
+}
+	#btnSection{
+		position: fixed;
+		height: 10%; width: 40vw;
+		left: 0; right: 0; bottom: 25vh;
+		margin-left: auto; margin-right: auto;
+		margin-top: 1vh;
+		z-index: 5000;
+		display: inline-block;
+	}
+	.btn{
+		font-size: 0.7vw;
+		height: 2vw; width: 2vw;
+		color: white; background-color:none;
+		text-align: center;
+		line-height: 2vw;
+		vertical-align: middle;
+		display: inline-block;
+		cursor: pointer;
+		transition: 0.2s;
+		box-sizing: none;
+	}
+	.btn:hover{
+		border-bottom: 10px white solid;
+		margin-top: -10px;
+	}
+	#btn1, #btn7{
+		margin-left: 0;
+	}
+	#input{
+		margin-left: 0vw; margin-top: 1vh;
+		position: relative;
+		height: 10%; width: 30%;
+	}
+	.inputText{
+		color: white;
+		font-size: 1vw;
+		text-align: center;
+		display: inline-block;
+		margin-left: 2vw;
+	}
+	#charSelBtn{
+		position: fixed;
+		height: 8vh; width: 15vw;
+		left: 0; right: 0; bottom: 15vh;
+		margin-left: auto; margin-right: auto; 
+		background-color: #1f1f1f;
+		opacity: 0;
+		transition: 1s;
+		padding: 0;
+	}
+	#charSelText{
+		text-align: center;
+		color: white;
+		font-size: 1vw;
+		line-height: 8vh;
+		vertical-align: middle;
+		padding: 0;
+	}
+	#charSelText:hover{
+		cursor: pointer;
+		opacity: 1;
+	}
+	p{padding: 0;}
+
 
 /*---------charSelection----------*/
 	#charSelection{
@@ -46,6 +126,8 @@
 		background-color: #E0E0E0;
 	/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
 		overflow-y: scroll;
+		opacity: 0;
+		transition: 2s;
 	}
 	#controllerDiv{
 		display: block;
@@ -144,43 +226,7 @@
 	    transform: translateY(20px);
 	  }
 	} 
-	#btnSection{
-		position: fixed;
-		height: 10%; width: 55%;
-		left: 0; top: 0;
-		margin-left: 3vw;
-		margin-top: 1vh;
-		z-index: 5000;
-	}
-	.btn{
-		font-size: 1vw;
-		height: 3vw; width: 3vw;
-		color: white; background-color:none;
-		border-radius: 50%;
-		text-align: center;
-		line-height: 3vw;
-		vertical-align: middle;
-		margin-left: 0vw;
-		display: inline-block;
-		cursor: pointer;
-	}
-	.btn:hover{
-		background-color: #1f1f1f;
-		color: black;
-		background-color: white;
-	}
-	#btn1, #btn7{
-		margin-left: 0;
-	}
-	#input{
-		margin-left: 0vw; margin-top: 1vh;
-		position: relative;
-		height: 10%; width: 30%;
-	}
-	.inputText{
-		color: white;
-		font-size: 1vw;
-	}
+
 	#selectionText{
 		position: fixed;
 		right: 2vw; top: 2vh;
@@ -265,7 +311,7 @@
 		margin-top: 2vh;
 	}
 	p{
-		margin: 1vh;
+		margin: 0vh;
 	}
 	.char{
 		height: 25%; width: 18%;
