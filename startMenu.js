@@ -25,7 +25,6 @@ var characterNames = [
     "Wine", 
     "WhiteClaw"];
 
-
 var characterImages = [
     "Characters/Char/budlight.png",
     "Characters/Char/corona.png",
@@ -61,7 +60,6 @@ function numPlayersSelected(numPlayers){
 
 function toCharSelection() {
     document.getElementById("startScreen").style.opacity = "0";
-    document.getElementById("charSelectionDiv").style.opacity = "1";
     setTimeout(displayStartScreen, 2000);
 }
 

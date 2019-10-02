@@ -56,15 +56,16 @@
 	margin-left: auto; margin-right: auto;
 	height: 35vh; width: 20vw; 
 }
-	#btnSection{
-		position: fixed;
-		height: 10%; width: 40vw;
-		left: 0; right: 0; bottom: 25vh;
-		margin-left: auto; margin-right: auto;
-		margin-top: 1vh;
-		z-index: 5000;
-		display: inline-block;
-	}
+#btnSection{
+	position: fixed;
+	height: 10%; width: 40vw;
+	left: 0; right: 0; bottom: 25vh;
+	margin-left: auto; margin-right: auto;
+	margin-top: 1vh;
+	z-index: 5000;
+	display: inline-block;
+	transition: 0.5s;
+}
 	.btn{
 		font-size: 0.7vw;
 		height: 2vw; width: 2vw;
@@ -308,6 +309,7 @@
 	    opacity: 0.8;
 	    padding-left: 3vw;
 	    opacity: 0.6;
+	    transition: 0.2s;
 	}
 	#normalText{
 		font-size: 1.3vw;
