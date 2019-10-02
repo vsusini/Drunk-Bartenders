@@ -37,6 +37,14 @@
 	  outline: 1px solid slategrey;
 	}
 
+#startGameBtnText{
+	display:none;
+	opacity:0;
+	transition: 1s;
+	font-size: 1.3vw;
+	padding-top: 2.4vh;
+}
+
 
 /*---------startScreen----------*/
 

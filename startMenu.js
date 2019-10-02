@@ -62,7 +62,6 @@ function toCharSelection() {
     document.getElementById("startScreen").style.opacity = "0";
     setTimeout(displayStartScreen, 2000);
 }
-
 function displayStartScreen() {
     document.getElementById("startScreen").style.display = "none";
 }
@@ -219,12 +218,20 @@ function createPlayer(num, name, imageName){
     if (currentPlayerCount == playerCount) {
         console.log(playerList);
         makeAllPlayerSelected();
-        changeScreen();
-        layoutStartingPositions();
+
+        document.getElementById("normalText").style.display = "none";
+        document.getElementById("startGameBtnText").style.display = "block";
+        document.getElementById("startGameBtnText").style.opacity = "1";
+
         //document.getElementById ("rollDie").addEventListener ("click", continueGame, false);
     } else {
         console.log("Missed it");
     }
+}
+
+function startGameClick(){
+    changeScreen();
+    layoutStartingPositions();
 }
 
 
