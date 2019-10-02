@@ -41,11 +41,8 @@ var characterImages = [
     "Characters/Char/whiteclaw.png"];
 
 var charSelBottomPanel = document.getElementById("normalText");
-var smallText = document.getElementById("smallText");
 var playerNumber = 1;
 makeAllPlayerSelected();
-
-
 
 function numPlayersSelected(numPlayers){
     for(var i = 1; i<13; i++){
@@ -62,17 +59,18 @@ function numPlayersSelected(numPlayers){
     charSelBottomPanel.innerHTML = "Player " + playerNumber + "'s character selection";
 }
 
-
 function toCharSelection() {
-    document.getElementById("startScreen").style.display = "none";
-    document.getElementById("charSelection").style.opacity = "1";
+    document.getElementById("startScreen").style.opacity = "0";
+    document.getElementById("charSelectionDiv").style.opacity = "1";
+    setTimeout(displayStartScreen, 2000);
 }
 
+function displayStartScreen() {
+    document.getElementById("startScreen").style.display = "none";
+}
 
 function choosePlayer(num) {
-
     playerNumber = playerNumber+1;
-
     charSelBottomPanel.innerHTML = "Player " + playerNumber + "'s character selection";
     switch (num) {
         case 0:
@@ -201,7 +199,7 @@ function removeClassSelectedFromPlayers(playerElm){
 
 
 function changeScreen(){
-    var charSelection = document.getElementById("charSelection");
+    var charSelection = document.getElementById("charSelectionDiv");
     var gameScreen = document.getElementById("gameScreen");
 
     charSelection.style.display = "none";

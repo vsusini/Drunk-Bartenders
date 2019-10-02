@@ -42,11 +42,13 @@
 
 #startScreen{
 	position: fixed; left: 0; top: 0;
-	display: block;
 	height: 100vh; width: 100vw;
 	/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
-	z-index: 300000;
-	background-image: url("images/bgBlack2.jpg");
+	z-index: 500;
+	background-image: url("images/bgStartBlurred.png");
+	background-position: center; background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	transition: 2s;
 }
 #logo{
 	position: fixed;
@@ -120,14 +122,15 @@
 
 
 /*---------charSelection----------*/
-	#charSelection{
+	#charSelectionDiv{
 		display: block;
 		height: 100vh; width: 100vw;
 		background-color: #E0E0E0;
 	/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
 		overflow-y: scroll;
-		opacity: 0;
+		opacity: 1;
 		transition: 2s;
+		z-index: 3001;
 	}
 	#controllerDiv{
 		display: block;
@@ -288,7 +291,7 @@
 	  background-color: darkgrey;
 	  outline: 1px solid slategrey;
 	}
-	#charSelBottomPanel{
+	#charSelNumText{
 	    position: fixed;
 	    top: 12vh;
 	    left: 0vw;
@@ -304,11 +307,11 @@
 	    box-shadow: 10px 10px 30px #1f1f1f;
 	    opacity: 0.8;
 	    padding-left: 3vw;
+	    opacity: 0.6;
 	}
 	#normalText{
-		font-size: 2vh;
-		padding: none;
-		margin-top: 2vh;
+		font-size: 1.3vw;
+		padding-top: 2.4vh;
 	}
 	p{
 		margin: 0vh;
