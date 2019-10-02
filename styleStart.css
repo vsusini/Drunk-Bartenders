@@ -316,8 +316,8 @@
 	    box-shadow: 10px 10px 30px #1f1f1f;
 	    opacity: 0.8;
 	    padding-left: 3vw;
-	    opacity: 0.6;
-	    transition: 0.2s;
+	    opacity: 0.8;
+	    transition: 0.5s;
 	}
 	#normalText{
 		font-size: 1.3vw;

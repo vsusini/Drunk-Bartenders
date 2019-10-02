@@ -218,6 +218,7 @@ function createPlayer(num, name, imageName){
     if (currentPlayerCount == playerCount) {
         console.log(playerList);
         makeAllPlayerSelected();
+        document.getElementById("charSelNumText").style.width = "15vw";
 
         document.getElementById("normalText").style.display = "none";
         document.getElementById("startGameBtnText").style.display = "block";
