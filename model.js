@@ -97,7 +97,8 @@
 					break;
 				case 1:
 					//Start Here
-					message = "Welcome to the game. Get ready to get hammered. Feel free to click on any card to learn how to play. Good Luck.";
+					message = "";
+					document.getElementById("modelText").style.backgroundImage = "url('images/card1_desc.png')";
 					imgSrc = cardImg[0].src;
 					break;
 				case 2:
@@ -380,6 +381,8 @@
 			coverProof.style.display = "none";
 			gameScreen.style.filter = "none";
 
+			document.getElementById("modelText").style.backgroundImage = "url('images/bgBlack2.jpg')";
+
 			document.getElementById("rollNumText").style.display = "block";
 			document.getElementById("closeModelIcon").style.display = "none";
 
@@ -392,6 +395,7 @@
 			for(var i=0; i<chars.length; i++){
 				chars[i].style.display = "block";
 			}
+
 		}
 
 

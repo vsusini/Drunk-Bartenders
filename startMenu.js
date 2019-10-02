@@ -60,7 +60,7 @@ function numPlayersSelected(numPlayers){
 
 function toCharSelection() {
     document.getElementById("startScreen").style.opacity = "0";
-    setTimeout(displayStartScreen, 2000);
+    setTimeout(displayStartScreen, 1000);
 }
 function displayStartScreen() {
     document.getElementById("startScreen").style.display = "none";
