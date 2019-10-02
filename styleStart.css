@@ -37,43 +37,43 @@
 	  outline: 1px solid slategrey;
 	}
 
-#startGameBtnText{
-	display:none;
-	opacity:0;
-	transition: 1s;
-	font-size: 1.3vw;
-	padding-top: 2.4vh;
-}
+	#startGameBtnText{
+		display:none;
+		opacity:0;
+		transition: 1s;
+		font-size: 1.3vw;
+		padding-top: 2.4vh;
+	}
 
 
 /*---------startScreen----------*/
 
-#startScreen{
-	position: fixed; left: 0; top: 0;
-	height: 100vh; width: 100vw;
-	/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
-	z-index: 500;
-	background-image: url("images/bgBlurred.png");
-	background-position: center; background-repeat: no-repeat;
-	background-size: 100vw 100vh;
-	transition: 2s;
-}
-#logo{
-	position: fixed;
-	left: 0; right: 0; top: 25vh;
-	margin-left: auto; margin-right: auto;
-	height: 35vh; width: 20vw; 
-}
-#btnSection{
-	position: fixed;
-	height: 10%; width: 40vw;
-	left: 0; right: 0; bottom: 25vh;
-	margin-left: auto; margin-right: auto;
-	margin-top: 1vh;
-	z-index: 5000;
-	display: inline-block;
-	transition: 0.5s;
-}
+	#startScreen{
+		position: fixed; left: 0; top: 0;
+		height: 100vh; width: 100vw;
+		/*	background: linear-gradient(to top left, #669999 0%, black 100%);*/
+		z-index: 500;
+		background-image: url("images/bgBlurred.png");
+		background-position: center; background-repeat: no-repeat;
+		background-size: 100vw 100vh;
+		transition: 2s;
+	}
+	#logo{
+		position: fixed;
+		left: 0; right: 0; top: 25vh;
+		margin-left: auto; margin-right: auto;
+		height: 35vh; width: 20vw; 
+	}
+	#btnSection{
+		position: fixed;
+		height: 10%; width: 40vw;
+		left: 0; right: 0; bottom: 25vh;
+		margin-left: auto; margin-right: auto;
+		margin-top: 1vh;
+		z-index: 5000;
+		display: inline-block;
+		transition: 0.5s;
+	}
 	.btn{
 		font-size: 0.7vw;
 		height: 2vw; width: 2vw;
@@ -348,8 +348,9 @@
 		position: absolute;
 		background-size: contain;
 		background-repeat: no-repeat;
-/*		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);*/
+
+
+
 		left: 0vw; bottom: 2vh;
 		opacity: 0.15;
 		transition: 0.2s;
@@ -507,7 +508,6 @@
 	}
 
 
-
 /*---------gameScreen-------------*/
 	#gameScreen{
 		height: 90vh; width: 1593vw;
@@ -607,8 +607,8 @@
 		}
 	}
 
-/*jump animation*/
-@keyframes jump {
+	/*jump animation*/
+	@keyframes jump {
 	from, 20%, 53%, 80%, to {
 		-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -627,7 +627,7 @@
 		-webkit-transform: translate3d(0, -15px, 0);
 		transform: translate3d(0, -15px, 0);
 	}
-}
+	}
 	.jump {
 		-webkit-animation-name: bounce;
 		animation-name: bounce;
@@ -730,14 +730,11 @@
 	}
 	#modelDialog{
 		position: fixed; 
-		left: 20vw; top: 0;
+		left: 0; right: 0; margin-left: auto; margin-right: auto;
 		margin-top: 15vh;
 		height: 50vh; width: 60vw;
-		background-color: black;
 		z-index: 20;
 		display: none;
-		border: 1px solid black;
-		box-shadow: 10px 10px 30px black;
 	}
 	#coverProof{
 		position: fixed;
@@ -750,7 +747,8 @@
 	#modelImg{
 		position: absolute;
 		left: 10px; top: 10px;
-		height: 48vh; width: 18vw;
+		height: 48vh; width: 20vw;
+		box-shadow: 15px 15px 30px black;
 	}
 	#modelText{
 		position: absolute;
@@ -766,6 +764,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		color: white;
+		box-shadow: 15px 15px 30px black;
 	}
 	#bottomCover{
 		position: absolute;
