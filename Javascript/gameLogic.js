@@ -198,7 +198,11 @@ function moveBack(player, move){
         node.style.setProperty("left",parseInt(leftVw,10)-(MOVING_VALUE)+"vw");
         leftVw = node.style.left;
     }
-    window.scrollBy(0,(window.innerWidth / 4)*move);
+    setTimeout(function(){
+        console.log("made it *3");
+        window.scrollBy(((((window.innerWidth / 4)*move)/1.5)*-1),0);
+    }, 1000);
+    
 
 }
 
