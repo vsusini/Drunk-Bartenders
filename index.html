@@ -1,0 +1,241 @@
+﻿
+<!-- 
+	Name: startMenu.html
+	Author : Nicolas Gardin
+	Author : Vincent Susini
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="styleStart.css">
+	<link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<title></title>
+</head>
+
+<body>
+
+	<div id="startScreen">
+		<img src="images/logo.png" id="logo"></img>
+		<div id=btnSection>
+			<p class=inputText> Number of Players: </p>
+			<div id=btn1 class=btn onclick="numPlayersSelected(1)"> 1 </div>
+			<div id=btn2 class=btn onclick="numPlayersSelected(2)"> 2 </div>
+			<div id=btn3 class=btn onclick="numPlayersSelected(3)"> 3 </div>
+			<div id=btn4 class=btn onclick="numPlayersSelected(4)"> 4 </div>
+			<div id=btn5 class=btn onclick="numPlayersSelected(5)"> 5 </div>
+			<div id=btn6 class=btn onclick="numPlayersSelected(6)"> 6 </div><!--<br> -->
+			<div id=btn7 class=btn onclick="numPlayersSelected(7)"> 7 </div>
+			<div id=btn8 class=btn onclick="numPlayersSelected(8)"> 8 </div>
+			<div id=btn9 class=btn onclick="numPlayersSelected(9)"> 9 </div>
+			<div id=btn10 class=btn onclick="numPlayersSelected(10)"> 10 </div>
+			<div id=btn11 class=btn onclick="numPlayersSelected(11)"> 11 </div>
+			<div id=btn12 class=btn onclick="numPlayersSelected(12)"> 12 </div>
+		</div>
+		<div id=charSelBtn onclick="toCharSelection()">
+			<p id="charSelText"> To Character Selection </p>
+		</div>
+	</div>
+
+	<!-- 1. Character Selection Screen  -->
+	<div id="charSelectionDiv">
+		<div id=controllerDiv>
+
+		<!-- <div id=messageDiv> Pick a character using the cards! </div> -->
+
+		<div id=leftSectionDiv></div>
+
+			<img src="Characters/SidePanel/Budlight.jpg" class="char" id="char1" onclick="choosePlayer(0)"></img>
+			<img src="Characters/SidePanel/corona.jpg" class="char" id="char2" onclick="choosePlayer(1)"></img><br>
+			<img src="Characters/SidePanel/RedBUll.jpg" class="char" id="char3" onclick="choosePlayer(2)"></img>
+			<img src="Characters/SidePanel/stella.jfif" class="char" id="char4" onclick="choosePlayer(3)"></img><br>
+			<img src="Characters/SidePanel/jack-daniels.jpg" class="char" id="char5" onclick="choosePlayer(4)"></img>
+			<img src="Characters/SidePanel/guinnessdraught9.jpg" class="char" id="char6" onclick="choosePlayer(5)"></img><br>
+			<img src="Characters/SidePanel/Smirnoff.jpg" class="char" id="char7" onclick="choosePlayer(6)"></img>
+			<img src="Characters/SidePanel/heineken-wallpapers_26740_1280x800.jpg" class="char" id="char8" onclick="choosePlayer(7)"></img><br>
+			<img src="Characters/SidePanel/coke.jpg" class="char" id="char9" onclick="choosePlayer(8)"></img>
+			<img src="Characters/SidePanel/vodka-martini-olives-glass.jpg" class="char" id="char10" onclick="choosePlayer(9)"></img><br>
+			<img src="Characters/SidePanel/winery.jpg" class="char" id="char11" onclick="choosePlayer(10)"></img>
+			<img src="Characters/SidePanel/White claw.jpg" class="char" id="char12" onclick="choosePlayer(11)"></img><br>
+
+			<img class=charModels id=budlight> </img>
+			<img class=charModels id=corona> </img>
+			<img class=charModels id=redbull> </img>
+			<img class=charModels id=stella> </img>
+			<img class=charModels id=whiskey> </img>
+			<img class=charModels id=guinness> </img>
+			<img class=charModels id=smirnoff> </img>
+			<img class=charModels id=heineken> </img>
+			<img class=charModels id=rumCoke> </img>
+			<img class=charModels id=martini> </img>
+			<img class=charModels id=wine> </img>
+			<img class=charModels id=whiteclaw> </img>
+		</div>
+			<div id="charSelNumText"> 
+				<p id=normalText> How many people are playing? (1-12) </p>
+				<p id=startGameBtnText onclick="startGameClick()"> Start Game! </p>
+
+			</div>
+		</div><!--end controllerDiv -->
+	 </div><!--end charSelection -->
+
+
+	<!-- 2. Character Selection Screen  -->
+	<div id="gameScreen">
+		<!-- character divs appended here (from gameLogic.js) -->
+
+		<img src="images/README.png" id="clickMeHand"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox1" onclick="mysteryBox1()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox2" onclick="mysteryBox2()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox3" onclick="mysteryBox3()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox4" onclick="mysteryBox4()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox5" onclick="mysteryBox5()"></img>
+
+		<img src="images/mysteryBox.png" id="mysteryBox6" onclick="mysteryBox6()"></img>
+
+		<!-- DONT REMOVE YET -->
+		<!-- 2.1 Side panel / HELP button  -->
+		<!-- 		<div id=helpBtn onclick="navFunction()">☰ Help</div>
+		<div id=sidePanel>
+			<div id=item1Div class="itemDiv">
+				<div id=item1Img class=itemImg> </div>
+				<div id=item1Text class=itemText> Hey! We throught you might get confused...<br><br> Heres how we can help: </div>
+			</div>
+
+			<div id=item2Div class="itemDiv">
+				<div id=item2Img class=itemImg> </div>
+				<div id=item2Text class=itemText> More info ...</div>
+			</div>
+		</div> -->
+
+		<!-- 2.2 Modal Dialog -->
+		<div id=modelDialog>
+			<img id=modelImg></img>
+			<div id=modelText> </div>
+			<!-- coverProof ensures nothing can be click during game when dialog
+			pops up, closes dialog when somewhere else is clicked -->
+			<div id=coverProof onclick="closeModel()">
+				<p id = closeModelIcon> x </p>
+			</div>
+			
+		</div>
+
+
+		<!-- 2.3 Card images -->
+		<div id="gameScreen2">
+			<img src="images/Backgrounds/group1/1.2.png" id=card1 name=t1 class=gameTile onclick="openModel(1)">
+			</img>
+			<img src="images/Backgrounds/group1/2.2.png" id=card2 name=t1 class=gameTile onclick="openModel(2)"></img>
+			<img src="images/Backgrounds/group1/3.2.png" id=card3 name=t1 class=gameTile onclick="openModel(3)"></img>
+			<img src="images/Backgrounds/group1/4.2.png" id=card4 name=t1 class=gameTile onclick="openModel(4)"></img>
+			
+			<img src="images/Backgrounds/group2/5.2.png" id=card5 name=t1 class=gameTile onclick="openModel(5)"></img> 
+			<img src="images/Backgrounds/group2/6.2.png" id=card6 name=t1 class=gameTile onclick="openModel(6)"></img>
+			<img src="images/Backgrounds/group2/7.2.png" id=card7 name=t1 class=gameTile onclick="openModel(7)"></img>
+			<img src="images/Backgrounds/group2/8.2.png" id=card8 name=t1 class=gameTile onclick="openModel(8)"></img>
+			
+			<img src="images/Backgrounds/group3/9.2.png" id=card9 name=t1 class=gameTile onclick="openModel(9)"></img> 
+			<img src="images/Backgrounds/group3/10.2.png" id=card10 name=t1 class=gameTile onclick="openModel(10)"></img>
+			<img src="images/Backgrounds/group3/11.2.png" id=card11 name=t1 class=gameTile onclick="openModel(11)"></img>
+			<img src="images/Backgrounds/group3/12.2.png" id=card12 name=t1 class=gameTile onclick="openModel(12)"></img>
+
+			<img src="images/Backgrounds/group4/13.2.png" id=card13 name=t1 class=gameTile onclick="openModel(13)"></img> 
+			<img src="images/Backgrounds/group4/14.2.png" id=card14 name=t1 class=gameTile onclick="openModel(14)"></img>
+			<img src="images/Backgrounds/group4/15.2.png" id=card15 name=t1 class=gameTile onclick="openModel(15)"></img>
+			<img src="images/Backgrounds/group4/16.2.png" id=card16 name=t1 class=gameTile onclick="openModel(16)"></img>
+
+			<img src="images/Backgrounds/group5/17.2.png" id=card17 name=t1 class=gameTile onclick="openModel(17)"></img> 
+			<img src="images/Backgrounds/group5/18.2.png" id=card18 name=t1 class=gameTile onclick="openModel(18)"></img>
+			<img src="images/Backgrounds/group5/19.2.png" id=card19 name=t1 class=gameTile onclick="openModel(19)"></img>
+			<img src="images/Backgrounds/group5/20.2.png" id=card20 name=t1 class=gameTile onclick="openModel(20)"></img>
+
+			<img src="images/Backgrounds/group6/21.2.png" id=card21 name=t1 class=gameTile onclick="openModel(21)"></img> 
+			<img src="images/Backgrounds/group6/22.2.png" id=card22 name=t1 class=gameTile onclick="openModel(22)"></img>
+			<img src="images/Backgrounds/group6/23.2.png" id=card23 name=t1 class=gameTile onclick="openModel(23)"></img>
+			<img src="images/Backgrounds/group6/24.2.png" id=card24 name=t1 class=gameTile onclick="openModel(24)"></img>
+
+			<img src="images/Backgrounds/group7/25.2.png" id=card25 name=t1 class=gameTile onclick="openModel(25)"></img> 
+			<img src="images/Backgrounds/group7/26.2.png" id=card26 name=t1 class=gameTile onclick="openModel(26)"></img>
+			<img src="images/Backgrounds/group7/27.2.png" id=card27 name=t1 class=gameTile onclick="openModel(27)"></img>
+			<img src="images/Backgrounds/group7/28.2.png" id=card28 name=t1 class=gameTile onclick="openModel(28)"></img>
+
+			<img src="images/Backgrounds/group8/29.2.png" id=card29 name=t1 class=gameTile onclick="openModel(29)"></img> 
+			<img src="images/Backgrounds/group8/30.2.png" id=card30 name=t1 class=gameTile onclick="openModel(30)"></img>
+			<img src="images/Backgrounds/group8/31.2.png" id=card31 name=t1 class=gameTile onclick="openModel(31)"></img>
+			<img src="images/Backgrounds/group8/32.2.png" id=card32 name=t1 class=gameTile onclick="openModel(32)"></img>
+
+			<img src="images/Backgrounds/group9/33.2.png" id=card33 name=t1 class=gameTile onclick="openModel(33)"></img> 
+			<img src="images/Backgrounds/group9/34.2.png" id=card34 name=t1 class=gameTile onclick="openModel(34)"></img>
+			<img src="images/Backgrounds/group9/35.2.png" id=card35 name=t1 class=gameTile onclick="openModel(35)"></img>
+			<img src="images/Backgrounds/group9/36.2.png" id=card36 name=t1 class=gameTile onclick="openModel(36)"></img>
+
+			<img src="images/Backgrounds/group10/37.2.png" id=card37 name=t1 class=gameTile onclick="openModel(37)"></img> 
+			<img src="images/Backgrounds/group10/38.2.png" id=card38 name=t1 class=gameTile onclick="openModel(38)"></img>
+			<img src="images/Backgrounds/group10/39.2.png" id=card39 name=t1 class=gameTile onclick="openModel(39)"></img>
+			<img src="images/Backgrounds/group10/40.2.png" id=card40 name=t1 class=gameTile onclick="openModel(40)"></img>
+
+			<img src="images/Backgrounds/group11/41.2.png" id=card41 name=t1 class=gameTile onclick="openModel(41)"></img> 
+			<img src="images/Backgrounds/group11/42.2.png" id=card42 name=t1 class=gameTile onclick="openModel(42)"></img>
+			<img src="images/Backgrounds/group11/43.2.png" id=card43 name=t1 class=gameTile onclick="openModel(43)"></img>
+			<img src="images/Backgrounds/group11/44.2.png" id=card44 name=t1 class=gameTile onclick="openModel(44)"></img>
+
+			<img src="images/Backgrounds/group12/45.2.png" id=card45 name=t1 class=gameTile onclick="openModel(45)"></img> 
+			<img src="images/Backgrounds/group12/46.2.png" id=card46 name=t1 class=gameTile onclick="openModel(46)"></img>
+			<img src="images/Backgrounds/group12/47.2.png" id=card47 name=t1 class=gameTile onclick="openModel(47)"></img>
+			<img src="images/Backgrounds/group12/48.2.png" id=card48 name=t1 class=gameTile onclick="openModel(48)"></img>
+
+			<img src="images/Backgrounds/group13/49.2.png" id=card49 name=t1 class=gameTile onclick="openModel(49)"></img> 
+			<img src="images/Backgrounds/group13/50.2.png" id=card50 name=t1 class=gameTile onclick="openModel(50)"></img>
+			<img src="images/Backgrounds/group13/51.2.png" id=card51 name=t1 class=gameTile onclick="openModel(51)"></img>
+			<img src="images/Backgrounds/group13/52.2.png" id=card52 name=t1 class=gameTile onclick="openModel(52)"></img>
+
+			<img src="images/Backgrounds/group14/53.2.png" id=card53 name=t1 class=gameTile onclick="openModel(53)"></img> 
+			<img src="images/Backgrounds/group14/54.2.png" id=card54 name=t1 class=gameTile onclick="openModel(54)"></img>
+			<img src="images/Backgrounds/group14/55.2.png" id=card55 name=t1 class=gameTile onclick="openModel(55)"></img>
+			<img src="images/Backgrounds/group14/56.2.png" id=card56 name=t1 class=gameTile onclick="openModel(56)"></img>
+
+			<img src="images/Backgrounds/group15/57.2.png" id=card57 name=t1 class=gameTile onclick="openModel(57)"></img> 
+			<img src="images/Backgrounds/group15/58.2.png" id=card58 name=t1 class=gameTile onclick="openModel(58)"></img>
+			<img src="images/Backgrounds/group15/59.2.png" id=card59 name=t1 class=gameTile onclick="openModel(59)"></img>
+			<img src="images/Backgrounds/group15/60.2.png" id=card60 name=t1 class="gameTile" onclick="openModel(60)"></img>
+
+			<!-- "go to last image-->
+			<img src="images/Backgrounds/group15/lastCard.gif" id=card61 name=t1 class= "lastCard" onclick="openModel(60)"></img>
+		</div>
+
+		<!-- <img id=startLine src="images/checkeredLine.png"></img> -->
+
+		<!-- 2.4 Control panel / Bottom panel -->
+		<div id=controlPanel class=bottomPanel>
+			<div id=rollDie class=panelContainer>
+
+				<span id=rollDieText class='start-btn' onclick="continueGame();">Roll Die</span>
+
+				<span class='start-btn panelText' id=rollTurnText onclick="moveToPlayer();"> Player X's turn </span>
+
+<!-- 				<p id=rollDieText class=panelText onclick="continueGame();"> Roll Die </p> -->
+<!-- 				<p id=rollTurnText class=panelText onclick="moveToPlayer();"> Player X's Turn > </p> -->
+			</div>
+
+			<div id=rollNum class=panelContainer>
+				<p id=rollNumText class=panelText> <span id="dieValue"> </span></p>
+				<img src="images/dice.png" id="die"></img>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="Javascript/startMenu.js"></script>
+	<script type="text/javascript" src="Javascript/dice.js"></script>
+	<script type="text/javascript" src="Javascript/gameLogic.js"></script>
+	<script type="text/javascript" src="Javascript/model.js"></script>
+
+</body>
+
+</html>
