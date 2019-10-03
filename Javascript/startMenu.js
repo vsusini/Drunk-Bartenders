@@ -214,9 +214,9 @@ function createPlayer(num, name, imageName){
     playerList[currentPlayerCount] = player;
     console.log("Added Player " + playerList[currentPlayerCount].getPlayerID() + " whos name is " + playerList[currentPlayerCount].getName());
     currentPlayerCount++;
-    console.log("currentPLayerOCunt " + currentPlayerCount + " Player count " + playerCount);
+    //console.log("currentPLayerOCunt " + currentPlayerCount + " Player count " + playerCount);
     if (currentPlayerCount == playerCount) {
-        console.log(playerList);
+        //console.log(playerList);
         makeAllPlayerSelected();
         document.getElementById("charSelNumText").style.width = "15vw";
 

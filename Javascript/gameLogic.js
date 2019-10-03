@@ -156,16 +156,30 @@ function movePlayer(player,move){
         console.log("Move:"+move);
     }
     //Movement of Player Div
+    completeMove(player,move,1);
+}
+
+function completeMove(player, move, moveType){
+    //console.log("Moving back player: "+player.getName()+"and hes moving back: "+move);
     for (var i = 0; i < move;i++){
         var node = document.getElementById("player"+player.getPlayerID());
         var leftVw = node.style.left;
         leftVw = leftVw.substring(0,leftVw.length-2);
-        console.log("leftVw:"+leftVw);
-        node.style.setProperty("left",parseInt(leftVw,10)+(MOVING_VALUE)+"vw");
+        //console.log("leftVw:"+leftVw);
+        if (moveType == 1){
+            node.style.setProperty("left",parseInt(leftVw,10)+(MOVING_VALUE)+"vw");
+        }else {
+            node.style.setProperty("left",parseInt(leftVw,10)-(MOVING_VALUE)+"vw");
+        }
         leftVw = node.style.left;
     }
-    window.scrollBy(((window.innerWidth / 4)*move)/1.5,0);
-    console.log("Window Offset: "+window.pageXOffset);
+    if (moveType == 1){
+        window.scrollBy(((window.innerWidth / 4)*move)/1.5,0);
+    }else{
+        setTimeout(function(){
+            window.scrollBy(((((window.innerWidth / 4)*move)/1.5)*-1),0);
+        }, 1000);
+    }
 }
 
 function gameWinAction(player){
@@ -189,21 +203,7 @@ function gameWinAction(player){
 
 function moveBack(player, move){
     player.increaseTileNum(move*-1);
-    for (var i = 0; i < move;i++){
-        console.log("Moving back player: "+player.getName()+"and hes moving back: "+move);
-        var node = document.getElementById("player"+player.getPlayerID());
-        var leftVw = node.style.left;
-        leftVw = leftVw.substring(0,leftVw.length-2);
-        console.log("leftVw:"+leftVw);
-        node.style.setProperty("left",parseInt(leftVw,10)-(MOVING_VALUE)+"vw");
-        leftVw = node.style.left;
-    }
-    setTimeout(function(){
-        console.log("made it *3");
-        window.scrollBy(((((window.innerWidth / 4)*move)/1.5)*-1),0);
-    }, 1000);
-    
-
+    completeMove(player,move,0);
 }
 
 //Ran when rollDie button is clicked
