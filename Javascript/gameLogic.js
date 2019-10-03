@@ -141,12 +141,15 @@ function moveToPlayer(){
 //Player jumps when called
 function playerJump(player){
         //Start Jump
+        player.style.setProperty("transition", "1s");
         player.style.setProperty("bottom","30vh");
 
         //Stall for 1sec then lower player again. 
         setTimeout(function(){
             player.style.setProperty("bottom","15vh");
+            player.style.setProperty("transition", "2s");
         }, 1000);
+
 }
 
 
@@ -171,7 +174,6 @@ function completeMove(player, move, moveType){
         }else {
             node.style.setProperty("left",parseInt(leftVw,10)-(MOVING_VALUE)+"vw");
         }
-        leftVw = node.style.left;
     }
     if (moveType == 1){
         window.scrollBy(((window.innerWidth / 4)*move)/1.5,0);
