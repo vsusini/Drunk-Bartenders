@@ -45,11 +45,11 @@
 
             var chanceCards = [
                 "Sorry bud, thats gonna cost you a shot!", 
-                "I'm impressed... get the rest of them drunk. \nYou've got 4 to give out.", 
+                "I'm impressed... get the rest of them drunk. <br><br>You've got 4 drinks to give out.", 
                 "You're cute, you though't I would give away things in these.", 
-                "Who put these in here. Pointless. \n You get to give out a shot though!", 
-                "I'm impressed... get the rest of them drunk. \nYou've got 2 to give out.",
-                "I'm impressed... get the rest of them drunk. \nYou've got 6 to give out."];
+                "Who put these in here. Pointless. <br><br>You get to give out a shot though!", 
+                "I'm impressed... get the rest of them drunk. <br><br>You've got 2 drinks to give out.",
+                "I'm impressed... get the rest of them drunk. <br><br>You've got 6 drinks to give out."];
 			var randNum = Math.floor(Math.random() * chanceCards.length);
 
 			switch(cardNum){
