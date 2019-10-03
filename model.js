@@ -367,7 +367,7 @@
 				chars[i].style.display = "none";
 			}
 
-			document.getElementById("panelText").style.display = "none";
+			document.getElementsByClassName("panelText")[0].style.display = "none";
 			document.getElementsByClassName("dieValue")[0].style.display = "none";
 			
 		}
