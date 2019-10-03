@@ -117,6 +117,7 @@ function choosePlayer(num) {
         case 11:
             document.getElementById("char12").className += " selected";
             createPlayer(11, characterNames[11],characterImages[11]);
+            break;
         case 12:
             document.getElementById("char13").className += " selected";
             createPlayer(12, characterNames[12],characterImages[12]);
