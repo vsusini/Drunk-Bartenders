@@ -114,6 +114,11 @@ function addPlayerStyle(node, name){
 function addDieValueToScreen(move){
     document.getElementById("dieValue").innerHTML = move;
 
+    //die roll animation
+    document.getElementById("die").style.opacity = "0";
+    document.getElementById("die").style.transform = "rotate(360deg)";
+    document.getElementById("die").style.left = "75vw";
+
     //Display dice value on screen
     dieText = document.getElementById("rollDieText");
     turnText = document.getElementById("rollTurnText");
@@ -123,6 +128,12 @@ function addDieValueToScreen(move){
 
 //Called when it needs to find the player on the screen 
 function moveToPlayer(){
+
+    //add die back to screen
+    document.getElementById("die").style.opacity = "1";
+    document.getElementById("die").style.transform = "rotate(0deg)";
+    document.getElementById("die").style.left = "53vw";
+
     document.getElementById("dieValue").innerHTML = "";
     var player = document.getElementById("player"+playerMoveCount);
     //Movement to player, currently goes to end of element and is smooth. 
