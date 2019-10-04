@@ -117,7 +117,7 @@ function addDieValueToScreen(move){
     //die roll animation
     document.getElementById("die").style.opacity = "0";
     document.getElementById("die").style.transform = "rotate(360deg)";
-    document.getElementById("die").style.left = "75vw";
+    document.getElementById("die").style.left = "90vw";
 
     //Display dice value on screen
     dieText = document.getElementById("rollDieText");

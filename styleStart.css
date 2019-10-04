@@ -718,6 +718,17 @@
 		left: 53vw; bottom: 3vh;
 		transition: 1s;
 	}
+	.dieAnimation{
+		transition: 1s;
+		opacity: 0;
+		transform: rotate(360deg);
+/*	  	-webkit-animation: rollDie 1s ease-out;  Safari 4+ 
+  		animation: rollDie 1s ease-out;*/
+	}
+	@keyframes rollDie{
+		0% {opacity: 1;}
+		100% {opacity: 0;}
+	}
 
 
 /*---------Model------------------*/
