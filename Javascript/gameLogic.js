@@ -191,7 +191,7 @@ function completeMove(player, move, moveType){
     }else{
         setTimeout(function(){
             window.scrollBy(((((window.innerWidth / 4)*move)/1.5)*-1),0);
-        }, 1000);
+        }, 400);
     }
 }
 
