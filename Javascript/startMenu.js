@@ -37,7 +37,7 @@ var characterImages = [
     "Characters/Char/rumAndCoke.png",  
     "Characters/Char/martini.png", 
     "Characters/Char/wine.png", 
-    "Characters/Char/whiteclaw.png"];
+    "Characters/Char/whiteClaw.png"];
 
 var charSelBottomPanel = document.getElementById("normalText");
 var playerNumber = 1;
