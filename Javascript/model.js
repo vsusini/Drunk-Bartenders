@@ -368,8 +368,9 @@
 				chars[i].style.display = "none";
 			}
 
-			document.getElementById("panelText").style.display = "none";
-			document.getElementsByClassName("dieValue")[0].style.display = "none";
+			//When uncommented leads to an error. Doesnt seem necessary not too sure. 
+			//document.getElementsByClassName("panelText")[0].style.display = "none";
+			//document.getElementsByClassName("dieValue")[0].style.display = "none";
 			
 		}
 

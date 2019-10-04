@@ -211,7 +211,7 @@ function gameWinAction(player){
             console.log("made it *3");
             node.style.setProperty("bottom","60vh"); //vertical height value
         }, 5000);
-    })
+    }, 3000)
 }
 
 function moveBack(player, move){
