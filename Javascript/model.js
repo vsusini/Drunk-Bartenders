@@ -113,7 +113,7 @@
 					break;
 				case 4:
 					//
-					message = "The youngest in the room. Its the baby. With the bird? Yeah, youngest drink";
+					message = "The youngest in the room. Its the baby. With the bird?<br>Yeah, youngest drink up!";
 					imgSrc = cardImg[3].src;
 					break;
 				case 5:
@@ -129,7 +129,7 @@
 					imgSrc = cardImg[6].src;
 					break;
 				case 8:
-					message = "Lucky you, hand out two drinks to the rest of them";
+					message = "Lucky you, hand out two drinks to the rest of them.";
 					imgSrc = cardImg[7].src;
 					break;
 				case 9:
@@ -181,7 +181,7 @@
 					imgSrc = cardImg[19].src;
 					break;
 				case 21:
-					message = "Last person to touch there nose... Ha! sorry loser now you know. ";
+					message = "Last person to touch there nose... Ha! sorry loser now you know. <br>Take a drink for me!";
 					imgSrc = cardImg[20].src;
 					break;
 				case 22:
