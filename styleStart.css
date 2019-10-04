@@ -682,7 +682,7 @@
 		bottom: 0;	
 		height: 10vh; width: 5vw;
 		z-index: 200 !important;
-		left: 62vw;
+		left: 53vw;
 	}
 	#rollDieText{
 		padding: top: 2vh;
@@ -716,6 +716,7 @@
 		height: 10vh; width: 6vw;
 		position: fixed;
 		left: 53vw; bottom: 3vh;
+		transition: 1s;
 	}
 	.dieAnimation{
 		transition: 1s;
