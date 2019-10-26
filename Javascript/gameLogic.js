@@ -210,6 +210,7 @@ function gameWinAction(player){
         setTimeout(function(){
             console.log("made it *3");
             node.style.setProperty("bottom","60vh"); //vertical height value
+            alert("Sorry we aren't finished yet. Didn't think anyone would survive. You were playing fr were you.");
         }, 5000);
     }, 3000)
 }
